@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="bookmark" href="../../favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../../static/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <title>仟健科技</title>
+    <style>
+        .addReceiveAddress{
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            min-width: 320px;
+            line-height: 50px;
+            background-color: #F55F62;
+        }
+        /*input[type*="checkbox"]:checked + label::before{*/
+            /*color: red;*/
+        /*}*/
+        .defaultAddressBox [class*="icon-"]::before{
+            color: #666;
+            font-size: 1.2em;
+        }
+
+        /*地址操作*/
+        .addressManipulate>li{
+            display: inline-block;
+            border-radius: 4px;
+        }
+
+        /*删除提示框*/
+        .settingWarn{
+            height: 35%;
+            background-color: #F56064;
+            color: #fff;
+            border-radius: 0 0 12px 12px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .settingWarn>span{
+            height: 100%;
+            flex: 1;
+        }
+        .deleteCancel{
+            border-right: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <!--头部-->
+    <header class="noRightHeader">
+        <a href="../setting.html" class="iconfont icon-left"></a>
+        收货地址
+    </header>
+    <ul class="marginTop50 em1_3" id="shippingAddress"></ul>
+    <!--模态弹出框-->
+    <div id="pop">
+        <div class="pop-box">
+            <h3>提示</h3>
+            <p>确认删除此收货地址吗?</p>
+            <div class="settingWarn">
+                <span class="deleteCancel flexRowBox alignItemCenter justifyContentCenter">取消</span>
+                <span class="deleteConfirm flexRowBox alignItemCenter justifyContentCenter">确定</span>
+            </div>
+        </div>
+    </div>
+    <a href="addEditAddress.html" class="addReceiveAddress em1_4">
+        新增收货地址
+    </a>
+    <script src="../../js/zepto_multiple.js"></script>
+    <script src="../../js/myJs/shippingAddress.js"></script>
+</body>
+</html>

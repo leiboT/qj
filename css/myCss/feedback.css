@@ -1,0 +1,12 @@
+.contentTitle{
+    background-color: #F2F0F0;
+}
+.feedbackImg{
+    display: inline-block;
+    border: 1px dashed #7C7C7C;
+    background-color: #F5F5F5;
+    width: 100px;
+    height: 100px;
+    line-height: 100px;
+    margin: 2% 3%;
+}

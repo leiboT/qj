@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no"/>
+    <meta name="author" content="web.qianjiantech.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-app-capable" content="yes">
+    <meta name="apple-mobile-app-status-bar-style" content="black">
+    <meta name="description" content="仟健-立足大众生活服务行业，深度挖掘客户需求，整合市场资源，融合分享经济学与倍增学原理，奉开放分享为基本原则，以互利互惠为发展目标，旨在让更多人有房住、有车开">
+    <meta name="keywords" content="购物,积分,房产,特产,汽车,酒店">
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <link rel="stylesheet" href="../../static/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <link rel="stylesheet" href="../../css/houseCss/productDetailPage.css"/>
+    <title>仟健科技</title>
+</head>
+<body>
+<!--头部-->
+<header class="noRightHeader">
+    <a href="carIndex.html" class="iconfont icon-left"></a>
+    商品详情
+</header>
+<section class="em1_4 txtLeft marginTop50 marginBottom50">
+    <!--产品图片及信息-->
+    <div class="rv">
+        <div class="productDetailImgBox">
+            <ul class="productDetailImg">
+                <li>
+                    <img src="../../static/img/car/xiandailangdong/xiandailangdong.jpg" alt="" class="img-response"/>
+                </li>
+                <li>
+                    <img src="../../static/img/car/xiandailangdong/xiandailangdong.jpg" alt="" class="img-response"/>
+                </li>
+            </ul>
+            <ul class="productDetailInfoBox ab txtLeft aroundPadding23">
+                <li>
+                    现代·朗动
+                </li>
+                <li class="em0_8 productDescribe">
+                    紧凑型,六挡手自一体,自然吸气,4门5座
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--定价与积分-->
+    <ul class="productDetailPriceAndScore aroundPadding23 borderBottom1">
+        <li>
+            商家定价￥10.58-12.78万元
+        </li>
+        <li>
+            赠送0积分
+        </li>
+    </ul>
+    <!--特别信息-->
+    <ul class="productSpecialInfo aroundPadding23 em0_9">
+        <li class="supportRefund">
+            <i class="iconfont icon-tui"></i>支持随时退款
+        </li>
+        <li class="needOrder">
+            <i class="iconfont icon-fou"></i>需要预约哦~
+        </li>
+        <li class="canCash">
+            <i class="iconfont icon-jifen"></i>该商品可使用积分抵现!
+        </li>
+    </ul>
+    <!--位置及联系方式-->
+    <ul class="flexRowBox borderTop4 borderBottom4 aroundPadding23 em0_8 justifyContentSpaceAround productPositionConnect">
+        <li class="productPosition">
+            <h3>兆科4S店</h3>
+            <P>东莞市厚街镇珊美地铁站A出口</P>
+        </li>
+        <li class="flexRowBox productConnect borderLeft1 leftPadding3 alignItemCenter">
+            <i class="iconfont icon-phone"></i>
+            <div class="product" id="productConnectPhone">
+                <a href="tel:13202661126">
+                    <h3 class="color666">联系电话:</h3>
+                    <P class="color252525">13202661126(梁先生)</P>
+                </a>
+            </div>
+        </li>
+    </ul>
+    <!--商品介绍-->
+    <div class="productIntro">
+        <h4 class="leftPadding3 borderBottom1">商品介绍</h4>
+        <ul class="aroundPadding23">
+            <li class="borderBottom4">
+                <img src="../../static/img/car/xiandailangdong/langdong1.jpg" alt="" class="img-response">
+            </li>
+            <li class="borderBottom4">
+                <img src="../../static/img/car/xiandailangdong/langdong2.jpg" alt="" class="img-response">
+            </li>
+            <li class="borderBottom4">
+                <img src="../../static/img/car/xiandailangdong/langdong3.jpg" alt="" class="img-response">
+            </li>
+            <li class="borderBottom4">
+                <img src="../../static/img/car/xiandailangdong/langdong4.jpg" alt="" class="img-response">
+            </li>
+
+        </ul>
+    </div>
+    <!--商品须知-->
+    <div class="productNotice">
+        <h4 class="leftPadding3 borderBottom1">商品须知</h4>
+        <div class="aroundPadding23 em0_8" id="productNoticeTxt">
+
+        </div>
+    </div>
+</section>
+<footer class="em1_4">
+    <ul class="footer prepareBuy">
+        <li class="productCollect flex1 flexColBox justifyContentCenter em0_8">
+            <i class="iconfont icon-collect"></i>
+            <div>收藏</div>
+        </li>
+        <li class="onKeyNav flex1 flexColBox alignItemCenter justifyContentCenter em0_8">
+            <i class="iconfont icon-nav"></i>
+            <div>一键导航</div>
+        </li>
+        <li class="buyVoucher flexRowBox alignItemCenter justifyContentCenter">
+            上传购买凭证
+        </li>
+    </ul>
+</footer>
+<!--模态弹出框-->
+<div id="pop">
+    <div class="pop-box">
+        <h3>提示</h3>
+        <p></p>
+        <span>关闭</span>
+    </div>
+</div>
+
+<script src="../../js/zepto_multiple.js"></script>
+<script>
+    var collect=false;
+    //收藏点击切换
+    $(".productCollect").click(function(){
+        collect=!collect;
+        collect?$(this).addClass("activeColor"):$(this).removeClass("activeColor")
+    });
+    //点击导航
+    $(".onKeyNav").click(function(){
+        console.log(this);
+        location.href="../../smallFeatureHTML/navigation.html";
+    });
+
+    //输入提交提示模态框元素
+    var pop=$("#pop");
+    var p=$("#pop p");
+    var closeBtn=$("#pop span");
+
+    //提示弹出框处理函数
+    function  reminderDeal(txt){
+        p.html(txt);
+        pop.addClass("pop-show");
+    }
+    sessionStorage.setItem("carDetailPage",5);
+
+    //上传购买凭证处理事件
+    $(".buyVoucher").click(function(){
+        if(sessionStorage.getItem("uid")&&sessionStorage.getItem("t")&&sessionStorage.getItem("stateCode")){
+            location.href="carVoucher.html";
+        }else{
+            reminderDeal("请先登录!");
+            closeBtn.text("进入登录页");
+            closeBtn.on("click",function(){
+                location.href="../../loginRegisterHTML/login.html";
+            });
+        }
+    });
+    //点击其他区域关闭弹框
+    $(pop).mouseup(function(e){
+        var _con = $('.pop-box');
+        if(_con != e.target && _con.has(e.target).length === 0){
+            $(this).removeClass("pop-show");
+        }
+    });
+</script>
+</body>
+</html>

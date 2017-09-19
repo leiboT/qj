@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="bookmark" href="../../favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../../static/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <link rel="stylesheet" href="../../css/myCss/feedback.css"/>
+    <title>仟健科技</title>
+    <style>
+        .smallInput{
+            background:#fff;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <!--头部-->
+    <header>
+        <a href="../setting.html" class="iconfont icon-left"></a>
+        意见反馈
+        <div>提交</div>
+    </header>
+    <section class="em1_4 marginTop50 txtLeft">
+        <h4 class="contentTitle em0_9 aroundPadding23">问题和意见</h4>
+        <div class="aroundPadding23">
+            <textarea class="smallInput em0_9" cols="30" rows="10" id="textarea" onfocus="if(value=='请输入不少于15字的描述'){value=''}"
+                      onblur="if (value ==''){value='请输入不少于15字的描述'}">请输入不少于15字的描述</textarea>
+            <div class="txtRight em0_8">不少于15字</div>
+        </div>
+        <h4 class="contentTitle em0_9 aroundPadding23">请提供相关问题的截图和照片</h4>
+        <label for="feedback" class="feedbackImg txtCenter">上传图片</label>
+        <input type="file" id="feedback" class="die"/>
+    </section>
+</body>
+</html>

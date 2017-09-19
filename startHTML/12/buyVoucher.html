@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no"/>
+    <meta name="author" content="web.qianjiantech.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-app-capable" content="yes">
+    <meta name="apple-mobile-app-status-bar-style" content="black">
+    <meta name="description" content="仟健-立足大众生活服务行业，深度挖掘客户需求，整合市场资源，融合分享经济学与倍增学原理，奉开放分享为基本原则，以互利互惠为发展目标，旨在让更多人有房住、有车开">
+    <meta name="keywords" content="购物,积分,房产,特产,汽车,酒店">
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="bookmark" href="../../favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../../static/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <link rel="stylesheet" href="../../css/houseCss/buyVoucher.css"/>
+    <title>仟健科技</title>
+</head>
+<body>
+    <!--头部-->
+    <header class="noRightHeader">
+        <a href="productDetailPage.html" class="iconfont icon-left"></a>
+        上传购买凭证
+    </header>
+    <section class="em1_4 height100 paddingTop50">
+        <ul class="flexRowBox justifyContentSpaceBetween alignItemCenter aroundPadding34">
+            <li class="flexRowBox alignItemCenter em0_9 txtLeft color333">
+                <i class="iconfont icon-picture deepColorIcon em0_9Before"></i>
+                请上传购买凭证
+            </li>
+            <li class="em0_9 colorfff" id="buyVoucherUpload">
+                <canvas id="myCanvas" style="display: none;"></canvas>
+                <label for="buyVoucherInput">上传文件</label>
+                <input type="file" id="buyVoucherInput" style="display: none"/>
+            </li>
+        </ul>
+        <div class="buyVoucherImg">
+
+        </div>
+        <button class="submitConfirmBtn" id="submitCheck">提交审核</button>
+    </section>
+    <!--模态弹出框-->
+    <div id="pop">
+        <div class="pop-box">
+            <h3>提示</h3>
+            <p></p>
+            <span>关闭</span>
+        </div>
+    </div>
+    <script src="../../js/zepto_multiple.js"></script>
+    <script src="../../js/buyVoucher.js"></script>
+</body>
+</html>

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no"/>
+    <meta name="author" content="web.qianjiantech.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-app-capable" content="yes">
+    <meta name="apple-mobile-app-status-bar-style" content="black">
+    <meta name="description" content="仟健-立足大众生活服务行业，深度挖掘客户需求，整合市场资源，融合分享经济学与倍增学原理，奉开放分享为基本原则，以互利互惠为发展目标，旨在让更多人有房住、有车开">
+    <meta name="keywords" content="购物,积分,房产,特产,汽车,酒店">
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <link rel="stylesheet" href="../../static/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <link rel="stylesheet" href="../../css/houseCss/productDetailPage.css"/>
+    <title>仟健科技</title>
+</head>
+<body>
+<!--头部-->
+<header class="noRightHeader">
+    <a href="caterIndex.html" class="iconfont icon-left"></a>
+    商家详情
+</header>
+<section class="em1_4 txtLeft marginTop50">
+    <!--产品图片及信息-->
+    <div class="rv">
+        <div class="productDetailImgBox">
+            <ul class="productDetailImg">
+                <li>
+                    <img src="../../static/img/cater/dian2.jpg" alt="" class="img-response"/>
+                </li>
+                <li>
+                    <img src="../../static/img/cater/dian2.jpg" alt="" class="img-response"/>
+                </li>
+            </ul>
+            <ul class="productDetailInfoBox ab txtLeft aroundPadding23">
+                <li>
+                    东莞特产店
+                </li>
+                <li class="em0_8 productDescribe">
+                    东莞市虎门龙眼广场附近
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!--商家商品及商家介绍-->
+    <ul class="flexRowBox txtCenter borderTop4 borderBottom4 topBottomPadding2" id="shopProAndInfo">
+        <li class="flex1 borderRight1 activeColor">商品</li>
+        <li class="flex1">商家介绍</li>
+    </ul>
+    <!--商家商品及介绍详情-->
+    <div id="shopProAndInfoDetail">
+        <ul class="productContainer leftRightPadding3">
+            <li class="productBox">
+                <div class="productPicture">
+                    <img src="../../static/img/cater/5.jpg" alt=""/>
+                </div>
+                <ul class="productDescription">
+                    <li class="productName">石碣龙眼</li>
+                    <li class="productLook">石碣龙眼</li>
+                    <li class="originalPrice">赠送积分:50</li>
+                    <li class="productPrice">
+                        <div class="presentPrice">￥66</div>
+                        <div class="sale">已售：0</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="productBox">
+                <div class="productPicture">
+                    <img src="../../static/img/cater/6.jpg" alt=""/>
+                </div>
+                <ul class="productDescription">
+                    <li class="productName">大岭山烧鹅</li>
+                    <li class="productLook">大岭山烧鹅</li>
+                    <li class="originalPrice">赠送积分:70</li>
+                    <li class="productPrice">
+                        <div class="presentPrice">￥88</div>
+                        <div class="sale">已售：0</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="productBox">
+                <div class="productPicture">
+                    <img src="../../static/img/cater/7.jpg" alt=""/>
+                </div>
+                <ul class="productDescription">
+                    <li class="productName">虎门麻虾</li>
+                    <li class="productLook">虎门麻虾</li>
+                    <li class="originalPrice">赠送积分:130</li>
+                    <li class="productPrice">
+                        <div class="presentPrice">￥150</div>
+                        <div class="sale">已售：0</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="productBox">
+                <div class="productPicture">
+                    <img src="../../static/img/cater/8.jpg" alt=""/>
+                </div>
+                <ul class="productDescription">
+                    <li class="productName">大朗荔枝</li>
+                    <li class="productLook">大朗荔枝</li>
+                    <li class="originalPrice">赠送积分:70</li>
+                    <li class="productPrice">
+                        <div class="presentPrice">￥90</div>
+                        <div class="sale">已售：0</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="aroundPadding23 die">
+            <li class="topBottomPadding2"><b>东莞特产店</b></li>
+            <li style="text-indent: 2em">东莞特产店位于东莞市虎门龙眼广场附近，销售产品主要是以地道的东莞特产为主，其中的虎门麻虾尤为出名！</li>
+            <li class="topBottomPadding2">物美价廉是这家店的宗旨，相信在这里每个人都能买到正宗的东莞特产！</li>
+        </ul>
+    </div>
+</section>
+
+<!--模态弹出框-->
+<div id="pop">
+    <div class="pop-box">
+        <h3>提示</h3>
+        <p></p>
+        <span>关闭</span>
+    </div>
+</div>
+
+<script src="../../js/zepto_multiple.js"></script>
+<script>
+    //    切换商品和商家介绍
+    $("#shopProAndInfo>li").click(function(){
+        $(this).addClass("activeColor").siblings().removeClass("activeColor");
+        console.log($(this).index());
+        $("#shopProAndInfoDetail>ul").eq($(this).index()).addClass("show").siblings().addClass("die").removeClass("show");
+    });
+
+
+    $("#shopProAndInfoDetail>ul:first-child>li").click(function(){
+        console.log($(this).index());
+        var i=$(this).index()+1;
+        location.href="cpd2"+i+".html";
+    })
+</script>
+</body>
+</html>

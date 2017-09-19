@@ -1,0 +1,12 @@
+#buyVoucherUpload{
+    min-width: 26%;
+    background-color: #F55F62;
+    border-radius: 4px;
+}
+.buyVoucherImg{
+    margin: 3%  0 10%;
+    display: inline-block;
+    width: 80%;
+    height: 40%;
+    background-color: #ddd;
+}

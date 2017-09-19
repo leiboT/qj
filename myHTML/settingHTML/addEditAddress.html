@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <meta content="telephone=no" name="format-detection">
+    <meta content="email=no" name="format-detection">
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="bookmark" href="../../favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../../static/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <link rel="stylesheet" href="../../css/myCss/LArea.css"/>
+    <title>仟健科技</title>
+    <style>
+        body{
+            background-color: #eee;
+        }
+        ::-webkit-input-placeholder{color: #999;}
+        :-moz-placeholder {color: #999;}
+        ::-moz-placeholder{color: #999;}
+        :-ms-input-placeholder{color: #999;}
+        #userAddressInfo{
+            background-color: #fff;
+        }
+        #userAddressInfo input{
+            font-size: 1em;
+            width: 100%;
+            padding: 4% 0;
+            border-bottom: 1px solid #ddd;
+        }
+        #userAddressInfo>li:nth-child(3){
+            padding: 2% 0;
+            border-bottom: 1px solid #ddd;
+        }
+        #userAddressInfo [class*="icon-"]::before,#detailAddress{
+            color: #999;
+        }
+        #shippingAddressBtn{
+            width: 94%;
+            padding: 2% 0;
+            margin-top: 1em;
+            color: #fff;
+            font-size: 1.4em;
+            border-radius: 4px;
+            background-color: #F55F62;
+        }
+
+        /*模态框*/
+        #selPop{
+            margin-top: 0;
+            z-index: 1500;
+        }
+        /*省市区选择框*/
+        #districtSelectBox{
+            width: 90%;
+            height: 50%;
+            min-height: 150px;
+            background-color: #fff;
+            position: absolute;
+            top: 25%;
+            left: 5%;
+            z-index: 2000;
+        }
+        #districtSelectBox>p{
+            height: 20%;
+            color: #6BB7D4;
+            border-bottom: 2px solid #6BB7D4;
+        }
+        .districtSelectEdit{
+            height: 20%;
+        }
+        .districtSelectEdit>li{
+            width: 50%;
+        }
+        /*区域选择容器*/
+        #districtSelectContainer{
+            height: 60%;
+        }
+        #districtSelectContainer>ul{
+            flex: 1;
+            height: 100%;
+        }
+        #districtSelectContainer>ul>li{
+            height: 33.3%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .userSelectAreaBox{
+            max-width: 70%;
+            justify-content: flex-end;
+        }
+        .userSelectArea{
+            white-space: nowrap;
+        }
+
+        /*输入提示盒子*/
+        #inputWarnBox{
+            width: 50%;
+            position: absolute;
+            bottom: 0;
+            left: 25%;
+            color: #fff;
+            background-color: #000;
+            display: none;
+            transition: all ;
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+<header class="noRightHeader">
+    <a href="shippingAddress.html" class="iconfont icon-left"></a>
+    <!--新增收货地址-->
+</header>
+<!--新增收货地址信息表单-->
+<form class="marginTop50" id="shippingAddressForm">
+    <ul class="em1_3 leftRightPadding3 rv" id="userAddressInfo">
+        <li>
+            <input type="text" placeholder="收货人姓名" name="name" id="shippingName" value=""/>
+        </li>
+        <li>
+            <input type="number" placeholder="手机号码" name="phone" id="shippingPhone" value=""/>
+        </li>
+        <li class="flexRowBox justifyContentSpaceBetween alignItemCenter color000" id="areaContainer" data-value="">
+            <div>
+                省、市、区
+            </div>
+            <div class="flex1 em0_9 flexRowBox alignItemCenter userSelectAreaBox">
+                <p class="userSelectArea overflowAuto"></p>
+                <i class="iconfont icon-right"></i>
+            </div>
+            <input id="value1" type="hidden" value="">
+        </li>
+        <!--<li class="flexRowBox justifyContentSpaceBetween alignItemCenter color000">-->
+            <!--街道-->
+            <!--<i class="iconfont icon-right"></i>-->
+        <!--</li>-->
+        <!--<li>-->
+            <!--<input type="number" placeholder="邮政编码"/>-->
+        <!--</li>-->
+        <li class="topPadding2">
+                <textarea name="address" id="detailAddress" class="width100 em1" cols="30" rows="5" onfocus="if(value=='详细地址'){value=''}" onblur="if (value ==''){value='详细地址'}" value="">详细地址</textarea>
+        </li>
+        <li id="inputWarnBox" class="em0_8">
+            <ul>
+                <li data-t="1"></li>
+                <li data-t="2"></li>
+                <li data-t="3"></li>
+                <li data-t="4"></li>
+            </ul>
+        </li>
+    </ul>
+    <button id="shippingAddressBtn">保存</button>
+</form>
+<!--模态弹出框-->
+<div id="pop">
+    <div class="pop-box">
+        <h3>提示</h3>
+        <p>确认删除此收货地址吗?</p>
+        <span>关闭</span>
+    </div>
+</div>
+<!--省市区弹出选择-->
+<!--<div id="districtSelectBox" class="em1_4">-->
+    <!--<p class="txtLeft flexRowBox alignItemCenter leftPadding3">请选择区域</p>-->
+    <!--&lt;!&ndash;区域选择容器&ndash;&gt;-->
+    <!--<div id="districtSelectContainer" class="overflowAuto flexRowBox">-->
+        <!--<ul>-->
+            <!--<li>北京</li>-->
+            <!--<li>天津</li>-->
+            <!--<li>河北省</li>-->
+        <!--</ul>-->
+        <!--<ul>-->
+            <!--<li>北京</li>-->
+            <!--<li>天津</li>-->
+            <!--<li>河北省</li>-->
+        <!--</ul>-->
+        <!--<ul>-->
+            <!--<li>北京</li>-->
+            <!--<li>天津</li>-->
+            <!--<li>河北省</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--<ul class="flexRowBox justifyContentSpaceAround districtSelectEdit borderTop1">-->
+        <!--<li class="flexRowBox justifyContentCenter alignItemCenter borderRight1">取消</li>-->
+        <!--<li class="flexRowBox justifyContentCenter alignItemCenter">确定</li>-->
+    <!--</ul>-->
+<!--</div>-->
+<script src="../../js/myJs/LAreaData1.js"></script>
+<script src="../../js/myJs/LAreaData2.js"></script>
+<script src="../../js/myJs/LArea.js"></script>
+<script src="../../js/zepto_multiple.js"></script>
+<script src="../../js/myJs/shippingAddress.js"></script>
+<script>
+    var area=new LArea();
+    area.init({
+        'trigger': '#areaContainer', //触发选择控件的文本框，同时选择完毕后name属性输出到该位置
+        'targetExport': '.userSelectArea',
+        'valueTo': '#value1', //选择完毕后id属性输出到该位置
+        'keys': {
+            id: 'id',
+            name: 'name'
+        }, //绑定数据源相关字段 id对应valueTo的value属性输出 name对应trigger的value属性输出
+        'type': 1, //数据源类型
+        'data': LAreaData //数据源
+    });
+    if(sessionStorage.getItem("editAddress"))
+        area.value=JSON.parse(sessionStorage.getItem("shippingAddress"))[sessionStorage.getItem("addressId")].value.split(",");
+    sessionStorage.getItem("editAddress")?$("header").children("a").after("编辑收货地址"):$("header").children("a").after("新增收货地址")
+</script>
+</body>
+</html>

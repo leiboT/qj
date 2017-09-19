@@ -1,0 +1,70 @@
+/*产品图片及信息*/
+.productDetailImgBox{
+    height: 180px;
+    overflow-x: auto;
+}
+.productDetailImg{
+    height: inherit;
+    width: 200%;
+}
+.productDetailImg>li{
+    height: inherit;
+    float: left;
+    width: 50%;
+}
+.productDetailInfoBox{
+    width: 100%;
+    color: #fff;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(134,122,125,0.8);
+}
+/*定价与积分*/
+.productDetailPriceAndScore{
+    display: flex;
+    justify-content: space-between;
+    color: #F55F62;
+}
+/*特别信息*/
+.productSpecialInfo i::before{
+    font-size: 0.9em;
+}
+.supportRefund{
+    color: #00A99D;
+}
+.supportRefund>i::before{
+    color: #00A99D;
+}
+.needOrder{
+    color: #00A99D;
+}
+.needOrder>i::before{
+    color: #00A99D;
+}
+.canCash{
+    color: #F55F62;
+}
+.canCash>i::before{
+    color: #F55F62;
+}
+/*位置及联系方式*/
+.productConnect>i::before{
+    color: #00816A;
+}
+/*商品介绍*/
+.productIntro>ul>li{
+
+}
+/*商品须知*/
+.productNotice>div{
+    color: #F55F62;
+}
+/*底部*/
+.prepareBuy div{
+    font-size: 1em;
+}
+.buyVoucher{
+    width: 60%;
+    background-color: #EA8200;
+    color: #fff;
+}
