@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/css/base.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/business.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/cater/cater.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/houseCss/buyVoucher.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/houseCss/houseClass.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/houseCss/houseIndex.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/houseCss/productDetailPage.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/myCss/balanceIntegral.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/myCss/changePwd.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/myCss/feedback.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/position.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/css/search.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/business.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/businessJs/shopsEnter.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/buyVoucher.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/cater/cater.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/houseJs/houseClass.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/houseJs/houseIndex.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/myJs/balanceScore.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/myJs/myCode.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/myJs/myPromotion.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/myJs/myShops.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/myJs/setting.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/myJs/shippingAddress.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/position.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/productDetailPage.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/start.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/data/cityList.json" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/static/data/hotCityList.json" charset="UTF-8" />
+  </component>
+</project>

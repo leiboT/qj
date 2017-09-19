@@ -1,0 +1,117 @@
+html{
+    height: 100%;
+}
+.bodyFlex{
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0;
+}
+.showScroll{
+    overflow: auto;
+}
+.classifyNav>div{
+    display: none;
+}
+.classifyNav>div>ul{
+    width: 100%;
+}
+.classifyNav>div>ul>li{
+    padding: 2% 0;
+}
+.classifyNav>.childClassifyBox:nth-child(2) i::before{
+    left: 10%;
+}
+.classifyNav>.childClassifyBox:nth-child(3) i::before{
+    left: 45%;
+}
+.classifyNav>.childClassifyBox:nth-child(4) i::before{
+    left: 80%;
+}
+.classifyNavBox{
+    color: #4D4D4D;
+    border-bottom: 1px solid #F0EEEE;
+    display: flex;
+    justify-content: space-around;
+    height: 40px;
+    line-height: 40px;
+}
+.classifyNavBox>li{
+    flex: 1;
+    display: flex;justify-content: center;
+}
+.classifyNavBox>li:not(:last-child){
+    border-right: 1px solid #F0EEEE;
+}
+.borderRight{
+    border-right: 1px solid #F0EEEE;
+}
+.borderBottom{
+    border-bottom: 1px solid #F0EEEE;
+}
+.classifyNavBox i::before{
+    color: #4D4D4D;
+}
+
+/*每个大分类的样式*/
+.childClassifyBox{
+    width: 100%;
+    background-color: #fff;
+    top: 120%;
+    z-index: 1000;
+}
+.childClassifyItem{
+    width: 30%;
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.childClassifyItem>li{
+    padding: 3.4% 0;
+    border-bottom: 1px solid #F0EEEE;
+}
+.markTriangle::before{
+    position: absolute;
+    top: -20px;
+}
+.childName{
+    max-height: 300px;
+    overflow-y: scroll;
+}
+.childName>li{
+    padding: 2% 0;
+    border-bottom: 1px solid #F0EEEE;
+    border-left: 1px solid #F0EEEE;
+}
+/*地区分类样式*/
+/*.districtClassify{*/
+    /*display: none;*/
+/*}*/
+/*.districtClassify .markTriangle::before{*/
+    /*left: 10%;*/
+/*}*/
+/*价格分类样式*/
+/*.priceClassify{*/
+    /*display: none;*/
+/*}*/
+/*.priceClassify .markTriangle::before{*/
+    /*left: 45%;*/
+/*}*/
+/*面积分类样式*/
+/*.areaClassify{*/
+    /*display: none;*/
+/*}*/
+/*.areaClassify .markTriangle::before{*/
+    /*left: 80%;*/
+/*}*/
+/*.areaClassify>ul{*/
+    /*width: 100%;*/
+/*}*/
+/*.areaClassify>ul>li{*/
+    /*padding: 2% 0;*/
+/*}*/
+/*搜索结果样式*/
+.searchResult{
+    padding: 3% 0 3% 5% ;
+    background-color: #F2F2F2;
+}

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-cn" class="settingHtmlBody">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no"/>
+    <meta name="author" content="web.qianjiantech.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-app-capable" content="yes">
+    <meta name="apple-mobile-app-status-bar-style" content="black">
+    <meta name="description" content="仟健-立足大众生活服务行业，深度挖掘客户需求，整合市场资源，融合分享经济学与倍增学原理，奉开放分享为基本原则，以互利互惠为发展目标，旨在让更多人有房住、有车开">
+    <meta name="keywords" content="购物,积分,房产,特产,汽车,酒店">
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="bookmark" href="../favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../static/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="../css/base.css"/>
+    <link rel="stylesheet" href="../css/my.css"/>
+    <title>仟健科技</title>
+</head>
+<body class="settingHtmlBody">
+    <!--头部-->
+    <header class="noRightHeader">
+        <a href="../my.html" class="iconfont icon-left"></a>
+        用户设置
+    </header>
+    <section class="marginTop50">
+        <ul id="settingInfo">
+            <li class="borderBottom1px">
+                <div class="width100 txtLeft rv">
+                    头像
+                    <label for="headPortraitFile" class="inlineBlock width100 height100 ab" id="headPortrait"></label>
+                    <div class="flexCenter rt">
+                        <div class="userPic" id="uPic">
+                            <img src="../static/img/login/avatar.png" alt="头像" class="img-response"/>
+                        </div>
+                        <i class="iconfont icon-right"></i>
+                        <canvas id="myCanvas" class="die"></canvas>
+                        <input type="file" id="headPortraitFile" class="die"/>
+                    </div>
+                </div>
+            </li>
+            <li class="borderBottom1px">
+                <a href="settingHTML/editNickname.html" class="width100 flexRowBox justifyContentSpaceBetween color666">
+                    称呼
+                    <div class="flexCenter">
+                        <div class="userInfoColor" id="nikeName">
+                            先生/女士
+                        </div>
+                        <i class="iconfont icon-right"></i>
+                    </div>
+                </a>
+            </li>
+            <li class="borderBottom4px">
+                手机号
+                <div class="flexCenter">
+                    <div class="userInfoColor" id="uPhone">
+                        xxxxxxx
+                    </div>
+                    <i class="iconfont icon-right"></i>
+                </div>
+            </li>
+            <li class="borderBottom1px">
+                <a href="settingHTML/changePassword.html" class="width100 flexRowBox justifyContentSpaceBetween color666">
+                    修改密码
+                    <i class="iconfont icon-right"></i>
+                </a>
+            </li>
+            <li class="borderBottom1px">
+                <a href="settingHTML/shippingAddress.html" class="width100 flexRowBox justifyContentSpaceBetween color666">
+                    收货地址
+                    <i class="iconfont icon-right"></i>
+                </a>
+            </li>
+            <li class="borderBottom4px">
+                账号绑定
+                <i class="iconfont icon-right"></i>
+            </li>
+            <li class="borderBottom1px">
+                <a href="settingHTML/Feedback.html" class="width100 flexRowBox justifyContentSpaceBetween color666">
+                    意见反馈
+                    <i class="iconfont icon-right"></i>
+                </a>
+            </li>
+            <li class="borderBottom1px">
+                <a href="settingHTML/systemInform.html" class="width100 flexRowBox justifyContentSpaceBetween color666">
+                    系统通知
+                    <i class="iconfont icon-right"></i>
+                </a>
+            </li>
+            <li class="borderBottom1px">
+                <a href="settingHTML/aboutUs.html" class="width100 flexRowBox justifyContentSpaceBetween color666">
+                    关于我们
+                    <i class="iconfont icon-right"></i>
+                </a>
+            </li>
+        </ul>
+        <button id="logOutBtn">退出登录</button>
+    </section>
+    <!--模态弹出框-->
+    <div id="pop">
+        <div class="pop-box">
+            <h3>提示</h3>
+            <p>确定退出该账号?</p>
+            <div class="settingWarn">
+                <span class="loginOutCancel  flexRowBox alignItemCenter justifyContentCenter">取消</span>
+                <span class="loginOutConfirm  flexRowBox alignItemCenter justifyContentCenter">确定</span>
+            </div>
+        </div>
+    </div>
+    <script src="../js/zepto_multiple.js"></script>
+    <script src="../js/myJs/setting.js"></script>
+</body>
+</html>

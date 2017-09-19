@@ -1,0 +1,306 @@
+/******提示登录******/
+#loginIn{
+    background-color: #F56064;
+}
+div.loginIn-img{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-top: 2%;
+}
+div.loginIn-info{
+    color: #fff;
+    padding: 3%;
+    font-size: 1.4em;
+}
+.loginIn-info>a{
+    font-size: 1em;
+}
+/******主体******/
+/*余额积分*/
+#balance-integral{
+    border-top: 10px solid #F1F1F1;
+    border-bottom: 10px solid #F1F1F1;
+}
+#balance-integral>li{
+    position: relative;
+    height: 40px;
+    line-height: 40px;
+}
+#balance-integral>li>a{
+    color: #666;
+}
+#balance-integral>li p{
+    height: 100%;
+    padding-left: 8%;
+    text-align: left;
+    font-size: 1.2em;
+}
+li.balance{
+    border-bottom: 1px solid #F2F2F2;
+}
+#balance-integral i{
+    position: absolute;
+    right: 4%;
+    top: 0;
+    height: 100%;
+}
+#balance-integral i::before{
+    color: #BBB;
+}
+/*我的导航列表*/
+#my-nav>li{
+    float: left;
+    width: 33.3%;
+}
+#my-nav>li:nth-child(3n){
+    border-bottom: 1px solid #F2F2F2;
+}
+#my-nav>li:not(:nth-child(3n)){
+    border-right: 1px solid #F2F2F2;
+    border-bottom: 1px solid #F2F2F2;
+}
+#my-nav a{
+    min-width: 60px;
+    color: #7E7E7E;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    font-size: 1em;
+    padding: 10%;
+}
+#my-nav img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    padding: 5% 15%;
+}
+/*二维码盒子弹出框*/
+/*#codeBg{*/
+    /*position: absolute;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*z-index: 1000;*/
+    /*background-color: rgba(117,117,117,0.5);*/
+    /*display: none;*/
+/*}*/
+/*#codeBg i{*/
+    /*position: absolute;*/
+    /*top: -6px;*/
+    /*right: -1px;*/
+/*}*/
+/*#codeBg i::before{*/
+    /*color: #000;*/
+/*}*/
+/*div.codeBox{*/
+    /*width: 200px;*/
+    /*height: 200px;*/
+    /*position: absolute;*/
+    /*background-color: #Fff;*/
+    /*margin: auto;*/
+    /*top: 0;*/
+    /*right: 0;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+/*}*/
+/*.codeBg-show{*/
+    /*display: block !important;*/
+/*}*/
+/*媒体查询 匹配不同尺寸*/
+
+@media screen and (max-width: 300px){
+    #my-nav{
+        font-size: 1.2em;
+    }
+}
+/*@media screen and (min-width: 370px){*/
+    /*#my-nav a{*/
+        /*font-size: 1.2em;*/
+    /*}*/
+/*}*/
+/*@media screen and (min-width: 400px){*/
+    /*#my-nav a{*/
+        /*font-size: 1.3em;*/
+    /*}*/
+/*}*/
+@media screen and (min-height: 640px){
+    #balance-integral>li{
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.25em;
+    }
+}
+@media screen and (min-height: 660px){
+    #balance-integral>li{
+        height: 60px;
+        line-height: 60px;
+        font-size: 1.3em;
+    }
+    div.loginIn-img{
+        margin-top: 4%;
+    }
+}
+/*@media screen and (min-height: 700px){*/
+    /*#my-nav>li{*/
+        /*padding: 4% 4%;*/
+    /*}*/
+/*}*/
+@media screen and (max-height: 600px){
+    div.loginIn-img{
+        transform: scale(0.9);
+    }
+}
+@media screen and (min-height:800px){
+    div.loginIn-img{
+        transform: scale(1.2);
+    }
+}
+/*@media screen and (min-height:996px){*/
+    /*body{*/
+        /*font-size: 14px;*/
+    /*}*/
+    /*#store-manage{*/
+        /*height: 70px;*/
+        /*line-height: 70px;*/
+    /*}*/
+/*}*/
+/*@media screen and (min-height:996px){*/
+    /*body{*/
+        /*font-size: 15px;*/
+    /*}*/
+    /*#store-manage{*/
+        /*height: 100px;*/
+        /*line-height: 100px;*/
+    /*}*/
+    /*#balance-integral{*/
+        /*border-top: 14px solid #F1F1F1;*/
+        /*border-bottom: 14px solid #F1F1F1;*/
+    /*}*/
+    /*#balance-integral>li{*/
+        /*height: 100px;*/
+        /*line-height: 100px;*/
+
+    /*}*/
+    /*div.loginIn-img{*/
+        /*transform: scale(1.5);*/
+        /*margin-top: 6%;*/
+    /*}*/
+/*}*/
+/*我的二维码*/
+.codeWarnTitle{
+    font-size: 1.4em;
+    margin: 5% 0;
+}
+#codeBg{
+    display: inline-block;
+    width: 90%;
+    height: 50%;
+    min-height: 250px;
+}
+
+/*我的推广*/
+.noPaddingBottom{
+    padding-bottom: 0;
+}
+#pro-list{
+    height: 100%;
+}
+#pro-list>li:not(:last-child){
+    height: 10%;
+    text-align: left;
+    border-bottom: 1px solid #f2f2f2;
+    padding: 2% 0 2% 4%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+div.pro-info{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div.pro-img{
+    width: 40px;
+    margin-right: 4%;
+}
+/*用户设置界面*/
+#settingInfo [class*='icon-']::before{
+    color: #999;
+    font-size: 1em;
+}
+#settingInfo{
+    margin-bottom: 10%;
+    font-size: 1.1em;
+    overflow: hidden;
+}
+#settingInfo>li{
+    padding: 2% 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.3em;
+}
+.userInfoColor{
+    color: #999;
+}
+.flexCenter{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.userPic{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+@media screen and (min-height: 700px) {
+    #settingInfo>li{
+        height: 50px;
+        line-height: 50px;
+    }
+    .userPic{
+        width: 40px;
+        height: 40px;
+    }
+}
+.borderBottom1px{
+    border-bottom: 1px solid #f0f0f0;
+}
+.borderBottom4px{
+    border-bottom: 4px solid #f0f0f0;
+}
+#logOutBtn{
+    width: 71%;
+    height: 40px;
+    line-height: 40px;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 18px;
+    background-color: #f56064;
+    /*letter-spacing: 10px;*/
+    cursor: pointer;
+}
+/*设置页提示框*/
+.settingWarn{
+    height: 35%;
+    background-color: #F56064;
+    color: #fff;
+    border-radius: 0 0 12px 12px;
+    border-top: 1px solid #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.settingWarn>span{
+    height: 100%;
+    flex: 1;
+}
+.loginOutCancel{
+    border-right: 1px solid #ddd;
+}

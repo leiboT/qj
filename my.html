@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no"/>
+    <meta name="author" content="web.qianjiantech.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-app-capable" content="yes">
+    <meta name="apple-mobile-app-status-bar-style" content="black">
+    <meta name="description" content="仟健-立足大众生活服务行业，深度挖掘客户需求，整合市场资源，融合分享经济学与倍增学原理，奉开放分享为基本原则，以互利互惠为发展目标，旨在让更多人有房住、有车开">
+    <meta name="keywords" content="购物,积分,房产,特产,汽车,酒店">
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="bookmark" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="static/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet" href="css/my.css"/>
+    <title>仟健科技</title>
+</head>
+<body>
+    <!--头部-->
+    <header class="noLeftHeader">
+        <!--<a href="#" class="iconfont icon-left"></a>-->
+        会员中心
+        <a href="myHTML/setting.html" class="iconfont icon-setting" id="setting"></a>
+    </header>
+    <!--登录-->
+    <div id="loginIn" class="marginTop50">
+        <div class="loginIn-img">
+            <img src="static/img/login/avatar.png" alt="" class="img-response"/>
+        </div>
+        <div class="loginIn-info">
+            <a href="loginRegisterHTML/login.html">请点击登录</a>
+        </div>
+    </div>
+    <!--主体-->
+    <section class="marginBottom50">
+        <!--余额积分-->
+        <ul id="balance-integral">
+            <li class="balance">
+                <a href="myHTML/myBalance.html">
+                    <p>余额：0.00元</p>
+                    <i class="iconfont icon-right"></i>
+                </a>
+            </li>
+            <li class="integral">
+                <a href="myHTML/myIntegral.html">
+                    <p>积分：0分</p>
+                    <i class="iconfont icon-right"></i>
+                </a>
+            </li>
+        </ul>
+        <!--我的导航列表-->
+        <ul id="my-nav" class="clearFloat em1_3">
+            <li>
+                <a href="myHTML/myCode.html" class="myCode">
+                    <img src="static/img/my/code.png" alt=""/>
+                    我的二维码
+                </a>
+            </li>
+            <li>
+                <a href="#" class="myOrder">
+                    <img src="static/img/my/order.png" alt=""/>
+                    我的订单
+                </a>
+            </li>
+            <li>
+                <a href="#" class="myCollection">
+                    <img src="static/img/my/collect.png" alt=""/>
+                    我的收藏
+                </a>
+            </li>
+            <li>
+                <a href="myHTML/myShops.html" class="myStore">
+                    <img src="static/img/my/store.png" alt=""/>
+                    我的商家
+                </a>
+            </li>
+            <li>
+                <a href="myHTML/myPromotion.html" class="myPromotion">
+                    <img src="static/img/my/generalize.png" alt=""/>
+                    我的推广
+                </a>
+            </li>
+            <li>
+                <a href="#" class="callService">
+                    <img src="static/img/my/service.png" alt=""/>
+                    联系客服
+                </a>
+            </li>
+        </ul>
+    </section>
+    <!--底部-->
+    <footer id="footer" class="footer">
+        <a href="start.html">
+            <i class="iconfont icon-home"></i>
+            <div>首页</div>
+        </a>
+        <a href="business.html">
+            <i class="iconfont icon-store"></i>
+            <div>商家</div>
+        </a>
+        <a href="my.html"  class="footerSelect">
+            <i class="iconfont icon-person"></i>
+            <div>我的</div>
+        </a>
+    </footer>
+    <!--模态弹出框-->
+    <div id="pop">
+        <div class="pop-box">
+            <h3>提示</h3>
+            <p></p>
+            <span>关闭</span>
+        </div>
+    </div>
+    <script src="js/zepto_multiple.js"></script>
+    <script src="js/my.js"></script>
+</body>
+</html>

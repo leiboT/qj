@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="stylesheet" href="../../static/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=6d2d824fe7994e8d876f3ee208fd3e6d&plugin=AMap.CitySearch"></script>
+    <title>仟健科技</title>
+</head>
+<body class="bodyFlex">
+<!--分类模态框-->
+<div id="selPop"></div>
+<!--头部-->
+<header>
+    <a href="../../start.html" class="iconfont icon-left"></a>
+    酒店
+    <!--地理位置-->
+    <div class="address em0_8">
+
+    </div>
+</header>
+<!--分类导航-->
+<nav class="classifyNav rv em1_4 marginTop50">
+    <ul class="classifyNavBox">
+        <li class="">
+            地区
+            <i class="iconfont icon-arrowdownb"></i>
+        </li>
+        <li>
+            价格星级
+            <i class="iconfont icon-arrowdownb"></i>
+        </li>
+        <li>
+            其他
+            <i class="iconfont icon-arrowdownb"></i>
+        </li>
+    </ul>
+    <!--分类盒子-->
+    <div class="childClassifyBox ab">
+        <div class="rv flexRowBox justifyContentSpaceBetween">
+            <i class="iconfont icon-trianglet markTriangle"></i>
+            <ul class="childClassifyItem">
+                <li class="activeColor">地区</li>
+                <li>地铁</li>
+            </ul>
+            <div class="flex1 em0_9">
+                <ul class="childName">
+                    <li class="activeColor" data-classifyid="0">不限</li><li data-classifyid="4">南城区 </li><li data-classifyid="5">东城区</li><li data-classifyid="6">厚街镇</li><li data-classifyid="7">虎门</li><li data-classifyid="8">长安</li></ul>
+                <ul class="childName die">
+                    <li class="activeColor">不限</li>
+                    <li>1号线</li>
+                    <li>2号线</li>
+                    <li>3号线</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="childClassifyBox ab">
+        <div class="rv flexRowBox justifyContentSpaceBetween">
+            <i class="iconfont icon-trianglet markTriangle"></i>
+            <ul class="childClassifyItem">
+                <li class="activeColor">价格/晚</li>
+                <li>星级</li>
+            </ul>
+            <div class="flex1 em0_9">
+                <ul class="childName">
+                    <li class="activeColor" data-classifyid="0">不限</li><li>50元以下</li><li>50-100元</li><li>100-150元</li><li>150-200元</li><li>200-250元</li><li>250-300元</li><li>300元以上</li></ul>
+                <ul class="childName die">
+                    <li class="activeColor">不限</li>
+                    <li>经济</li><li>三星舒适</li><li>四星高档</li><li>五星豪华</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="childClassifyBox ab">
+        <div class="rv flexRowBox justifyContentSpaceBetween">
+            <i class="iconfont icon-trianglet markTriangle"></i>
+            <ul class="childClassifyItem borderRight1">
+                <li class="activeColor">房型</li>
+                <li>早餐</li>
+                <li>主题</li>
+            </ul>
+            <div class="flex1 em0_9">
+                <ul class="childName">
+                    <li class="activeColor">不限</li>
+                    <li>单人间(单床)</li>
+                    <li>单人间(大床)</li>
+                    <li>多人间(大床)</li>
+                    <li>多人间(双床)</li>
+                </ul>
+                <ul class="childName die">
+                    <li class="activeColor">不限</li>
+                    <li>不含早</li>
+                    <li>含早</li>
+                </ul>
+                <ul class="childName die">
+                    <li class="activeColor">不限</li>
+                    <li>钟点房</li>
+                    <li>公寓</li>
+                    <li>亲子</li>
+                    <li>情侣</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</nav>
+<!--搜索结果-->
+<div class="searchResult txtLeft">
+    共5个结果
+</div>
+<!--商品主体-->
+<section class="txtLeft showScroll">
+    <ul class="productContainer">
+        <li class="productBox">
+            <div class="productPicture">
+                <img src="../../static/img/hotel/sanhe/sanhe.jpg" alt=""/>
+            </div>
+            <ul class="productDescription">
+                <li class="productName">三和概念酒店</li>
+                <li class="productLook">四星高档性/含早/WIFI/有窗/亲子,情侣</li>
+                <li class="productPrice">
+                    <div class="presentPrice">￥350起</div>
+                    <div class="originalPrice">￥450起</div>
+                    <div class="sale">已售：0</div>
+                </li>
+            </ul>
+        </li>
+        <li class="productBox">
+            <div class="productPicture">
+                <img src="../../static/img/hotel/dihaohuayuan/dihaohuayuan.jpg" alt=""/>
+            </div>
+            <ul class="productDescription">
+                <li class="productName">东莞帝豪花园酒店</li>
+                <li class="productLook">五星豪华型/含早/WIFI/有窗/亲子,情侣</li>
+                <li class="productPrice">
+                    <div class="presentPrice">￥500起</div>
+                    <div class="originalPrice">￥600起</div>
+                    <div class="sale">已售：0</div>
+                </li>
+            </ul>
+        </li>
+        <li class="productBox">
+            <div class="productPicture">
+                <img src="../../static/img/hotel/shengda/shengda.jpg" alt=""/>
+            </div>
+            <ul class="productDescription">
+                <li class="productName">圣达酒店</li>
+                <li class="productLook">三星舒适性/不含早/WIFI/钟点,亲子,情侣</li>
+                <li class="productPrice">
+                    <div class="presentPrice">￥200起</div>
+                    <div class="originalPrice">￥250起</div>
+                    <div class="sale">已售：0</div>
+                </li>
+            </ul>
+        </li>
+        <li class="productBox">
+            <div class="productPicture">
+                <img src="../../static/img/hotel/chengzi/chengzi.jpg" alt=""/>
+            </div>
+            <ul class="productDescription">
+                <li class="productName">橙子酒店</li>
+                <li class="productLook">三星舒适性/不含早/有窗/钟点,亲子,情侣</li>
+                <li class="productPrice">
+                    <div class="presentPrice">￥289起</div>
+                    <div class="originalPrice">￥350起</div>
+                    <div class="sale">已售：0</div>
+                </li>
+            </ul>
+        </li>
+        <li class="productBox">
+            <div class="productPicture">
+                <img src="../../static/img/hotel/gongyu/gongyu.jpg" alt=""/>
+            </div>
+            <ul class="productDescription">
+                <li class="productName">爱物公寓</li>
+                <li class="productLook">经济型/不含早/有窗/钟点,公寓</li>
+                <li class="productPrice">
+                    <div class="presentPrice">￥120起</div>
+                    <div class="originalPrice">￥150起</div>
+                    <div class="sale">已售：0</div>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</section>
+<script src="../../js/zepto_multiple.js"></script>
+<script>
+//    //判断android or ios
+//    var u = navigator.userAgent;
+//    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+//    var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+//
+//    isiOS&&$(".productPicture img").height("auto");
+
+    $(".address").html(`
+                        <a href="../../smallFeatureHTML/position.html">
+                            <i class="iconfont icon-arrowdownb"></i>
+                            ${sessionStorage.getItem("userDistrict")||"东莞市"}
+                        </a>
+                    `);
+    //根据点击获取分类类型
+    $(".classifyNavBox").on("click","li",function(){
+        if($(this).children("i").hasClass("icon-arrowupb")){
+            $(this).children("i").attr("class","iconfont icon-arrowdownb");
+            $("#selPop").removeClass("show");
+            $(".classifyNav>div").eq($(this).index()).removeClass("show");
+        }else{
+            $("#selPop").addClass("show");
+            $(this).children("i").attr("class","iconfont icon-arrowupb");
+            $(this).siblings().children("i").attr("class","iconfont icon-arrowdownb");
+            var index=$(this).index();
+            $(".classifyNav>div").eq(index).addClass("show").siblings().removeClass("show");
+        }
+    });
+
+    //切换一级分类处理函数
+    function cutClassify(self){
+        console.log(self);
+        console.log($(self).index());
+        $(self).addClass("activeColor").siblings().removeClass("activeColor");
+        $(self).parent("ul").next("div").children("ul").eq($(self).index()).addClass("show").siblings().removeClass("show").addClass("die");
+    }
+    //利用冒泡为一级二级分类添加点击切换事件
+    $(".classifyNav").on("click",".childClassifyBox>div>.childClassifyItem>li",function(){//一级分类
+        cutClassify(this);
+    }).on("click",".childClassifyBox>.childClassifyItem>li",function(){//特殊一级分类（只有一级）
+        $(this).addClass("activeColor").siblings("li").removeClass("activeColor");
+    }).on("click",".childName>li",function(){//二级分类
+        console.log(this);
+        $(this).addClass("activeColor").siblings("li").removeClass("activeColor");
+    });
+
+
+    //点击关闭分类选择框
+    $(document).mouseup(function(e){
+        var _con = $('.classifyNav');
+        if(_con != e.target && _con.has(e.target).length === 0){
+            $("#selPop").removeClass("show");
+            $(".classifyNav>div").removeClass("show");
+            $(".classifyNavBox>li").children("i").attr("class","iconfont icon-arrowdownb");
+        }
+    });
+
+    //跳转详情页
+    $(".productContainer>li").click(function(){
+        var i=$(this).index()+1;
+        location.href="hotelDetail"+i+".html";
+    })
+</script>
+</body>
+</html>

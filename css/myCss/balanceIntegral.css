@@ -1,0 +1,28 @@
+.hintImg{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 10% 0 2% 0;
+}
+.hintTxt{
+    font-size: 1.2em;
+    color: #333;
+}
+.myBalance,.myIntegral{
+    font-size: 2em;
+    color: #333;
+    font-weight: bold;
+    margin: 4% 0 10% 0;
+}
+.operate>li{
+    display: inline-block;
+    width: 80%;
+    color: #fff;
+    font-size: 1.2em;
+    background-color: #F55F62;
+    padding: 2% 0;
+    border-radius: 16px;
+}
+.operate>li:nth-child(2){
+    margin: 8% 0;
+}

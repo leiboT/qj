@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="shortcut icon" href="../static/icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/loginRegisterFind.css"/>
+    <link rel="stylesheet" href="../static/iconfont/iconfont.css"/>
+    <title>仟健科技</title>
+</head>
+<body>
+    <!--登录-->
+    <header>
+        <!--<a href="startHTML.html" class="iconfont icon-left"></a>-->
+        登录
+    </header>
+    <!--头像-->
+    <div id="avatar-box">
+        <div class="user-img">
+            <img src="../static/img/login/avatar.png" alt="" class="img-response"/>
+        </div>
+    </div>
+    <!--登录-->
+    <div id="login">
+        <!--登录表单-->
+        <form action="#" id="login-form">
+            <ul class="loginRegisterFind-box login-box">
+                <li>
+                    <i class="iconfont icon-person"></i>
+                    <input type="text" placeholder="请输入账号(手机号)" name="account" id="userPhone"/>
+                </li>
+                <li>
+                    <i class="iconfont icon-lock"></i>
+                    <input type="password" placeholder="请输入密码" name="password" id="userPwd"/>
+                    <i class="iconfont icon-eyeOpen"></i>
+                </li>
+            </ul>
+            <button class="loginRegisterFind-btn" id="login-btn">登录</button>
+        </form>
+    </div>
+    <!--注册或者忘记密码-->
+    <div id="help">
+        <a href="http://api.qianjiantech.com/getRegister">我要注册</a>
+        /
+        <a href="forgetPwd.html">忘记密码</a>
+    </div>
+    <!--模态弹出框-->
+    <div id="pop">
+        <div class="pop-box">
+            <h3>提示</h3>
+            <p></p>
+            <span>关闭</span>
+        </div>
+    </div>
+    <!--成功状态吐司框-->
+    <div id="successPop">
+
+    </div>
+    <script src="../js/zepto_multiple.js"></script>
+    <script src="../js/regLogFind.js"></script>
+</body>
+</html>

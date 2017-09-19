@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no"/>
+    <meta name="author" content="web.qianjiantech.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-app-capable" content="yes">
+    <meta name="apple-mobile-app-status-bar-style" content="black">
+    <meta name="description" content="仟健-立足大众生活服务行业，深度挖掘客户需求，整合市场资源，融合分享经济学与倍增学原理，奉开放分享为基本原则，以互利互惠为发展目标，旨在让更多人有房住、有车开">
+    <meta name="keywords" content="购物,积分,房产,特产,汽车,酒店">
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <link rel="stylesheet" href="../../static/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <title>仟健科技</title>
+</head>
+<body class="bodyFlex">
+<!--分类模态框-->
+<div id="selPop"></div>
+    <!--头部-->
+    <header>
+        <a href="../../start.html" class="iconfont icon-left"></a>
+        汽车
+        <!--地理位置-->
+        <div class="address em0_8">
+
+        </div>
+    </header>
+    <!--分类导航-->
+    <nav class="classifyNav rv em1_4 marginTop50">
+        <ul class="classifyNavBox">
+            <li class="">
+                地区
+                <i class="iconfont icon-arrowdownb"></i>
+            </li>
+            <li>
+                价格
+                <i class="iconfont icon-arrowdownb"></i>
+            </li>
+            <li>
+                品牌
+                <i class="iconfont icon-arrowdownb"></i>
+            </li>
+        </ul>
+        <!--分类盒子-->
+        <div class="childClassifyBox ab">
+            <div class="rv flexRowBox justifyContentSpaceBetween">
+                <i class="iconfont icon-trianglet markTriangle"></i>
+                <ul class="childClassifyItem">
+                    <li class="activeColor">地区</li>
+                </ul>
+                <div class="flex1 em0_9">
+                    <ul class="childName">
+                        <li class="activeColor" data-classifyid="0">不限</li><li data-classifyid="4">南城区 </li><li data-classifyid="5">东城区</li><li data-classifyid="6">厚街镇</li><li data-classifyid="7">虎门</li><li data-classifyid="8">长安</li></ul>
+                </div>
+            </div>
+        </div>
+        <div class="childClassifyBox ab">
+            <div class="rv flexRowBox justifyContentSpaceBetween">
+                <i class="iconfont icon-trianglet markTriangle"></i>
+                <ul class="childClassifyItem">
+                    <li class="activeColor">总价</li>
+                </ul>
+                <div class="flex1 em0_9">
+                    <ul class="childName">
+                        <li class="activeColor" data-classifyid="0">不限</li><li data-classifyid="0">5万以下</li><li data-classifyid="0">5-10万</li><li data-classifyid="0">10-15万</li><li data-classifyid="0">15-20万</li><li data-classifyid="0">20-25万</li><li data-classifyid="0">25-30万</li><li data-classifyid="0">30-40万</li><li data-classifyid="0">40-60万</li><li data-classifyid="10">60-80万</li><li data-classifyid="11">80-100万</li><li data-classifyid="0">100万-150万</li><li data-classifyid="0">150万-200万</li><li data-classifyid="0">200万以上</li></ul>
+                </div>
+            </div>
+        </div>
+        <div class="childClassifyBox ab">
+            <div class="rv flexRowBox justifyContentSpaceBetween">
+                <i class="iconfont icon-trianglet markTriangle"></i>
+                <ul class="childClassifyItem borderRight1">
+                    <li class="activeColor">国产</li>
+                    <li>日系</li>
+                    <li>德系</li>
+                    <li>韩系</li>
+                    <li>法系</li>
+                    <li>美系</li>
+                </ul>
+                <div class="flex1 em0_9">
+                    <ul class="childName">
+                        <li class="activeColor">不限</li>
+                        <li>比亚迪</li>
+                        <li>奇瑞</li>
+                        <li>吉利</li>
+                        <li>哈飞</li>
+                        <li>长城</li>
+                        <li>江淮</li>
+                        <li>长安</li>
+                        <li>荣威</li>
+                        <li>名爵</li>
+                        <li>东风</li>
+                    </ul>
+                    <ul class="childName die">
+                        <li class="activeColor">不限</li>
+                        <li>丰田TOYOTA</li>
+                        <li>日产NISSAN</li>
+                        <li>斯柯达</li>
+                        <li>本田HONDA</li>
+                        <li>雷克萨斯LEXUS</li>
+                        <li>马自达MAZDA</li>
+                        <li>三菱MITSUBISI</li>
+                        <li>铃木SUZUKI</li>
+                        <li>斯巴鲁SUBARU</li>
+                    </ul>
+                    <ul class="childName die">
+                        <li class="activeColor">不限</li>
+                        <li>大众</li>
+                        <li>奔驰</li>
+                        <li>奥迪</li>
+                        <li>BMW</li>
+                        <li>保时捷</li>
+                        <li>迈巴赫</li>
+                    </ul>
+                    <ul class="childName die">
+                        <li class="activeColor">不限</li>
+                        <li>现代</li>
+                        <li>起亚</li>
+                        <li>大宇</li>
+                    </ul>
+                    <ul class="childName die">
+                        <li class="activeColor">不限</li>
+                        <li>PEUGEOT标致</li>
+                        <li>CITROEN雪铁龙</li>
+                        <li>RENAULT雷诺</li>
+                    </ul>
+                    <ul class="childName die">
+                        <li class="activeColor">不限</li>
+                        <li>凯迪拉克</li>
+                        <li>雪佛兰</li>
+                        <li>福特</li>
+                        <li>林肯</li>
+                        <li>别克</li>
+                        <li>悍马</li>
+                        <li>Jeep</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--搜索结果-->
+    <div class="searchResult txtLeft">
+        共6个结果
+    </div>
+    <!--商品主体-->
+    <section class="txtLeft showScroll">
+        <ul class="productContainer">
+            <li class="productBox">
+                <div class="productPicture">
+                    <img src="../../static/img/car/byd/byd.jpg" alt=""/>
+                </div>
+                <ul class="productDescription">
+                    <li class="productName">比亚迪·秦</li>
+                    <li class="productLook">紧凑型,纯电动 218马力电动机,4门5座</li>
+                    <li class="productPrice">
+                        <div class="presentPrice">￥13.99-30.98万</div>
+                        <!--<div class="originalPrice">￥18.59-30.98万</div>-->
+                        <div class="sale">已售：0</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="productBox">
+                <div class="productPicture">
+                    <img src="../../static/img/car/dazongtuguan/dazongtuguan.jpg" alt=""/>
+                </div>
+                <ul class="productDescription">
+                    <li class="productName">大众·途观</li>
+                    <li class="productLook">紧凑型SUV,涡轮增压,七档双离合,5门5座</li>
+                    <li class="productPrice">
+                        <div class="presentPrice">￥26.28-39.18万</div>
+                        <!--<div class="originalPrice">￥18.59-30.98万</div>-->
+                        <div class="sale">已售：0</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="productBox">
+                <div class="productPicture">
+                    <img src="../../static/img/car/ftbadao/ftbadao.jpg" alt=""/>
+                </div>
+                <ul class="productDescription">
+                    <li class="productName">丰田·普拉多</li>
+                    <li class="productLook">中大型SUV,六挡手自一体,5门5座</li>
+                    <li class="productPrice">
+                        <div class="presentPrice">￥36.98-62.53万</div>
+                        <!--<div class="originalPrice">￥18.59-30.98万</div>-->
+                        <div class="sale">已售：0</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="productBox">
+                <div class="productPicture">
+                    <img src="../../static/img/car/kaidilake/kaidilake.jpg" alt=""/>
+                </div>
+                <ul class="productDescription">
+                    <li class="productName">凯迪拉克·XT5</li>
+                    <li class="productLook">中型SUV,涡轮增压,八挡手自一体,5门5座</li>
+                    <li class="productPrice">
+                        <div class="presentPrice">￥35.99-53.99万</div>
+                        <!--<div class="originalPrice">￥18.59-30.98万</div>-->
+                        <div class="sale">已售：0</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="productBox">
+                <div class="productPicture">
+                    <img src="../../static/img/car/xiandailangdong/xiandailangdong.jpg" alt=""/>
+                </div>
+                <ul class="productDescription">
+                    <li class="productName">现代·朗动</li>
+                    <li class="productLook">紧凑型,六挡手自一体,自然吸气,4门5座</li>
+                    <li class="productPrice">
+                        <div class="presentPrice">￥10.58-12.78万</div>
+                        <!--<div class="originalPrice">￥18.59-30.98万</div>-->
+                        <div class="sale">已售：0</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="productBox">
+                <div class="productPicture">
+                    <img src="../../static/img/car/xuetielong/xuetielong.jpg" alt=""/>
+                </div>
+                <ul class="productDescription">
+                    <li class="productName">雪铁龙·全新爱丽舍</li>
+                    <li class="productLook">紧凑型,六挡手自一体,自然吸气,4门5座</li>
+                    <li class="productPrice">
+                        <div class="presentPrice">￥8.38-12.08万</div>
+                        <!--<div class="originalPrice">￥18.59-30.98万</div>-->
+                        <div class="sale">已售：0</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <script src="../../js/zepto_multiple.js"></script>
+    <script>
+        $(".address").html(`
+                        <a href="../../smallFeatureHTML/position.html">
+                            <i class="iconfont icon-arrowdownb"></i>
+                            ${sessionStorage.getItem("position")||sessionStorage.getItem("userDistrict")||"东莞市"}
+                        </a>
+                    `);
+        //根据点击获取分类类型
+        $(".classifyNavBox").on("click","li",function(){
+            if($(this).children("i").hasClass("icon-arrowupb")){
+                $(this).children("i").attr("class","iconfont icon-arrowdownb");
+                $("#selPop").removeClass("show");
+                $(".classifyNav>div").eq($(this).index()).removeClass("show");
+            }else{
+                $("#selPop").addClass("show");
+                $(this).children("i").attr("class","iconfont icon-arrowupb");
+                $(this).siblings().children("i").attr("class","iconfont icon-arrowdownb");
+                var index=$(this).index();
+                $(".classifyNav>div").eq(index).addClass("show").siblings().removeClass("show");
+            }
+        });
+
+        //切换一级分类处理函数
+        function cutClassify(self){
+            console.log(self);
+            console.log($(self).index());
+            $(self).addClass("activeColor").siblings().removeClass("activeColor");
+            $(self).parent("ul").next("div").children("ul").eq($(self).index()).addClass("show").siblings().removeClass("show").addClass("die");
+        }
+        //利用冒泡为一级二级分类添加点击切换事件
+        $(".classifyNav").on("click",".childClassifyBox>div>.childClassifyItem>li",function(){//一级分类
+            cutClassify(this);
+        }).on("click",".childClassifyBox>.childClassifyItem>li",function(){//特殊一级分类（只有一级）
+            $(this).addClass("activeColor").siblings("li").removeClass("activeColor");
+        }).on("click",".childName>li",function(){//二级分类
+            console.log(this);
+            $(this).addClass("activeColor").siblings("li").removeClass("activeColor");
+        });
+
+
+        //点击关闭分类选择框
+        $(document).mouseup(function(e){
+            var _con = $('.classifyNav');
+            if(_con.is!=e.target && _con.has(e.target).length === 0){
+                $("#selPop").removeClass("show");
+                $(".classifyNav>div").removeClass("show");
+                $(".classifyNavBox>li").children("i").attr("class","iconfont icon-arrowdownb");
+            }
+        });
+
+//        跳转商品详情页
+        $(".productContainer>li").on("click",function(){
+            console.log($(this).index()+1);
+            var i=$(this).index()+1;
+            location.href='carDetailPage'+i+'.html';
+        })
+
+    </script>
+</body>
+</html>

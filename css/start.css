@@ -1,0 +1,85 @@
+.swiper-pagination-bullet-active{
+    background-color: #e4393c !important;
+}
+/*加载*/
+[class*="loadingImg"]{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    z-index: 1400;
+}
+/*地址*/
+.address>a{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+/*/!********导航********!/*/
+/*.nav-box>li{*/
+    /*float: left;*/
+    /*text-align: center;*/
+/*}*/
+/*.nav-box a{*/
+    /*min-width: 75px;*/
+    /*display: inline-block;*/
+    /*padding: 10% 10%;*/
+    /*color: #666;*/
+/*}*/
+/*.nav-box img{*/
+    /*display: block;*/
+    /*width: 100%;*/
+    /*height: 100%;*/
+    /*border-radius: 50%;*/
+    /*padding: 5% 10% 0;*/
+/*}*/
+/********主体********/
+/*公告*/
+#notice-box{
+    display: inline-block;
+    width: 90%;
+    padding: 3% 0 3% 20%;
+    border-top: 1px solid #E2E2E4;
+    border-bottom: 1px solid #E2E2E4;
+    position: relative;
+    overflow: hidden;
+}
+div.notice{
+    width: 20%;
+    height: 100%;
+    color: #000;
+    font-size: 1.4em;
+    font-weight: 500;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+div.noticeTxt-box{
+    overflow: hidden;
+}
+div.noticeTxt-box ul{
+    width: 300%;
+    float: left;
+}
+div.noticeTxt-box li{
+    float: left;
+    width: 33.3%;
+    text-align: left;
+}
+div.noticeTxt-box a{
+    font-size: 1.2em;
+    color: #e4393c;
+}
+/*特别推荐*/
+#recommend{
+    display: inline-block;
+    width: 90%;
+    font-size: 1.1em;
+}
+.recommend-header{
+    height: 40px;
+    line-height: 40px;
+    border-bottom: 1px solid #E2E2E4;
+}

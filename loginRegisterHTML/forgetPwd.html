@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+    <link rel="shortcut icon" href="../static/icon/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/loginRegisterFind.css"/>
+    <link rel="stylesheet" href="../static/iconfont/iconfont.css"/>
+    <title>仟健科技</title>
+</head>
+<body>
+<!--头部-->
+<header>
+    <a href="login.html" class="iconfont icon-left"></a>
+    找回密码
+</header>
+<div id="register">
+    <!--忘记密码-->
+    <form action="#" id="find-form">
+        <ul class="loginRegisterFind-box registerFind-box find-box">
+            <li>
+                <i class="iconfont icon-person"></i>
+                <input type="text" placeholder="请输入账号(手机号)" value="" id="userPhone" name="account"/>
+            </li>
+            <li>
+                <i class="iconfont icon-key"></i>
+                <input type="text" placeholder="请输入验证码" value="" id="userCode" name="code"/>
+                <div class="captcha">
+                    获取验证码
+                </div>
+            </li>
+            <li>
+                <i class="iconfont icon-lock"></i>
+                <input type="password" placeholder="请输入6-12位密码" value="" id="userPwd" name="password"/>
+                <i class="iconfont icon-eyeOpen"></i>
+            </li>
+        </ul>
+        <button class="loginRegisterFind-btn" id="findBtn">完成</button>
+    </form>
+</div>
+<!--模态弹出框-->
+<div id="pop">
+    <div class="pop-box">
+        <h3>提示</h3>
+        <p></p>
+        <span>关闭</span>
+    </div>
+</div>
+<!--成功状态吐司框-->
+<div id="successPop">
+
+</div>
+<script src="../js/zepto_multiple.js"></script>
+<script src="../js/regLogFind.js"></script>
+</body>
+</html>

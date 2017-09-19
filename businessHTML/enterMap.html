@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no"/>
+    <meta name="author" content="web.qianjiantech.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-app-capable" content="yes">
+    <meta name="apple-mobile-app-status-bar-style" content="black">
+    <meta name="description" content="仟健-立足大众生活服务行业，深度挖掘客户需求，整合市场资源，融合分享经济学与倍增学原理，奉开放分享为基本原则，以互利互惠为发展目标，旨在让更多人有房住、有车开">
+    <meta name="keywords" content="购物,积分,房产,特产,汽车,酒店">
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <link rel="shortcut icon" href="../favicon.ico" />
+    <link rel="bookmark" href="../favicon.ico" type="image/x-icon"/>
+    <title>仟健科技</title>
+    <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1119.css"/>
+    <script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=6d2d824fe7994e8d876f3ee208fd3e6d&plugin=AMap.Autocomplete,AMap.PlaceSearch,AMap.ToolBar"></script>
+    <style>
+        #tip{
+            box-sizing: border-box;
+            width: 90%;
+            background-color: #ddf;
+            color: #333;
+            border: 1px solid silver;
+            box-shadow: 3px 4px 3px 0 silver;
+            position: absolute;
+            top: 1%;
+            right: 5%;
+            border-radius: 5px;
+            overflow: hidden;
+            line-height: 20px;
+            font-size: 12px;
+            padding: 0 10px;
+        }
+        #tip input[type='text']{
+            box-sizing: border-box;
+            /*height: 25px;*/
+            border: 0;
+            padding: 10px 0 10px 5px;
+            width: 100%;
+            border-radius: 3px;
+            outline: none;
+            font-size: 16px;
+        }
+        #back{
+            text-decoration: none;
+            position: fixed;
+            left: 0;
+            bottom: 20px;
+            text-align: center;
+            width: 50px;
+            line-height: 30px;
+            background-color: #fff;
+            color: #666;
+            font-size: 14px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .auto-item{
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+<div id="container"></div>
+<div id="tip">
+    <input type="text" id="keyword" name="keyword" value="请输入关键字：(选定后搜索)" onfocus="this.value=''">
+</div>
+<a href="shopsEnter.html" id="back">
+    返回
+</a>
+<script type="text/javascript">
+    var map = new AMap.Map("container", {
+        resizeEnable: true,
+        zoom: 18
+    });
+    map.plugin('AMap.Geolocation', function() {
+        geolocation = new AMap.Geolocation({
+            enableHighAccuracy: true,//是否使用高精度定位，默认:true
+            timeout: 10000,          //超过10秒后停止定位，默认：无穷大
+            noIpLocate:3,
+            buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+            zoomToAccuracy: true,      //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
+            buttonPosition:'RB'
+        });
+        map.addControl(geolocation);
+        geolocation.getCurrentPosition();
+        AMap.event.addListener(geolocation, 'complete', onComplete);//返回定位信息
+        AMap.event.addListener(geolocation, 'error', onError);      //返回定位出错信息
+    });
+    //解析定位结果
+    function onComplete(data) {
+        //console.log(data.position);
+        var lng=data.position.lng;
+        var lat=data.position.lat;
+        var publicData={};
+        publicData.lng=lng;
+        publicData.lat=lat;
+
+        var add = data.formattedAddress;
+        var province=data.addressComponent.province;
+        var city=data.addressComponent.city || data.addressComponent.province;
+        var district=data.addressComponent.district || data.addressComponent.city;
+        var town=data.addressComponent.township;
+
+        publicData.address=add;
+        publicData.province=province;
+        publicData.city=city;
+        publicData.district=district;
+        publicData.town=town;
+        sessionStorage.setItem("pcdt",JSON.stringify(publicData));
+
+        var marker = new AMap.Marker({  //加点
+            map: map,
+            position: [data.position.lng,data.position.lat]
+        });
+        var infoWindow = new AMap.InfoWindow({
+            content: data.formattedAddress,
+            offset: {x: 0, y: -30}
+        });
+        infoWindow.open(map, marker.getPosition());
+
+        AMap.event.addListener(marker, 'click', currentMarkerClick);
+        function currentMarkerClick(){
+            infoWindow.open(map, marker.getPosition());
+            setTimeout(function(){
+                location.href="shopsEnter.html";
+            },500)
+        }
+    }
+    //解析定位错误信息
+    function onError(data) {
+        //console.log(data)
+    }
+
+
+//    map.plugin(["AMap.ToolBar"],function(){ var tool = new AMap.ToolBar(); map.addControl(tool);});
+    //输入提示
+    var auto = new AMap.Autocomplete({
+        input: "keyword"
+    });
+    //POI搜索
+    var placeSearch = new AMap.PlaceSearch({
+        map: map
+    });
+
+    AMap.event.addListener(placeSearch, 'markerClick', markerClick);
+
+    function markerClick(data){
+        var lng=data.data.location.lng;
+        var lat=data.data.location.lat;
+
+        var xy=[lng,lat];
+        var publicData={};
+        publicData.lng=lng;
+        publicData.lat=lat;
+
+        map.plugin('AMap.Geocoder',function(){
+            var geocoder = new AMap.Geocoder({
+                radius: 1000,
+                extensions: "all"
+            });
+            geocoder.getAddress(xy, function(status, result) {
+                //console.log(status,result);
+                if (status === 'complete' && result.info === 'OK') {
+                    geocoder_CallBack(result);
+                }
+            });
+
+            function geocoder_CallBack(data) {
+                var add = data.regeocode.formattedAddress; //返回地址描述
+                var province=data.regeocode.addressComponent.province;
+                var city=data.regeocode.addressComponent.city || data.regeocode.addressComponent.province;
+                var district=data.regeocode.addressComponent.district || data.regeocode.addressComponent.city;
+                var town=data.regeocode.addressComponent.township;
+                publicData.address=add;
+                publicData.province=province;
+                publicData.city=city;
+                publicData.district=district;
+                publicData.town=town;
+                sessionStorage.setItem("pcdt",JSON.stringify(publicData));
+                setTimeout(function(){
+                    location.href="shopsEnter.html";
+                },500)
+            }
+        });
+    }
+
+    var select = function(e) {
+        placeSearch.setCity(e.poi.adcode);
+        placeSearch.search(e.poi.name);  //关键字查询查询
+    };
+    //方式一：
+    var listener = AMap.event.addListener(auto, "select", select);//注册监听，当选中某条记录时会触发
+    //AMap.event.removeListener(listener);//需要时这样移除
+    //======================
+    ////方式二：
+    ////用on和off方法
+    //auto.on('select',select)
+    ////auto.off('select',select)//移除的方法
+    //======================
+    //    })
+</script>
+</body>
+</html>

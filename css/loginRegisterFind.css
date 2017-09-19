@@ -1,0 +1,260 @@
+*{padding: 0;  margin: 0;  border: none;  outline: none;  box-sizing: border-box;list-style: none}
+body{font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;  background-color: #fff;  color: #333; text-align: center;}
+a{text-decoration: none;color: #666}
+[class*='icon-']::before{color: #000; font-size: 20px; cursor: pointer;}
+.img-response{display: block; width: 100%; height: 100%;}
+html,body{width: 100%; height: 100%;}
+.rt{float: right}
+[type='text'],[type='password']{
+    width: 100%;
+}
+/*头部*/
+header{
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+    text-align: center;
+}
+header>a{
+    position: absolute;
+    left: 4%;
+}
+/****登录注册统一样式****/
+ul.loginRegisterFind-box{
+    display: inline-block;
+    width: 77.8%;
+    border: 1px solid #999;
+    border-radius: 8px;
+    /*margin-bottom: 10%;*/
+    margin-bottom: 8%;
+    /*margin-top: 10%;*/
+    margin-top: 8%;
+}
+ul.loginRegisterFind-box li{
+    position: relative;
+    /*padding: 20px 0 20px 40px;*/
+    padding: 16px 0 16px 40px;
+    text-align: left;
+}
+ul.loginRegisterFind-box i::before{
+    position: absolute;
+}
+ul.loginRegisterFind-box input{
+    font-size: 16px;
+    overflow: hidden;
+}
+/*表单提交按钮*/
+button.loginRegisterFind-btn{
+    width: 71%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    border-radius: 6px;
+    color: #fff;
+    background-color: #F55F62;
+    letter-spacing: 10px;
+    cursor: pointer;
+}
+/*****注册以及找回--不同样式****/
+ul.registerFind-box li:not(:last-child){
+    border-bottom: 1px solid #999;
+}
+ul.registerFind-box i:not(:nth-child(3))::before{
+    left: 10px;
+    /*top: 18px;*/
+    top: 14px;
+}
+ul.registerFind-box i:nth-child(3)::before{
+    top: 18px;
+    right: 20px;
+}
+ul.registerFind-box{
+    margin-bottom: 0;
+}
+/*注册协议*/
+#regProtocol{
+    margin: 4% 0;
+    font-size: 14px;
+    /*color: #FF9997;*/
+}
+#regProtocol .protocolTxt,#regProtocol input{
+    cursor: pointer;
+}
+#regProtocol [type="checkbox"]{
+    display: none;
+}
+#regProtocol label{
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #999;
+}
+#regProtocol [type="checkbox"]:checked + label{
+    background-image: url("../static/img/yes/yes.png");
+    background-size: contain;
+}
+/*注册验证码*/
+div.captcha{
+    width: 30%;
+    /*height: 60px;*/
+    height: 52px;
+    /*line-height: 60px;*/
+    line-height: 52px;
+    border-left: 1px solid #999;
+    text-align: center;
+    position: absolute;
+    top: 2px;
+    right: 0;
+    cursor: pointer;
+}
+/****登录--不同样式****/
+/*头像*/
+#avatar-box{
+    margin-top: 4%;
+}
+div.user-img{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    /*border: 1px solid #333;*/
+    border-radius: 50%;
+    overflow: hidden;
+}
+div.user-img>i{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+div.user-img>i::before{
+    font-size: 3em;
+    position: absolute;
+    top: 10px;
+    left: 26px;
+}
+ul.login-box li:first-child{
+    border-bottom: 1px solid #999;
+}
+ul.login-box i:not(:nth-child(n+2))::before{
+    left: 10px;
+    /*top: 18px;*/
+    top: 14px;
+}
+ul.login-box i:nth-child(n+2)::before{
+    right: 10px;
+}
+ul.login-box i:nth-child(3)::before{
+    /*top: 24px;*/
+    top: 15px;
+}
+/*ul.login-box i:nth-child(4)::before{*/
+    /*top: 38px;*/
+/*}*/
+
+/*注册或者忘记密码*/
+#help{
+    margin-top: 7%;
+}
+/*找回密码---不同样式*/
+ul.find-box{
+    margin-bottom: 8%;
+}
+/*注册协议弹出框*/
+.protocolContent{
+    width: 70%;
+    height: 70%;
+    border: 4px solid rgba(0,0,0,0.1);
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+}
+.protocolContent-header{
+    width: 100%;
+    height: 7%;
+    line-height: 2.5;
+    padding: 0 6px;
+    background-color: #F3F3F3;
+    text-align: left;
+}
+@media screen and (max-height: 600px){
+    .protocolContent-header{
+        line-height: 2;
+    }
+}
+@media screen and (min-height: 1000px){
+    .protocolContent-header{
+        line-height: 4;
+    }
+}
+@media screen and (min-height: 1300px){
+    .protocolContent-header{
+        line-height: 5;
+    }
+}
+.protocolContent-container{
+    width: 100%;
+    height: 93%;
+    padding: 4px;
+    overflow: auto;
+}
+/*模态弹出框*/
+#pop,#protocolBox{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.15);
+    display: none;
+}
+div.pop-box{
+    width: 50%;
+    height: 140px;
+    font-size: 16px;
+    background-color: #fff;
+    border-radius: 12px;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+div.pop-box>span{
+    display: block;
+    background-color: #F56064;
+    color: #fff;
+    border-radius: 0 0 12px 12px;
+    cursor: pointer;
+}
+div.pop-box>h3,div.pop-box>span{
+    height: 30px;
+    line-height: 30px;
+}
+div.pop-box>h3{
+    border-bottom: 1px solid #E5E5E5;
+}
+div.pop-box>p{
+    height: 80px;
+    line-height: 80px;
+}
+.pop-show{
+    display: block !important;
+}
+#successPop{
+    color: #fff;
+    padding: 0.4em 0;
+    position: fixed;
+    bottom: 50px;
+    left: 50%;
+    margin-left: -10%;
+    width: 20%;
+    border-radius: 12px;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+}
