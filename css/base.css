@@ -1,4 +1,4 @@
-*{padding: 0;  margin: 0;  border: none;  outline: none;  box-sizing: border-box;list-style: none}
+*{padding: 0;  margin: 0;  border: none;  outline: none;  box-sizing: border-box;list-style: none;cursor: auto;}
 body{font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;  background-color: #fff;  color: #666; text-align: center; -webkit-font-smoothing: antialiased; /*chrome、safari*/  -moz-osx-font-smoothing: grayscale;/*firefox*/}
 a{text-decoration: none;color: #fff}
 html,body{width: 100%;height: 100%;overflow: auto;min-width: 320px;}
@@ -39,6 +39,7 @@ body{position: relative;-webkit-overflow-scrolling : touch;-webkit-user-select:n
 .topBottomPadding2{padding: 2% 0;}
 .aroundPadding23{padding: 2% 3%;}
 .aroundPadding34{padding: 3% 4%;}
+.border0{border: 0;}
 .border1{border: 1px solid #ddd;}
 .borderTop1{border-Top: 1px solid #F2F2F2;}
 .borderRight1{border-right: 1px solid #F2F2F2}
