@@ -82,7 +82,7 @@ $(function(){
                     `;
                     }
                     carouselBox.html(html);
-                    var swiper = new Swiper('.swiper-container', {
+                    new Swiper('.swiper-container', {
                         pagination: '.swiper-pagination',
                         paginationClickable: true
                     });
@@ -202,7 +202,7 @@ $(function(){
                                 <ul class="productDescription">
                                     <li class="productName">${v.product_name}</li>
                                     <li class="productLook em0_8">${v.describe}</li>
-                                    <li class="originalPrice em0_8">赠送积分：${cutMoney(v.market_price)}</li>
+                                    <li class="presentIntegral em0_8">赠送积分：${cutMoney(v.market_price)}</li>
                                     <li class="productPrice em0_9">
                                         <div class="presentPrice">￥${cutMoney(v.shop_price)}</div>
                                         <div class="sale">已售：${v.sell_count}</div>
@@ -220,8 +220,8 @@ $(function(){
     loadYouLick();
 
     //跳转商品详情页
-    $(".productContainer").on("click","li.productBox",function(){
-        sessionStorage.setItem("productId",$(this).attr("data-productid"));
+    $(".productContainer").on("click",".productDescription",function(){
+        sessionStorage.setItem("productId",$(this).parent().attr("data-productid"));
         location.href="../12/productDetailPage.html";
     })
 });
