@@ -143,7 +143,7 @@ $(function(){
                     imgLoadingEnd(
                         ".carousel-box",
                         function(){
-                            var swiper = new Swiper('.swiper-container', {
+                            new Swiper('.swiper-container', {
                             pagination: '.swiper-pagination',
                             paginationClickable: true
                             })
@@ -260,7 +260,7 @@ $(function(){
                                 <ul class="productDescription">
                                     <li class="productName">${v.product_name}</li>
                                     <li class="productLook em0_8">${v.describe}</li>
-                                    <li class="originalPrice em0_8">赠送积分：${v.market_price.length>4?v.market_price.substring(0,v.market_price.length-4)+"万":v.market_price.length>8?v.market_price.substring(0,v.market_price.length-8)+"亿":v.market_price}</li>
+                                    <li class="presentIntegral em0_8">赠送积分：${v.market_price.length>4?v.market_price.substring(0,v.market_price.length-4)+"万":v.market_price.length>8?v.market_price.substring(0,v.market_price.length-8)+"亿":v.market_price}</li>
                                     <li class="productPrice em0_9">
                                         <div class="presentPrice">￥${v.shop_price.length>4?v.shop_price.substring(0,v.shop_price.length-4)+"万":v.shop_price.length>8?v.shop_price.substring(0,v.shop_price.length-8)+"亿":v.shop_price}</div>
                                         <div class="sale">已售：${v.sell_count}</div>
@@ -288,8 +288,8 @@ $(function(){
     loadYouLick();
 
     //跳转商品详情页
-    $(".productContainer").on("click","li.productBox",function(){
-        sessionStorage.setItem("productId",$(this).attr("data-productid"));
-        location.href="startHTML/12/productDetailPage.html#mp.weixin.qq.com";
+    $(".productContainer").on("click",".productDescription",function(){
+        sessionStorage.setItem("productId",$(this).parent().attr("data-productid"));
+        location.href="startHTML/12/productDetailPage.html";
     })
 });
