@@ -10,11 +10,14 @@
     <meta name="description" content="仟健-立足大众生活服务行业，深度挖掘客户需求，整合市场资源，融合分享经济学与倍增学原理，奉开放分享为基本原则，以互利互惠为发展目标，旨在让更多人有房住、有车开">
     <meta name="keywords" content="购物,积分,房产,特产,汽车,酒店">
     <meta name="format-detection" content="telphone=no, email=no"/>
+    <meta http-equiv="x-rim-auto-match" content="none">
+    <meta http-equiv="Cache-Control" content="no-cache">
     <link rel="shortcut icon" href="../../favicon.ico" />
     <link rel="bookmark" href="../../favicon.ico" type="image/x-icon"/>
     <link rel="stylesheet" href="../../static/iconfont/iconfont.css"/>
     <link rel="stylesheet" href="../../css/base.css"/>
     <link rel="stylesheet" href="../../css/houseCss/productDetailPage.css"/>
+    <link rel="stylesheet" href="../../css/swiper.min.css"/>
     <title>仟健科技</title>
 </head>
 <body>
@@ -26,25 +29,23 @@
     </header>
     <section class="em1_4 txtLeft marginTop50 marginBottom50">
         <!--产品图片及信息-->
-        <div class="rv">
-            <div class="productDetailImgBox">
-                <ul class="productDetailImg">
-                    <li>
-                        <img src="../../static/img/house/gy.jpg" alt="" class="img-response"/>
-                    </li>
-                    <li>
-                        <img src="../../static/img/house/gy.jpg" alt="" class="img-response"/>
-                    </li>
-                </ul>
-                <ul class="productDetailInfoBox ab txtLeft aroundPadding23">
-                    <li>
-                        万科地产
-                    </li>
-                    <li class="em0_8 productDescribe">
-                        首建三期好楼房15座2003
-                    </li>
-                </ul>
+        <div class="productDetailImgBox rv swiper-container">
+            <div class="productDetailImg swiper-wrapper">
+                <!--<li>-->
+                <!--<img src="../../static/img/house/gy.jpg" alt="" class="img-response"/>-->
+                <!--</li>-->
+                <!--<li>-->
+                <!--<img src="../../static/img/house/gy.jpg" alt="" class="img-response"/>-->
+                <!--</li>-->
             </div>
+            <ul class="productDetailInfoBox ab txtLeft aroundPadding23">
+                <li>
+                    万科地产
+                </li>
+                <li class="em0_8 productDescribe">
+                    首建三期好楼房15座2003
+                </li>
+            </ul>
         </div>
         <!--定价与积分-->
         <ul class="productDetailPriceAndScore aroundPadding23 borderBottom1">
@@ -123,6 +124,7 @@
     </div>
 
     <script src="../../js/zepto_multiple.js"></script>
+    <script src="../../js/swiper.min.js"></script>
     <script src="http://res.wx.qq.com/open/js/jweixin-1.1.0.js"></script>
     <script src="../../js/productDetailPage.js"></script>
 </body>
