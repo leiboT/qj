@@ -127,6 +127,10 @@ header>a{
 }
 
 /********轮播********/
+/*点*/
+.swiper-pagination-bullet-active{
+    background-color: #e4393c !important;
+}
 #carousel{
     height: 180px;
     overflow: hidden;
@@ -287,49 +291,56 @@ header>a{
     display: flex;
     justify-content: space-around;
     align-content: space-between;
-    padding: 1% 0;
+    padding: 5% 0;
     border-bottom: 1px solid #F0F0F0;
 }
 .productPicture{
-    flex: 1;
     background-color: #CCBABE;
     display: flex;
     flex-direction: column;
+    width: 102px;
+    height: 102px;
 }
 .productPicture img{
     flex: 1;
     vertical-align: bottom;
     display: block;
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
 }
 .productDescription{
-    width: 75%;
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0 2%;
 }
 .productDescription>li{
     width: 100%;
-    white-space: nowrap;
-    overflow-x: scroll;
-    padding: 2% 0;
+    white-space: normal;
+    /*overflow-x: scroll;*/
 }
 .productName{
     color: #4D4D4D;
     font-size: 1.1em;
+    overflow: hidden;
+    line-height: 1.2em;
 }
 .productLook,.originalPrice{
     color: #979797;
 }
-.productDescription{
-    padding: 0 2%;
+.productLook{
+    overflow: hidden;
+    line-height: 1.33em;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
 }
 .productPrice{
     display: flex;
     justify-content: space-between;
 }
-.presentPrice,.sale,.originalPrice{
+.presentPrice,.sale,.presentIntegral{
     color: #F35F62;
 }
 /*文件上传按钮美化*/
@@ -463,4 +474,10 @@ div.pop-box>p{
 }
 .pop-show{
     display: block !important;
+}
+@media screen and (min-width: 415px){
+    body{font-size: 13px;}
+}
+@media screen and (min-width: 767px){
+    body{font-size: 14px;}
 }
