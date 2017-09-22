@@ -13,7 +13,15 @@
     <link rel="stylesheet" href="../../static/iconfont/iconfont.css"/>
     <link rel="stylesheet" href="../../css/base.css"/>
     <link rel="stylesheet" href="../../css/houseCss/productDetailPage.css"/>
+    <link rel="stylesheet" href="../../css/swiper.min.css"/>
     <title>仟健科技</title>
+    <style>
+        #shopProAndInfoDetail{
+             display: inline-block;
+             width: 90%;
+             font-size: 1.1em;
+         }
+    </style>
 </head>
 <body>
 <!--头部-->
@@ -21,27 +29,25 @@
     <a href="caterIndex.html" class="iconfont icon-left"></a>
     商家详情
 </header>
-<section class="em1_4 txtLeft marginTop50">
+<section class="em1_3 marginTop50">
     <!--产品图片及信息-->
-    <div class="rv">
-        <div class="productDetailImgBox">
-            <ul class="productDetailImg">
-                <li>
-                    <img src="../../static/img/cater/dian.jpg" alt="" class="img-response"/>
-                </li>
-                <li>
-                    <img src="../../static/img/cater/dian.jpg" alt="" class="img-response"/>
-                </li>
-            </ul>
-            <ul class="productDetailInfoBox ab txtLeft aroundPadding23">
-                <li>
-                    广东特产(东莞厚街店)
-                </li>
-                <li class="em0_8 productDescribe">
-                    东莞市厚街镇珊美地铁A出口附近
-                </li>
-            </ul>
+    <div class="productDetailImgBox rv swiper-container">
+        <div class="productDetailImg swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../../static/img/cater/dian.jpg" alt="" class="img-response"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../static/img/cater/dian.jpg" alt="" class="img-response"/>
+            </div>
         </div>
+        <ul class="productDetailInfoBox ab txtLeft aroundPadding23">
+            <li>
+                广东特产(东莞厚街店)
+            </li>
+            <li class="em0_8 productDescribe">
+                东莞市厚街镇珊美地铁A出口附近
+            </li>
+        </ul>
     </div>
     <!--商家商品及商家介绍-->
     <ul class="flexRowBox txtCenter borderTop4 borderBottom4 topBottomPadding2" id="shopProAndInfo">
@@ -50,16 +56,16 @@
     </ul>
     <!--商家商品及介绍详情-->
     <div id="shopProAndInfoDetail">
-        <ul class="productContainer leftRightPadding3">
+        <ul class="productContainer">
             <li class="productBox">
                 <div class="productPicture">
                     <img src="../../static/img/cater/1.jpg" alt=""/>
                 </div>
                 <ul class="productDescription">
                     <li class="productName">厚街香肠</li>
-                    <li class="productLook">厚街香肠</li>
-                    <li class="originalPrice">赠送积分:40</li>
-                    <li class="productPrice">
+                    <li class="productLook em0_8">厚街香肠</li>
+                    <li class="presentIntegral em0_8">赠送积分:40</li>
+                    <li class="productPrice em0_9">
                         <div class="presentPrice">￥50</div>
                         <div class="sale">已售：0</div>
                     </li>
@@ -71,9 +77,9 @@
                 </div>
                 <ul class="productDescription">
                     <li class="productName">白沙油鸭</li>
-                    <li class="productLook">白沙油鸭</li>
-                    <li class="originalPrice">赠送积分:90</li>
-                    <li class="productPrice">
+                    <li class="productLook em0_8">白沙油鸭</li>
+                    <li class="presentIntegral em0_8">赠送积分:90</li>
+                    <li class="productPrice em0_9">
                         <div class="presentPrice">￥99</div>
                         <div class="sale">已售：0</div>
                     </li>
@@ -85,9 +91,9 @@
                 </div>
                 <ul class="productDescription">
                     <li class="productName">麦芽糖柚皮</li>
-                    <li class="productLook">麦芽糖柚皮</li>
-                    <li class="originalPrice">赠送积分:20</li>
-                    <li class="productPrice">
+                    <li class="productLook em0_8">麦芽糖柚皮</li>
+                    <li class="presentIntegral em0_8">赠送积分:20</li>
+                    <li class="productPrice em0_9">
                         <div class="presentPrice">￥30</div>
                         <div class="sale">已售：0</div>
                     </li>
@@ -99,17 +105,17 @@
                 </div>
                 <ul class="productDescription">
                     <li class="productName">鸡仔饼</li>
-                    <li class="productLook">鸡仔饼</li>
-                    <li class="originalPrice">赠送积分:70</li>
-                    <li class="productPrice">
+                    <li class="productLook em0_8">鸡仔饼</li>
+                    <li class="presentIntegral em0_8">赠送积分:70</li>
+                    <li class="productPrice em0_9">
                         <div class="presentPrice">￥80</div>
                         <div class="sale">已售：0</div>
                     </li>
                 </ul>
             </li>
         </ul>
-        <ul class="aroundPadding23 die">
-            <li class="topBottomPadding2"><b>广东特产(东莞厚街店)</b></li>
+        <ul class="aroundPadding23 txtLeft die">
+            <li class="topBottomPadding2 txtCenter"><b>广东特产(东莞厚街店)</b></li>
             <li style="text-indent: 2em">广东特产(东莞厚街店)位于东莞市厚街镇珊美地铁A出口附近，销售产品主要是以地道的东莞特产为主</li>
             <li class="topBottomPadding2">相信在这里每个人都能买到正宗的东莞特产!</li>
         </ul>
@@ -126,6 +132,7 @@
 </div>
 
 <script src="../../js/zepto_multiple.js"></script>
+<script src="../../js/swiper.min.js"></script>
 <script>
 //    切换商品和商家介绍
     $("#shopProAndInfo>li").click(function(){
@@ -139,7 +146,12 @@
         console.log($(this).index());
         var i=$(this).index()+1;
         location.href="cpd"+i+".html";
-    })
+    });
+
+new Swiper('.swiper-container', {
+    pagination: '.swiper-pagination',
+    paginationClickable: true
+});
 </script>
 </body>
 </html>
