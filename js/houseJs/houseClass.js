@@ -65,16 +65,16 @@ $(function(){
                                 <ul class="productDescription">
                                     <li class="productName">${v.product_name}</li>
                                     <li class="productLook em0_8">${v.describe}</li>
-                                    <li class="originalPrice em0_8">赠送积分：${v.market_price.length>4?v.market_price.substring(0,v.shop_price.length-4)+"万":v.shop_price.length>8?v.market_price.substring(0,v.shop_price.length-8)+"亿":v.market_price}</li>
+                                    <li class="presentIntegral em0_8">赠送积分：${cutMoney(v.market_price)}</li>
                                     <li class="productPrice em0_9">
-                                        <div class="presentPrice">￥${v.shop_price.length>4?v.shop_price.substring(0,v.shop_price.length-4)+"万":v.shop_price.length>8?v.shop_price.substring(0,v.shop_price.length-8)+"亿":v.shop_price}</div>
+                                        <div class="presentPrice">￥${cutMoney(v.shop_price)}</div>
                                         <div class="sale">已售：${v.sell_count}</div>
                                     </li>
                                 </ul>
                             </li>
                         `;
             });
-            $("section").html("<ul class='productContainer'>"+html+"</ul>");
+            $("section").html("<div class='inlineBlock' style='width: 90%'><ul class='productContainer'>"+html+"</ul></div>");
             $(".searchResult").html("共"+result.info.length+"个结果")
         }else if(result.code==2001){
             $("section").html(`<p class="txtCenter aroundPadding23 borderBottom1">未找到匹配资源</p>`);
@@ -275,8 +275,8 @@ $(function(){
     });
 
     //跳转商品详情页
-    $("section").on("click",".productContainer>li",function(){
-        sessionStorage.setItem("productId",$(this).attr("data-productid"));
+    $("section").on("click",".productDescription",function(){
+        sessionStorage.setItem("productId",$(this).parent().attr("data-productid"));
         location.href="../12/productDetailPage.html"
     })
 });
