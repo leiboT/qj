@@ -1,6 +1,3 @@
-.swiper-pagination-bullet-active{
-    background-color: #e4393c !important;
-}
 /*加载*/
 [class*="loadingImg"]{
     position: absolute;
