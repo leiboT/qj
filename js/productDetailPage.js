@@ -111,13 +111,16 @@ $(function(){
                     for(var i= 0,html1="",len=info.goods_rotation.length; i<len; i++){
 
                         html1+=`
-                                <li>
+                                <div class="swiper-slide">
                                     <img src="${info.goods_rotation[i]}" class="img-response"/>
-                                </li>
+                                </div>
                             `;
                     }
-                    $(".productDetailImg").width(100*len+"%").html(html1);
-                    $(".productDetailImg>li").width((1/len)*100+"%");
+                    $(".productDetailImg").html(html1);
+                    new Swiper('.swiper-container', {
+                        pagination: '.swiper-pagination',
+                        paginationClickable: true
+                    });
                     $("#productNoticeTxt").html(purchaseNote);
                 }
             }
@@ -138,7 +141,7 @@ $(function(){
         //点击导航
         $(".onKeyNav").click(function(){
             $(this).addClass("activeColor");
-            setTimeout(function(){
+            setTimeout(()=>{
                 $(this).removeClass("activeColor");
             },2000);
             wx.openLocation({
