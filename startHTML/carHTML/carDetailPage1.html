@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="../../static/iconfont/iconfont.css"/>
     <link rel="stylesheet" href="../../css/base.css"/>
     <link rel="stylesheet" href="../../css/houseCss/productDetailPage.css"/>
+    <link rel="stylesheet" href="../../css/swiper.min.css"/>
     <title>仟健科技</title>
 </head>
 <body>
@@ -23,25 +24,23 @@
 </header>
 <section class="em1_4 txtLeft marginTop50 marginBottom50">
     <!--产品图片及信息-->
-    <div class="rv">
-        <div class="productDetailImgBox">
-            <ul class="productDetailImg">
-                <li>
-                    <img src="../../static/img/car/byd/byd.jpg" alt="" class="img-response"/>
-                </li>
-                <li>
-                    <img src="../../static/img/car/byd/byd.jpg" alt="" class="img-response"/>
-                </li>
-            </ul>
-            <ul class="productDetailInfoBox ab txtLeft aroundPadding23">
-                <li>
-                    比亚迪·秦
-                </li>
-                <li class="em0_8 productDescribe">
-                    紧凑型,纯电动 218马力电动机,4门5座
-                </li>
-            </ul>
+    <div class="productDetailImgBox rv swiper-container">
+        <div class="productDetailImg swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../../static/img/car/byd/byd.jpg" alt="" class="img-response"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../static/img/car/byd/byd.jpg" alt="" class="img-response"/>
+            </div>
         </div>
+        <ul class="productDetailInfoBox ab txtLeft aroundPadding23">
+            <li>
+                比亚迪·秦
+            </li>
+            <li class="em0_8 productDescribe">
+                紧凑型,纯电动 218马力电动机,4门5座
+            </li>
+        </ul>
     </div>
 
     <!--定价与积分-->
@@ -133,6 +132,7 @@
 </div>
 
 <script src="../../js/zepto_multiple.js"></script>
+<script src="../../js/swiper.min.js"></script>
 <script>
     var collect=false;
     //收藏点击切换
@@ -183,6 +183,10 @@
             console.log(123456);
             $(this).removeClass("pop-show");
         }
+    });
+    new Swiper('.swiper-container', {
+        pagination: '.swiper-pagination',
+        paginationClickable: true
     });
 </script>
 </body>
