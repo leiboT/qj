@@ -1,4 +1,5 @@
 *{padding: 0;  margin: 0;  border: none;  outline: none;  box-sizing: border-box;list-style: none;cursor: auto;}
+img,input{vertical-align: middle;}
 body{font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;  background-color: #fff;  color: #666; text-align: center; -webkit-font-smoothing: antialiased; /*chrome、safari*/  -moz-osx-font-smoothing: grayscale;/*firefox*/}
 a{text-decoration: none;color: #fff}
 html,body{width: 100%;height: 100%;overflow: auto;min-width: 320px;}
