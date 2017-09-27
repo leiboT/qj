@@ -1,6 +1,14 @@
 .shopProductBox{
     width: 100%;
 }
+.shopProductBox>li{
+    width: 30%;
+    min-width: 92px;
+    margin-right: 1em;
+}
+.shopProductBox>li:last-child{
+    margin-right: 0;
+}
 .shopsPic{
     width: 20%;
     height: 50px;
