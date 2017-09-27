@@ -19,7 +19,7 @@ $(function(){
                             ${sessionStorage.getItem("userDistrict")||"东莞市"}
                         </a>
                     `);
-
+    //特产筛选项
     customAjax(
         "http://api.qianjiantech.com/v1/specialtyChoose",
         {
@@ -109,74 +109,72 @@ $(function(){
         //}
     });
 
-    ////加载特产商品处理函数
-    //function loadSpecialty(result){
-    //    console.log(result);
-    //    if(result.code==2000){
-    //        var html="";
-    //        $(result.info).each(function(k,v){
-    //            console.log(v);
-    //            var htmlGoods="";
-    //            $(v.goods).each(function(k1,v1){
-    //                htmlGoods+=`
-    //                        <li>
-    //                            <div class="shopProductPic">
-    //                                <img src="${v1.product_img_url}" alt="${v1.product_name}" class="img-response"/>
-    //                            </div>
-    //                            <p>${v1.product_name}</p>
-    //                            <p class="colorF35F62">￥${v1.shop_price}</p>
-    //                        </li>
-    //                    `;
-    //            });
-    //            html+=`
-    //                    <li class="flexColbox justifyContentSpaceBetween aroundPadding23 borderBottom4" data-shopId="${v.shop_id}">
-    //            <div class="flexRowBox marginBottom4">
-    //                <div class="shopsPic">
-    //                    <img src="${v.shop_head_image}" alt="${v.shop_name}" class="img-response"/>
-    //                </div>
-    //                <ul class="flex1">
-    //                    <li class="color000">
-    //                        ${v.shop_name}
-    //                    </li>
-    //                    <li class="em0_9">
-    //                        距您当前位置${v.distance}千米
-    //                    </li>
-    //                </ul>
-    //            </div>
-    //            <ul>
-    //                <li class="overflowAuto">
-    //                    <ul class="shopProductBox flexRowBox justifyContentSpaceBetween txtCenter">
-    //                        ${htmlGoods}
-    //                    </ul>
-    //                </li>
-    //            </ul>
-    //        </li>
-    //                `;
-    //        });
-    //        $("#specialtyContainer").html(html);
-    //    }
-    //}
-    ////进入即加载距离最近的特产
-    //customAjax(
-    //    "http://api.qianjiantech.com/v1/show",
-    //    {
-    //        area_name:sessionStorage.getItem("userDistrict") || "东莞市",
-    //        class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId"),
-    //        distance_id:8,
-    //        longitude:113.619790,
-    //        latitude:22.931441
-    //    },
-    //    function(result){
-    //        loadSpecialty(result)
-    //    }
-    //
-    //);
+    //加载特产商品处理函数
+    function loadSpecialty(result){
+        console.log(result);
+        if(result.code==2000){
+            var html="";
+            $(result.info).each(function(k,v){
+                console.log(v);
+                var htmlGoods="";
+                $(v.goods).each(function(k1,v1){
+                    htmlGoods+=`
+                            <li>
+                                <div class="shopProductPic">
+                                    <img src="${v1.product_img_url}" alt="${v1.product_name}" class="img-response"/>
+                                </div>
+                                <p>${v1.product_name}</p>
+                                <p class="colorF35F62">￥${v1.shop_price}</p>
+                            </li>
+                        `;
+                });
+                html+=`
+                        <li class="flexColbox justifyContentSpaceBetween aroundPadding23 borderBottom4" data-shopId="${v.shop_id}">
+                <div class="flexRowBox marginBottom4">
+                    <div class="shopsPic">
+                        <img src="${v.shop_head_image}" alt="${v.shop_name}" class="img-response"/>
+                    </div>
+                    <ul class="flex1">
+                        <li class="color000">
+                            ${v.shop_name}
+                        </li>
+                        <li class="em0_9">
+                            距您当前位置${v.distance}千米
+                        </li>
+                    </ul>
+                </div>
+                <ul>
+                    <li class="overflowAuto">
+                        <ul class="shopProductBox flexRowBox justifyContentSpaceBetween txtCenter">
+                            ${htmlGoods}
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+                    `;
+            });
+            $("#specialtyContainer").html(html);
+        }
+    }
+    //进入即加载距离最近的特产
+    customAjax(
+        "http://api.qianjiantech.com/v1/show",
+        {
+            area_name:sessionStorage.getItem("userDistrict") || "东莞市",
+            class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId"),
+            distance_id:8,
+            longitude:sessionStorage.getItem("userPosition")?sessionStorage.getItem("userPosition").split(",")[0] : 113.619790,
+            latitude:sessionStorage.getItem("userPosition")?sessionStorage.getItem("userPosition").split(",")[1] : 22.931441
+        },
+        function(result){
+            loadSpecialty(result)
+        }
+
+    );
 
     //跳转商品详情页
-    $("#specialtyContainer>li").on("click",function(){
-        //console.log($(this).attr("data-productid"));
-        //sessionStorage.setItem("shopSelfId",$(this).attr("data-shopid"));
-        var i=$(this).index()+1;
-        location.href="caterDetail"+i+".html";
+    $("#specialtyContainer").on("click","#specialtyContainer>li",function(){
+        sessionStorage.setItem("shopId",$(this).attr("data-shopid"));
+        location.href="caterDetail.html";
     })
 });
