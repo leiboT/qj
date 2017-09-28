@@ -57,6 +57,29 @@ $(function(){
     var proInfoConfirm=$(".pro-info-footer");
     var number=$("#number");
     var muiToast=$(".mui-toast");
+    //输入提交提示模态框元素
+    var pop=$("#pop");
+    var p=$("#pop p");
+    var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
+    //提示弹出框处理函数
+    function  reminderDeal(txt){
+        p.html(txt);
+        pop.addClass("pop-show");
+    }
+
+    //点击其他区域关闭弹框
+    $(pop).mouseup(function(e){
+        var _con = $('.pop-box');
+        if(_con != e.target && _con.has(e.target).length === 0){
+            $(this).removeClass("pop-show");
+        }
+    });
+    //跳转
+    function jump(url,t){
+        setTimeout(function(){
+            location.href=url
+        },t)
+    }
 
     //预载购物车头部信息处理
     var preloadCart=function(ele){
@@ -68,33 +91,54 @@ $(function(){
 
     //点击加入购物车处理
     addCart.click(function(){
-        customAjax(
-            "http://api.qianjiantech.com/v1/mayAddShopCart",
-            {product_id:sessionStorage.getItem("productId")},
-            function(res){
-                console.log(res);
-                if(res.code==2000){
-                    console.log(res.info);
-                    var html="";
-                    $(res.info).each(function(k,v){
-                        console.log(v);
-                        html+=`
+        if(sessionStorage.getItem("uid")&&sessionStorage.getItem("stateCode")){
+            customAjax(
+                "http://api.qianjiantech.com/v1/mayAddShopCart",
+                {product_id:sessionStorage.getItem("productId")},
+                function(res){
+                    console.log(res);
+                    if(res.code==2000){
+                        console.log(res.info);
+                        var html="";
+                        $(res.info).each(function(k,v){
+                            console.log(v);
+                            html+=`
                             <li aria-checked="false" data-number="${v.number}" data-price="${v.price}" data-stockId="${v.stock_id}" data-img="${v.img_url}">
                                 ${v.attr}
                             </li>
                         `;
-                    });
-                    $(".items").html(html);
-                    var firstItem=$(".items>li").eq(0);
-                    firstItem.addClass("checked").attr("aria-checked",true);
-                    preloadCart(firstItem);
+                        });
+                        $(".items").html(html);
+                        var firstItem=$(".items>li").eq(0);
+                        firstItem.addClass("checked").attr("aria-checked",true);
+                        preloadCart(firstItem);
+                    }
                 }
-            }
-        );
-        coverBg.attr("style","display:block;");
-        proInfoBox.attr("style","transform: translate3d(0,0,0);");
-        //数量复位
-        $("#number").val(1)
+            );
+            coverBg.attr("style","display:block;");
+            proInfoBox.attr("style","transform: translate3d(0,0,0);");
+            //数量复位
+            $("#number").val(1)
+        }else{
+            reminderDeal("请先登录！");
+            closeBtn.text("进入登录页");
+            closeBtn.on("click",function(){
+                jump("../../loginRegisterHTML/login.html",0);
+            });
+        }
+    });
+
+    //请登录
+    $(".cart-link").click(function(e){
+        if(!sessionStorage.getItem("uid")&&!sessionStorage.getItem("stateCode")){
+            e.preventDefault();
+            reminderDeal("请先登录！");
+            closeBtn.text("进入登录页");
+            closeBtn.on("click",function(){
+                jump("../../loginRegisterHTML/login.html",0);
+            });
+        }
+
     });
 
     //预载购物车弹出样式处理
@@ -146,6 +190,13 @@ $(function(){
                         break;
                     case 2001:
                         addCartWarn("加入失败,请重试");
+                        break;
+                    case 9000:
+                        console.log("已在其他设备登录");
+                        reminderDeal("已在其他设备登录");
+                        closeBtn.text("即将进入登录页!");
+                        jump("../../loginRegisterHTML/login.html",1500);
+                        sessionStorage.clear();
                         break;
                 }
 
