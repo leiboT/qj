@@ -48,6 +48,16 @@
             border: 1px solid #F35F62;
             margin: 0.9em 0 3em;
         }
+        .pro-txt{
+            overflow: hidden;
+            line-height: 1.33em;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
     </style>
 </head>
 <body>
@@ -57,20 +67,22 @@
     填写订单
 </header>
 <section class="em1_4 height100 paddingTop50 txtLeft">
-    <div class="flexRowBox justifyContentSpaceBetween alignItemCenter borderBottom4 leftRightPadding3">
-        <ul class="flex1">
-            <li class="topPadding2 txtLeft">
-                <b>胡小文</b>
-                <b>15211162683</b>
-            </li>
-            <li class="em0_8 txtLeft topBottomPadding2">
-                广东省东莞市望牛墩镇等待点点滴滴
-            </li>
-        </ul>
-        <i class="iconfont icon-right"></i>
-    </div>
+    <a href="../../myHTML/settingHTML/shippingAddress.html" class="color252525" id="orderAddress">
+        <div class="flexRowBox justifyContentSpaceBetween alignItemCenter borderBottom4 leftRightPadding3">
+            <ul class="flex1">
+                <li class="topPadding2 txtLeft">
+                    <b class="addressUserName">胡小文</b>
+                    <b class="addressPhone">15211162683</b>
+                </li>
+                <li class="em0_8 txtLeft topBottomPadding2 addressInfo">
+                    广东省东莞市望牛墩镇等待点点滴滴
+                </li>
+            </ul>
+            <i class="iconfont icon-right"></i>
+        </div>
+    </a>
     <!--所选商品列表-->
-    <div>
+    <div id="orderProBox">
         <div class="aroundPadding23 borderBottom4">
             <div class="bottomPadding2 color252525">
                 可可吉米食品专营店
@@ -101,9 +113,9 @@
             </ul>
         </div>
         <div class="aroundPadding23 borderBottom4">
-            <div class="bottomPadding2 color252525">
-                可可吉米食品专营店
-            </div>
+            <!--<div class="bottomPadding2 color252525">-->
+                <!--可可吉米食品专营店-->
+            <!--</div>-->
             <ul class="flexRowBox justifyContentFlex-start alignItemCenter">
                 <li class="flex1 flexRowBox alignItemCenter">
                     <div class="cart-product-cell-1">
@@ -152,7 +164,7 @@
     </ul>
     <!--总价及支付-->
     <ul class="flexColBox alignItemCenter">
-        <li class="colorF35F62 topBottomPadding2">总价：￥198.00</li>
+        <li class="colorF35F62 topBottomPadding2" id="orderTotalMoney">总价：￥198.00</li>
         <li class="wxPay topBottomPadding2 txtCenter">
             微信支付
         </li>
@@ -170,5 +182,110 @@
     </div>
 </div>
 <script src="../../js/zepto_multiple.js"></script>
+<script>
+    var orderAddress=$("#orderAddress");
+    sessionStorage.removeItem("isOrder");
+    //异步再封装
+    function customAjax(url,data,fn){
+        $.ajax({
+            type:"post",
+            url:url,
+            data:data,
+            dataType:"json",
+            success:fn,
+            error:function(error){
+                console.log(error)
+            }
+        })
+    }
+    customAjax(
+            "http://api.qianjiantech.com/v1/mayCreateOrder",
+            {
+                user_id:sessionStorage.getItem("uid"),
+                state_code:sessionStorage.getItem("stateCode")
+            },
+            function(res){
+                console.log(res);
+                switch (res.code){
+                    case 2000:
+                            var html="";
+                            $(res.info.data).each(function(k,v){
+                                html+=`
+                                <div class="aroundPadding23 borderBottom4">
+                                    <ul class="flexRowBox justifyContentFlex-start alignItemCenter">
+                                    <li class="flex1 flexRowBox alignItemCenter">
+                                    <div class="cart-product-cell-1">
+                                    <img src="${v.img_url}" alt="" class="cart-photo-thumb"/>
+                                    </div>
+                                    <ul>
+                                    <li class="em0_9 pro-txt color252525">
+                                    ${v.describe}
+                                    </li>
+                                    <li class="em0_8 pro-txt">
+                                    ${v.attr}
+                                    </li>
+                                    <li class="colorF35F62">
+                                    ￥${v.price}
+                                    </li>
+                                    <li class="color252525 flexRowBox">
+                                    <ul class="flexRowBox quantity-wrapper">
+                                    <li class="border1 txtCenter"> - </li>
+                                    <li class="border1 flexColBox">
+                                    <input type="tel" value="${v.count}" class="flex1 width100 txtCenter"/>
+                                    </li>
+                                    <li class="border1 txtCenter"> + </li>
+                                    </ul>
+                                    </li>
+                                    </ul>
+                                    </li>
+                                    </ul>
+                                    </div>
+                            `;
+                            });
+                            var address=res.info.add.address,
+                                    addressId=res.info.add.address_id,
+                                    addressUserName=res.info.add.address_user_name,
+                                    addressPhone=res.info.add.address_phone;
+                            if(address&&addressId&&addressUserName&&addressPhone){
+                                orderAddress.html(`
+                                <div class="flexRowBox justifyContentSpaceBetween alignItemCenter borderBottom4 leftRightPadding3" data-addressId="${addressId}">
+                                    <ul class="flex1 leftPadding3">
+                                        <li class="topPadding2 txtLeft">
+                                            <b class="addressUserName">${addressUserName}</b>
+                                            <b class="addressPhone">${addressPhone}</b>
+                                        </li>
+                                        <li class="em0_8 txtLeft topBottomPadding2 addressInfo">
+                                            ${address}
+                                        </li>
+                                    </ul>
+                                    <i class="iconfont icon-right"></i>
+                                </div>
+                            `);
+                            }else{
+                                orderAddress.html(`
+                                    <div class="flexRowBox justifyContentSpaceBetween alignItemCenter borderBottom4 leftRightPadding3" data-addressId="${addressId}">
+                                    <ul class="flex1 leftPadding3">
+                                        <li class="colorF35F62 em0_9">你还没有收货地址或默认地址, 去创建</li>
+                                    </ul>
+                                    <i class="iconfont icon-right"></i>
+                                </div>
+                                `)
+                            }
+                            $("#orderProBox").html(html);
+                            $("#orderTotalMoney").html("总价：￥"+res.info.add.total_money);
+                        break;
+                    case 9000:
+                        alert("已在其他设备登录");
+                        location.href="../../loginRegisterHTML/login.html";
+                        sessionStorage.clear();
+                        break;
+                }
+            }
+    );
+
+    orderAddress.click(function(){
+        sessionStorage.setItem("isOrder",1);
+    })
+</script>
 </body>
 </html>
