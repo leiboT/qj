@@ -2,7 +2,8 @@
 img,input{vertical-align: middle;}
 body{font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;  background-color: #fff;  color: #666; text-align: center; -webkit-font-smoothing: antialiased; /*chrome、safari*/  -moz-osx-font-smoothing: grayscale;/*firefox*/}
 a{text-decoration: none;color: #fff}
-html,body{width: 100%;height: 100%;overflow: auto;min-width: 320px;}
+html,body{width: 100%;height: 100%;overflow-x: hidden;
+    overflow-y: auto;min-width: 320px;}
 body{position: relative;-webkit-overflow-scrolling : touch;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
 [class*='icon-']::before{color: #fff;font-size: 1.4em;font-weight: 900;}
 ::-webkit-input-placeholder{color: #fff;font-size: 1em;}
@@ -32,6 +33,7 @@ body{position: relative;-webkit-overflow-scrolling : touch;-webkit-user-select:n
 .paddingTop50{padding-top: 50px;}
 .marginTop50{margin-top: 50px;}
 .marginBottom50{margin-bottom: 50px;}
+.marginRight1{margin-right: 1em;}
 .leftPadding3{padding-left: 3%;}
 .rightPadding3{padding-right: 3%;}
 .leftRightPadding3{padding: 0 3%;}
