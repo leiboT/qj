@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no"/>
+    <meta name="author" content="web.qianjiantech.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-app-capable" content="yes">
+    <meta name="apple-mobile-app-status-bar-style" content="black">
+    <meta name="description" content="仟健-立足大众生活服务行业，深度挖掘客户需求，整合市场资源，融合分享经济学与倍增学原理，奉开放分享为基本原则，以互利互惠为发展目标，旨在让更多人有房住、有车开">
+    <meta name="keywords" content="购物,积分,房产,特产,汽车,酒店">
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <link rel="stylesheet" href="../../static/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <link rel="stylesheet" href="../../css/houseCss/productDetailPage.css"/>
+    <link rel="stylesheet" href="../../css/swiper.min.css"/>
+    <title>仟健科技</title>
+    <style>
+        #shopProAndInfoDetail{
+             display: inline-block;
+             width: 90%;
+             font-size: 1.1em;
+         }
+    </style>
+</head>
+<body>
+<!--头部-->
+<header class="noRightHeader">
+    <a href="caterIndex.html" class="iconfont icon-left"></a>
+    商家详情
+</header>
+<section class="em1_3 marginTop50">
+    <!--产品图片及信息-->
+    <div class="productDetailImgBox rv swiper-container">
+        <div class="productDetailImg swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="../../static/img/cater/dian.jpg" alt="" class="img-response"/>
+            </div>
+            <div class="swiper-slide">
+                <img src="../../static/img/cater/dian.jpg" alt="" class="img-response"/>
+            </div>
+        </div>
+        <ul class="productDetailInfoBox ab txtLeft aroundPadding23">
+            <li class="shopName">
+                广东特产(东莞厚街店)
+            </li>
+            <li class="em0_8 shopAddress">
+                东莞市厚街镇珊美地铁A出口附近
+            </li>
+        </ul>
+    </div>
+    <!--商家商品及商家介绍-->
+    <ul class="flexRowBox txtCenter borderTop4 borderBottom4 topBottomPadding2" id="shopProAndInfo">
+        <li class="flex1 borderRight1 activeColor">商品</li>
+        <li class="flex1">商家介绍</li>
+    </ul>
+    <!--商家商品及介绍详情-->
+    <div id="shopProAndInfoDetail">
+        <ul class="productContainer">
+            <li class="productBox">
+                <div class="productPicture">
+                    <img src="../../static/img/cater/1.jpg" alt=""/>
+                </div>
+                <ul class="productDescription">
+                    <li class="productName">厚街香肠</li>
+                    <li class="productLook em0_8">厚街香肠</li>
+                    <li class="presentIntegral em0_8">赠送积分:40</li>
+                    <li class="productPrice em0_9">
+                        <div class="presentPrice">￥50</div>
+                        <div class="sale">已售：0</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="productBox">
+                <div class="productPicture">
+                    <img src="../../static/img/cater/2.jpg" alt=""/>
+                </div>
+                <ul class="productDescription">
+                    <li class="productName">白沙油鸭</li>
+                    <li class="productLook em0_8">白沙油鸭</li>
+                    <li class="presentIntegral em0_8">赠送积分:90</li>
+                    <li class="productPrice em0_9">
+                        <div class="presentPrice">￥99</div>
+                        <div class="sale">已售：0</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="productBox">
+                <div class="productPicture">
+                    <img src="../../static/img/cater/3.jpg" alt=""/>
+                </div>
+                <ul class="productDescription">
+                    <li class="productName">麦芽糖柚皮</li>
+                    <li class="productLook em0_8">麦芽糖柚皮</li>
+                    <li class="presentIntegral em0_8">赠送积分:20</li>
+                    <li class="productPrice em0_9">
+                        <div class="presentPrice">￥30</div>
+                        <div class="sale">已售：0</div>
+                    </li>
+                </ul>
+            </li>
+            <li class="productBox">
+                <div class="productPicture">
+                    <img src="../../static/img/cater/4.jpg" alt=""/>
+                </div>
+                <ul class="productDescription">
+                    <li class="productName">鸡仔饼</li>
+                    <li class="productLook em0_8">鸡仔饼</li>
+                    <li class="presentIntegral em0_8">赠送积分:70</li>
+                    <li class="productPrice em0_9">
+                        <div class="presentPrice">￥80</div>
+                        <div class="sale">已售：0</div>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+        <ul class="aroundPadding23 txtLeft die">
+            <li class="topBottomPadding2 txtCenter shopName"><b>广东特产(东莞厚街店)</b></li>
+            <li style="text-indent: 2em;word-break:break-all;" class="shopIntro">广东特产(东莞厚街店)位于东莞市厚街镇珊美地铁A出口附近，销售产品主要是以地道的东莞特产为主</li>
+        </ul>
+    </div>
+</section>
+
+<!--模态弹出框-->
+<div id="pop">
+    <div class="pop-box">
+        <h3>提示</h3>
+        <p></p>
+        <span>关闭</span>
+    </div>
+</div>
+
+<script src="../../js/zepto_multiple.js"></script>
+<script src="../../js/swiper.min.js"></script>
+<script>
+    //输入提交提示模态框元素
+    var pop=$("#pop");
+    var p=$("#pop p");
+    var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
+    //提示弹出框处理函数
+    function  reminderDeal(txt){
+        p.html(txt);
+        pop.addClass("pop-show");
+    }
+    //跳转
+    function jump(url,t){
+        setTimeout(function(){
+            location.href=url
+        },t)
+    }
+    //切换商品和商家介绍
+    $("#shopProAndInfo>li").click(function(){
+        $(this).addClass("activeColor").siblings().removeClass("activeColor");
+        console.log($(this).index());
+        $("#shopProAndInfoDetail>ul").eq($(this).index()).addClass("show").siblings().addClass("die").removeClass("show");
+    });
+    //异步再封装
+    function customAjax(url,data,fn){
+        $.ajax({
+            type:"post",
+            url:url,
+            data:data,
+            dataType:"json",
+            success:fn,
+            error:function(error){
+                console.log(error)
+            }
+        })
+    }
+    //加载商家信息
+    customAjax(
+            "http://api.qianjiantech.com/v1/shopIntroduction",
+            {shop_id:sessionStorage.getItem("shopId")},
+            function(res){
+                console.log(res);
+                if(res.code==2000){
+                    $(".shopName").html(res.info.shop_name);
+                    $(".shopAddress").html(res.info.address);
+                    $(".shopIntro").html(res.info.ad);
+                    var html="";
+                    $(res.info.show.rotation).each(function(k,v){
+                        html+=`
+                            <div class="swiper-slide">
+                                <img src="${v}" alt="" class="img-response"/>
+                            </div>
+                        `;
+                    });
+                    $(".productDetailImg").html(html);
+                    new Swiper('.swiper-container', {
+                        pagination: '.swiper-pagination',
+                        loop:true,
+                        loopSlider:10,
+                        autoplayDisableOnInteraction : false,
+                        autoplay: 2500
+                    });
+                }
+            }
+    );
+    //加载商家产品
+    customAjax(
+            "http://api.qianjiantech.com/v1/shopGoods",
+            {
+                user_id:sessionStorage.getItem("uid"),
+                state_code:sessionStorage.getItem("stateCode"),
+                shop_id:sessionStorage.getItem("shopId")
+            },
+            function(res){
+                console.log(res);
+                if(res.code==2000){
+                    var html="";
+                    $(res.info).each(function(k,v){
+                        html+=`
+                            <li class="productBox" data-proId="${v.product_id}">
+                                <div class="productPicture">
+                                    <img src="${v.img_url}" alt=""/>
+                                </div>
+                                <ul class="productDescription">
+                                    <li class="productName">厚街香肠</li>
+                                    <li class="productLook em0_8">${v.describe}</li>
+                                    <li class="presentIntegral em0_8">赠送积分:${v.market_price}</li>
+                                    <li class="productPrice em0_9">
+                                        <div class="presentPrice">￥${v.shop_price}</div>
+                                        <div class="sale">已售：${v.count}</div>
+                                    </li>
+                                </ul>
+                            </li>
+                        `;
+                    });
+                    $(".productContainer").html(html);
+                }else if(res.code==9000){
+                    reminderDeal("你已在其他设备登录!");
+                    closeBtn.html("即将进入登录页").unbind("click");
+                    jump("../../loginRegisterHTML/login.html",1500);
+                    sessionStorage.clear();
+                }
+            }
+    );
+    //进入商品详情页
+    $(".productContainer").on("click",".productDescription",function(){
+        sessionStorage.setItem("productId",$(this).parent().attr("data-proid"));
+        location.href="cpd.html";
+    })
+</script>
+</body>
+</html>
