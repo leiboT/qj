@@ -45,6 +45,14 @@ $(function(){
             }
         })
     }
+    //图片加载完清除占位图
+    function clearPlaceholderShape(){
+        $(".ui-fb").each(function(k,v){
+            $(v).load(function(){
+                $(this).parent().removeClass("ui-lz");
+            })
+        });
+    }
     var primaryHtml=[];
 
     function cutMoney(price){
@@ -59,8 +67,8 @@ $(function(){
             $(info).each(function(k,v){
                 html+=`
                            <li class="productBox" data-productId="${v.product_id}">
-                                <div class="productPicture">
-                                    <img src="${v.img_url}" alt=""/>
+                                <div class="productPicture rv ui-lz">
+                                    <img src="${v.img_url}" alt="${v.product_id}" class="ui-fb"/>
                                 </div>
                                 <ul class="productDescription">
                                     <li class="productName">${v.product_name}</li>
@@ -80,6 +88,7 @@ $(function(){
             $("section").html(`<p class="txtCenter aroundPadding23 borderBottom1">未找到匹配资源</p>`);
             $(".searchResult").html("没有结果")
         }
+        clearPlaceholderShape()
     }
 
     var classifyBig=[];
@@ -275,8 +284,8 @@ $(function(){
     });
 
     //跳转商品详情页
-    $("section").on("click",".productDescription",function(){
-        sessionStorage.setItem("productId",$(this).parent().attr("data-productid"));
-        location.href="../12/productDetailPage.html"
+    $("section").on("click",".productContainer>li",function(){
+        sessionStorage.setItem("productId",$(this).attr("data-productid"));
+        location.href="../12/productDetailPage.html";
     })
 });
