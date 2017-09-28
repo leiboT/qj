@@ -21,7 +21,7 @@ $(function(){
     $("#searchDemo").click(function(){
         location.href="smallFeatureHTML/search.html"
     });
-    //判断图片加载完成
+    //判断轮播图片加载完成
     function imgLoadingEnd(boxSelector,fnc,loadingBox){
         var imgList = $(boxSelector).find('img');
         var callback = function(){
@@ -37,7 +37,15 @@ $(function(){
             };
         })(imgList.length, callback);
         imgList.each(function(){
-            $(this).bind('load', check).attr('src', $(this).attr('data-img'));
+            $(this).bind('load', check).attr('src', $(this).attr('data-img')).show();
+        });
+    }
+    //图片加载完清除占位图
+    function clearPlaceholderShape(){
+        $(".ui-fb").each(function(k,v){
+            $(v).load(function(){
+                $(this).parent().removeClass("ui-lz");
+            })
         });
     }
 
@@ -59,8 +67,10 @@ $(function(){
                     <li class="x4">
                         <a href="startHTML/${
                                 jump=='house'?'houseHTML/houseIndex':jump=='car'?'carHTML/carIndex':jump=='food'?'caterHTML/caterIndex':jump=='hotel'?'hotelHTML/hotelIndex':jump=='tourism'?'travelHtml/travelIndex':jump=='education'?'educateHTML/educateIndex':jump=='health'?'healthHTML/healthIndex':jump=='Fine'?'boutiqueHTML/boutiqueIndex':jump=='about_us'?'aboutHTML':'moreHTML/moreIndex'}.html" data-classifyClassId="${info[i].id}">
-                            <img src="" alt="${info[i].class_name}" data-img="${info[i].img_url}"/>
-                            ${info[i].class_name}
+                                <div class="ui-lz rv nav-img">
+                                    <img src="${info[i].img_url}" alt="${info[i].class_name}" data-img="${info[i].img_url}" class="ui-fb"/>
+                                </div>
+                            <span>${info[i].class_name}</span>
                         </a>
                     </li>
                     `
@@ -70,7 +80,7 @@ $(function(){
                         <a href="startHTML/${
                             jump=='house'?'houseHTML/houseIndex':jump=='car'?'carHTML/carIndex':jump=='food'?'caterHTML/caterIndex':jump=='hotel'?'hotelHTML/hotelIndex':jump=='tourism'?'travelHtml/travelIndex':jump=='education'?'educateHTML/educateIndex':jump=='health'?'healthHTML/healthIndex':jump=='Fine'?'boutiqueHTML/boutiqueIndex':jump=='about_us'?'aboutHTML':'moreHTML/moreIndex'}.html" data-classifyClassId="${info[i].id}">
                             <img src="" alt="${info[i].class_name}" data-img="${info[i].img_url}"/>
-                            ${info[i].class_name}
+                            <span>${info[i].class_name}</span>
                         </a>
                     </li>`;
                         }else{
@@ -79,18 +89,14 @@ $(function(){
                         <a href="startHTML/${
                                 jump=='house'?'houseHTML/houseIndex':jump=='car'?'carHTML/carIndex':jump=='food'?'caterHTML/caterIndex':jump=='hotel'?'hotelHTML/hotelIndex':jump=='tourism'?'travelHtml/travelIndex':jump=='education'?'educateHTML/educateIndex':jump=='health'?'healthHTML/healthIndex':jump=='Fine'?'boutiqueHTML/boutiqueIndex':jump=='about_us'?'aboutHTML':'moreHTML/moreIndex'}.html" data-classifyClassId="${info[i].id}">
                             <img src="" alt="${info[i].class_name}" data-img="${info[i].img_url}"/>
-                            ${info[i].class_name}
+                            <span>${info[i].class_name}</span>
                         </a>
                     </li>`;
                             navBox.width(20*len+"%");
                         }
                     }
                     navBox.html(html);
-                    imgLoadingEnd(
-                        ".nav-box",
-                        function(){},
-                        ".loadingImg2"
-                    )
+                    clearPlaceholderShape();
                 }
             }
         })
@@ -145,7 +151,10 @@ $(function(){
                         function(){
                             new Swiper('.swiper-container', {
                             pagination: '.swiper-pagination',
-                            paginationClickable: true
+                            paginationClickable: true,
+                            loop: true,
+                            autoplayDisableOnInteraction: false,
+                            autoplay: 3000
                             })
                         },
                         ".loadingImg1"
@@ -247,6 +256,7 @@ $(function(){
             url:"http://api.qianjiantech.com/v1/recommend",
             dataType:"json",
             success:function(result){
+                console.log(result);
                 var code=result.code;
                 if(code==2000){
                     var info=result.info;
@@ -254,8 +264,8 @@ $(function(){
                     $(info).each(function(k,v){
                         html+=`
                             <li class="productBox rv" data-productId="${v.product_id}">
-                                <div class="productPicture">
-                                    <img src="${v.img_url}" alt="${v.product_id}" data-img="${v.img_url}"/>
+                                <div class="productPicture rv ui-lz">
+                                    <img src="${v.img_url}" alt="${v.product_id}" data-img="${v.img_url}" class="ui-fb"/>
                                 </div>
                                 <ul class="productDescription">
                                     <li class="productName">${v.product_name}</li>
@@ -266,20 +276,11 @@ $(function(){
                                         <div class="sale">已售：${v.sell_count}</div>
                                     </li>
                                 </ul>
-                                <!--<div class="loadingImg3 flexRowBox justifyContentCenter alignItemCenter">正在加载中...</div>-->
                             </li>
                         `;
                     });
                     $(".productContainer").html(html);
-                    //imgLoadingEnd(
-                    //    ".productContainer",
-                    //    function(){},
-                    //    ".loadingImg3"
-                    //)
-                    //if(isiOS){
-                    //    console.log(123456);
-                    //    $(".productContainer img").height("auto");
-                    //}
+                    clearPlaceholderShape();
                 }
 
             }
@@ -288,8 +289,13 @@ $(function(){
     loadYouLick();
 
     //跳转商品详情页
-    $(".productContainer").on("click",".productDescription",function(){
-        sessionStorage.setItem("productId",$(this).parent().attr("data-productid"));
-        location.href="startHTML/12/productDetailPage.html";
+    $(".productContainer").on("click",".productBox",function(){
+        sessionStorage.setItem("productId",$(this).attr("data-productId"));
+        if($(this).attr("data-productId")==5 || $(this).attr("data-productId")==12){
+            sessionStorage.setItem("shopId",3);
+            sessionStorage.setItem("allClassId",3);
+            location.href="startHTML/caterHTML/cpd.html";
+        }else
+            location.href="startHTML/12/productDetailPage.html";
     })
 });
