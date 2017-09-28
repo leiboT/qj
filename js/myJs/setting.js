@@ -7,6 +7,11 @@ $(function(){
     var pop=$("#pop");
     var p=$("#pop p");
     var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
+    //提示弹出框处理函数
+    function  reminderDeal(txt){
+        p.html(txt);
+        pop.addClass("pop-show");
+    }
     //用户信息
     var userInfo=JSON.parse(sessionStorage.getItem("userInfo"));
     //加载用户信息
