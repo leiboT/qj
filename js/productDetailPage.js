@@ -1,26 +1,34 @@
 $(function(){
     //配置微信接口
-    var xhr = new XMLHttpRequest();
-    xhr.open('get', "http://api.qianjiantech.com/getLocation?url="+"http://web.qianjiantech.com/startHTML/12/productDetailPage.html");
-    xhr.onload = function(e) {
-        if ((xhr.status >= 200 && xhr.status < 300) || xhr.status === 0) {
-            var responseData = JSON.parse(xhr.responseText);
-            wx.config({
-                debug: false,
-                appId: responseData.AppId,
-                timestamp: responseData.timestamp,
-                nonceStr: responseData.nonce,
-                signature: responseData.signature,
-                jsApiList: [
-                    //所有要调用的 API 都要加到这个列表中
-                    'checkJsApi',
-                    'openLocation',
-                    'getLocation'
-                ]
-            });
-        }
-    };
-    xhr.send();
+    try {
+        var xhr = new XMLHttpRequest();
+        xhr.open('get', "http://api.qianjiantech.com/getLocation?url="+"http://web.qianjiantech.com/startHTML/12/productDetailPage.html");
+        xhr.onreadystatechange= function() {
+            if (xhr.readyState==4 && xhr.status==200) {
+                try{
+                    var responseData = JSON.parse(xhr.responseText);
+                    wx.config({
+                        debug: false,
+                        appId: responseData.AppId,
+                        timestamp: responseData.timestamp,
+                        nonceStr: responseData.nonce,
+                        signature: responseData.signature,
+                        jsApiList: [
+                            //所有要调用的 API 都要加到这个列表中
+                            'checkJsApi',
+                            'openLocation',
+                            'getLocation'
+                        ]
+                    });
+                }catch (err){
+                    console.log(err)
+                }
+            }
+        };
+        xhr.send();
+    } catch (e) {
+        console.log(e)
+    }
 
     function cutMoney(price){
         return price.length>4?price.substring(0,price.length-4)+"万":price.length>8?price.substring(0,price.length-8)+"亿":price;
@@ -144,14 +152,18 @@ $(function(){
             setTimeout(()=>{
                 $(this).removeClass("activeColor");
             },2000);
-            wx.openLocation({
-                longitude : NavData.longitude, // 经度，浮点数，范围为180 ~ -180。
-                latitude : NavData.latitude, // 纬度，浮点数，范围为90 ~ -90
-                name : '商品位置', // 位置名
-                address : NavData.address, // 地址详情说明
-                scale : 20, // 地图缩放级别,整形值,范围从1~28。默认为最大
-                infoUrl : 'http://weixin.qq.com' // 在查看位置界面底部显示的超链接,可点击跳转（测试好像不可用）
-            });
+            try{
+                wx.openLocation({
+                    longitude : NavData.longitude, // 经度，浮点数，范围为180 ~ -180。
+                    latitude : NavData.latitude, // 纬度，浮点数，范围为90 ~ -90
+                    name : '商品位置', // 位置名
+                    address : NavData.address, // 地址详情说明
+                    scale : 20, // 地图缩放级别,整形值,范围从1~28。默认为最大
+                    infoUrl : 'http://weixin.qq.com' // 在查看位置界面底部显示的超链接,可点击跳转（测试好像不可用）
+                });
+            }catch(e){
+                console.log(e)
+            }
         });
 
         //输入提交提示模态框元素
