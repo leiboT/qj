@@ -50,13 +50,27 @@
         .deleteCancel{
             border-right: 1px solid #ddd;
         }
+        .addressEditList{
+            height: 0;
+            overflow: hidden;
+        }
+        .addressYesDefault>i::before{
+            color: #e4393c;
+        }
+        .addressYesDefault .activeDefault{
+            color: #e4393c;
+        }
+        .addressYesDefault .activeDefault ::before{
+            color: #e4393c;
+        }
     </style>
 </head>
 <body>
     <!--头部-->
-    <header class="noRightHeader">
+    <header>
         <a href="../setting.html" class="iconfont icon-left"></a>
         收货地址
+        <span id="addressEditBtn">管理</span>
     </header>
     <ul class="marginTop50 em1_3" id="shippingAddress"></ul>
     <!--模态弹出框-->
