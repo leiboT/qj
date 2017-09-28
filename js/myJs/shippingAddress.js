@@ -41,16 +41,12 @@ $(function(){
     });
 
     //设为默认地址
-    $("#shippingAddress").on("click",".defaultAddressBox",function(){
-        $(".defaultAddressBox").each(function(k,v){
-            $(v).removeClass("activeColor")
-        });
-        $(this).addClass("activeColor");
+    var setDefaultAdd=function(ele){
         customAjax(
             "http://api.qianjiantech.com/v1/setDefault",
             {
                 user_id:uid,
-                address_id:$(this).attr("data-addressid"),
+                address_id:$(ele).attr("data-addressid"),
                 state_code:stateCode,
                 is_default:1
             },
@@ -65,6 +61,14 @@ $(function(){
                 }
             }
         )
+    };
+
+    $("#shippingAddress").on("click",".defaultAddressBox",function(){
+        $(".defaultAddressBox").each(function(k,v){
+            $(v).removeClass("activeDefault");
+        });
+        $(this).addClass("activeDefault").parent().parent().parent().addClass("addressYesDefault");
+        setDefaultAdd(this);
     });
 
     //判断地址是否有null
@@ -81,17 +85,17 @@ $(function(){
             var html="";
             $(info).each(function(k,v){
                 shippingAddress[v.address_id]=v;
-                html+=`<li class="borderBottom4" data-addressId="${v.address_id}">
-            <ul class="leftRightPadding3">
-                <li class="flexRowBox justifyContentSpaceBetween topPadding2">
-                    <b>${v.name}</b>
+                html+=`<li class="leftRightPadding3 borderBottom4 flexRowBox alignItemCenter addressItems ${v.id_default==1&&'addressYesDefault'}" data-addressId="${v.address_id}">
+            <ul class="flex1">
+                <li class="flexRowBox topPadding2">
+                    <b class="marginRight1">${v.name}</b>
                     <b>${v.phone}</b>
                 </li>
                 <li class="em0_8 txtLeft topBottomPadding2">
                     ${judgeAddressNull(v.province)}${judgeAddressNull(v.city)}${judgeAddressNull(v.district)}${judgeAddressNull(v.address)}
                 </li>
-                <li class="borderTop1 flexRowBox justifyContentSpaceBetween alignItemCenter topBottomPadding2">
-                    <div class="defaultAddressBox ${v.id_default==1&&'activeColor'}" data-addressId="${v.address_id}" data-isDefault="${v.id_default}">
+                <li class="borderTop1 flexRowBox justifyContentSpaceBetween alignItemCenter addressEditList">
+                    <div class="defaultAddressBox activeDefault" data-addressId="${v.address_id}">
                         <i class="iconfont icon-checkedon"></i>
                         设为默认地址
                     </div>
@@ -101,10 +105,24 @@ $(function(){
                     </ul>
                 </li>
             </ul>
+            <i class="iconfont icon-yes addressYes"></i>
         </li>`;
             });
             sessionStorage.setItem("shippingAddress",JSON.stringify(shippingAddress));
             $("#shippingAddress").html(html);
+            //如果是从订单进入收获地址
+            if(sessionStorage.getItem("isOrder")){
+                //改变回退
+                $("header>a").attr("href","../../startHTML/12/writeOrder.html");
+                //点击切换地址同时设为默认并跳转回结算
+                $("#shippingAddress").on("click",".addressItems",function(){
+                    $(this).addClass("addressYesDefault").siblings(".addressYesDefault").removeClass("addressYesDefault");
+                    setDefaultAdd(this);
+                    jump("../../startHTML/12/writeOrder.html",100);
+                })
+            }else{
+                $(".addressYes").remove();
+            }
         }else if(code==2001){
             $("#shippingAddress").html(`<li>你的收货地址为空</li>`);
         }else if(code==9000){
@@ -143,7 +161,7 @@ $(function(){
                         function(result){
                             $(".settingWarn").unbind("click");
                             result.code==2000&&$(_self).parent().parent().parent().parent().remove();
-                            $("#shippingAddress").html()||$("#shippingAddress").html(`<li>你的收货地址为空</li>`);
+                            $("#shippingAddress").html()||$("#shippingAddress").html(`<li>你的收货地址为空</li>`)&&$("#addressEditBtn").remove();
                         }
                     )
                 }else{
@@ -282,5 +300,12 @@ $(function(){
         e = e || window.event;
         e.preventDefault();
         addEditSubmit();
-    })
+    });
+
+    //编辑完成切换
+    var toggle=true;
+    $("#addressEditBtn").click(function(){
+        toggle?$(".addressEditList").attr("style","height:100%;")&&$(this).text("完成")&&$(".addressYes").attr("style","display:none;"):$(".addressEditList").attr("style","")&&$(this).text("管理")&&$(".addressYes").attr("style","display:block;");
+        toggle=!toggle;
+    });
 });
