@@ -7,6 +7,35 @@ $(function(){
     if(city)
         $(".address").html(`<i class="iconfont icon-arrowdownb"></i>`+city);
 
+
+    //图片加载完清除占位图
+    function clearPlaceholderShape(){
+        $(".ui-fb").each(function(k,v){
+            $(v).load(function(){
+                $(this).parent().removeClass("ui-lz");
+            })
+        });
+    }
+    //判断轮播图片加载完成
+    function imgLoadingEnd(boxSelector,fnc,loadingBox){
+        var imgList = $(boxSelector).find('img');
+        var callback = function(){
+            fnc();
+            $(loadingBox).hide();
+        };
+        var check = (function (count, fn){
+            return function(){
+                count--;
+                if(count == 0){
+                    fn();
+                }
+            };
+        })(imgList.length, callback);
+        imgList.each(function(){
+            $(this).bind('load', check).attr('src', $(this).attr('data-img')).show();
+        });
+    }
+
     //加载首页分类
     function loadSort(){
         $.ajax({
@@ -25,8 +54,10 @@ $(function(){
                             html+=`
                     <li class="x4">
                         <a href="houseItem.html" data-classId="${itemId}" class="em0_9">
-                            <img src="${info[i].item_url}" alt="${info[i].item_name}"/>
-                            ${info[i].item_name}
+                            <div class="ui-lz rv nav-img">
+                                <img src="${info[i].item_url}" alt="${info[i].item_name}" class="ui-fb"/>
+                            </div>
+                            <span>${info[i].item_name}</span>
                         </a>
                     </li>
                     `
@@ -34,17 +65,21 @@ $(function(){
                             html+=
                     `<li class="x5">
                         <a href="houseItem.html" data-classId="${itemId}" class="em0_8">
-                            <img src="${info[i].item_url}" alt="${info[i].item_name}"/>
-                            ${info[i].item_name}
+                            <div class="ui-lz rv nav-img">
+                                <img src="${info[i].item_url}" alt="${info[i].item_name}" class="ui-fb"/>
+                            </div>
+                            <span>${info[i].item_name}</span>
                         </a>
                     </li>
                     `;
                         }else{
                             html+=
                                 `<li class="x5">
-                        <a href="houseItem.html" class="em0_8">
-                            <img src="${info[i].item_url}" alt="${info[i].item_name}"/>
-                            ${info[i].item_name}
+                        <a href="houseItem.html" data-classId="${itemId}" class="em0_8">
+                            <div class="ui-lz rv nav-img">
+                                <img src="${info[i].item_url}" alt="${info[i].item_name}" class="ui-fb"/>
+                            </div>
+                            <span>${info[i].item_name}</span>
                         </a>
                     </li>
                     `;
@@ -52,6 +87,7 @@ $(function(){
                         }
                     }
                     navBox.html(html);
+                    clearPlaceholderShape()
                 }
             }
         })
@@ -77,15 +113,24 @@ $(function(){
                     for(var k=0,html='';k<len;k++){
                         html+=`
                         <a href="#" class="swiper-slide">
-                            <img src="${info[k].img_url}" class="img-response"/>
+                            <img src="" class="img-response" data-img="${info[k].img_url}"/>
                         </a>
                     `;
                     }
                     carouselBox.html(html);
-                    new Swiper('.swiper-container', {
-                        pagination: '.swiper-pagination',
-                        paginationClickable: true
-                    });
+                    imgLoadingEnd(
+                        ".carousel-box",
+                        function(){
+                            new Swiper('.swiper-container', {
+                                pagination: '.swiper-pagination',
+                                paginationClickable: true,
+                                loop: true,
+                                autoplayDisableOnInteraction: false,
+                                autoplay: 3000
+                            })
+                        },
+                        ".loadingImg1"
+                    );
                     //每个轮播图的width
                     //var carouselWidth=$(".carousel-box li").width();
                     //var i=0;
@@ -196,8 +241,8 @@ $(function(){
                     $(info).each(function(k,v){
                         html+=`
                             <li class="productBox" data-productId="${v.product_id}">
-                                <div class="productPicture">
-                                    <img src="${v.img_url}" alt="${v.product_id}"/>
+                                <div class="productPicture rv ui-lz">
+                                    <img src="${v.img_url}" alt="${v.product_id}" class="ui-fb"/>
                                 </div>
                                 <ul class="productDescription">
                                     <li class="productName">${v.product_name}</li>
@@ -212,6 +257,7 @@ $(function(){
                         `;
                     });
                     $(".productContainer").html(html);
+                    clearPlaceholderShape()
                 }
 
             }
@@ -220,8 +266,8 @@ $(function(){
     loadYouLick();
 
     //跳转商品详情页
-    $(".productContainer").on("click",".productDescription",function(){
-        sessionStorage.setItem("productId",$(this).parent().attr("data-productid"));
+    $(".productContainer").on("click",".productContainer>li",function(){
+        sessionStorage.setItem("productId",$(this).attr("data-productid"));
         location.href="../12/productDetailPage.html";
     })
 });
