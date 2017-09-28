@@ -42,6 +42,9 @@
             color: #ddd;
             font-size: 1.2em;
         }
+        [type='tel']{
+            background-color: #f5f5f5;
+        }
         .cart-photo-thumb{
             max-width: 88px;
             max-height: 88px;
@@ -52,16 +55,19 @@
             max-height: 88px;
             padding: 0 7px;
         }
-        .pro-title{
+        .pro-txt{
             overflow: hidden;
             line-height: 1.33em;
             display: -webkit-box;
-            -webkit-line-clamp: 2;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-line-clamp: 1;
             -webkit-box-orient: vertical;
         }
-        .quantity-wrapper{
-            width: 30%;
-        }
+        /*.quantity-wrapper{*/
+            /*width: 30%;*/
+        /*}*/
         .quantity-wrapper>li{
             flex: 1;
             min-width: 25px;
@@ -77,170 +83,161 @@
             padding: 0.3em 1.2em;
             border-radius: 0.4em;
         }
-
+        .cartItem{
+            background-color: #f5f5f5;
+        }
+        .cartProDelete{
+            align-self: flex-end;
+        }
+        .totalMoney{
+            font-weight: bold;
+        }
+        /*设置页提示框*/
+        .settingWarn{
+            height: 35%;
+            background-color: #F56064;
+            color: #fff;
+            border-radius: 0 0 12px 12px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .settingWarn>span{
+            height: 100%;
+            flex: 1;
+        }
+        .loginOutCancel{
+            border-right: 1px solid #ddd;
+        }
+        .disabled{
+            background-color: #ddd;
+        }
     </style>
 </head>
 <body>
 <!--头部-->
 <header class="noRightHeader">
-    <a href="../caterHTML/cpd1.html" class="iconfont icon-left"></a>
+    <a href="../caterHTML/cpd.html" class="iconfont icon-left"></a>
     购物车
 </header>
 <div id="shoppingCartContainer" class="txtCenter paddingTop50">
     <section class="em1_4 txtLeft shop-group">
-        <div class="aroundPadding23 borderBottom4">
-            <div class="bottomPadding2 color252525">
-                <i class="iconfont icon-checkedon"></i>
-                可可吉米食品专营店
-            </div>
-            <ul class="flexRowBox justifyContentFlex-start alignItemCenter">
-                <li>
-                    <i class="iconfont icon-checkedon"></i>
-                </li>
-                <li class="flex1 flexRowBox alignItemCenter">
-                    <div class="cart-product-cell-1">
-                        <img src="https://img10.360buyimg.com/n7/s176x176_jfs/t5776/77/9199759403/243347/327cc9f7/5983bfc0N26fb4478.jpg!q70.jpg" alt="" class="cart-photo-thumb"/>
-                    </div>
-                    <ul class="flex1">
-                        <li class="em0_8 pro-title">
-                            德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】
-                        </li>
-                        <li class="colorF35F62">
-                            ￥99.00
-                        </li>
-                        <li class="color252525 flexRowBox">
-                            <ul class="flexRowBox quantity-wrapper">
-                                <li class="border1 txtCenter"> - </li>
-                                <li class="border1 flexColBox">
-                                    <input type="tel" value="1" class="flex1 width100 txtCenter"/>
-                                </li>
-                                <li class="border1 txtCenter"> + </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="clearFloat color252525 em0_8">
-                <div class="rt">|编辑</div>
-            </div>
-        </div>
-        <div class="aroundPadding23 borderBottom4">
-            <div class="bottomPadding2 color252525">
-                <i class="iconfont icon-checkedon"></i>
-                可可吉米食品专营店
-            </div>
-            <ul class="flexRowBox justifyContentFlex-start alignItemCenter">
-                <li>
-                    <i class="iconfont icon-checkedon"></i>
-                </li>
-                <li class="flex1 flexRowBox alignItemCenter">
-                    <div class="cart-product-cell-1">
-                        <img src="https://img10.360buyimg.com/n7/s176x176_jfs/t5776/77/9199759403/243347/327cc9f7/5983bfc0N26fb4478.jpg!q70.jpg" alt="" class="cart-photo-thumb"/>
-                    </div>
-                    <ul class="flex1">
-                        <li class="em0_8 pro-title">
-                            德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】
-                        </li>
-                        <li class="colorF35F62">
-                            ￥99.00
-                        </li>
-                        <li class="color252525 flexRowBox">
-                            <ul class="flexRowBox quantity-wrapper">
-                                <li class="border1 txtCenter"> - </li>
-                                <li class="border1 flexColBox">
-                                    <input type="tel" value="1" class="flex1 width100 txtCenter"/>
-                                </li>
-                                <li class="border1 txtCenter"> + </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="clearFloat color252525 em0_8">
-                <div class="rt">|编辑</div>
-            </div>
-        </div>
-        <div class="aroundPadding23 borderBottom4">
-            <div class="bottomPadding2 color252525">
-                <i class="iconfont icon-checkedon"></i>
-                可可吉米食品专营店
-            </div>
-            <ul class="flexRowBox justifyContentFlex-start alignItemCenter">
-                <li>
-                    <i class="iconfont icon-checkedon"></i>
-                </li>
-                <li class="flex1 flexRowBox alignItemCenter">
-                    <div class="cart-product-cell-1">
-                        <img src="https://img10.360buyimg.com/n7/s176x176_jfs/t5776/77/9199759403/243347/327cc9f7/5983bfc0N26fb4478.jpg!q70.jpg" alt="" class="cart-photo-thumb"/>
-                    </div>
-                    <ul class="flex1">
-                        <li class="em0_8 pro-title">
-                            德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】
-                        </li>
-                        <li class="colorF35F62">
-                            ￥99.00
-                        </li>
-                        <li class="color252525 flexRowBox">
-                            <ul class="flexRowBox quantity-wrapper">
-                                <li class="border1 txtCenter"> - </li>
-                                <li class="border1 flexColBox">
-                                    <input type="tel" value="1" class="flex1 width100 txtCenter"/>
-                                </li>
-                                <li class="border1 txtCenter"> + </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="clearFloat color252525 em0_8">
-                <div class="rt">|编辑</div>
-            </div>
-        </div>
-        <div class="aroundPadding23 borderBottom4">
-            <div class="bottomPadding2 color252525">
-                <i class="iconfont icon-checkedon"></i>
-                可可吉米食品专营店
-            </div>
-            <ul class="flexRowBox justifyContentFlex-start alignItemCenter">
-                <li>
-                    <i class="iconfont icon-checkedon"></i>
-                </li>
-                <li class="flex1 flexRowBox alignItemCenter">
-                    <div class="cart-product-cell-1">
-                        <img src="https://img10.360buyimg.com/n7/s176x176_jfs/t5776/77/9199759403/243347/327cc9f7/5983bfc0N26fb4478.jpg!q70.jpg" alt="" class="cart-photo-thumb"/>
-                    </div>
-                    <ul class="flex1">
-                        <li class="em0_8 pro-title">
-                            德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】
-                        </li>
-                        <li class="colorF35F62">
-                            ￥99.00
-                        </li>
-                        <li class="color252525 flexRowBox">
-                            <ul class="flexRowBox quantity-wrapper">
-                                <li class="border1 txtCenter"> - </li>
-                                <li class="border1 flexColBox">
-                                    <input type="tel" value="1" class="flex1 width100 txtCenter"/>
-                                </li>
-                                <li class="border1 txtCenter"> + </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="clearFloat color252525 em0_8">
-                <div class="rt">|编辑</div>
-            </div>
-        </div>
+        <!--<div class="aroundPadding23 borderBottom4">-->
+            <!--<div class="bottomPadding2 color252525">-->
+                <!--<i class="iconfont icon-checkedon"></i>-->
+                <!--可可吉米食品专营店-->
+            <!--</div>-->
+            <!--<ul class="flexRowBox justifyContentFlex-start alignItemCenter">-->
+                <!--<li>-->
+                    <!--<i class="iconfont icon-checkedon"></i>-->
+                <!--</li>-->
+                <!--<li class="flex1 flexRowBox alignItemCenter">-->
+                    <!--<div class="cart-product-cell-1">-->
+                        <!--<img src="https://img10.360buyimg.com/n7/s176x176_jfs/t5776/77/9199759403/243347/327cc9f7/5983bfc0N26fb4478.jpg!q70.jpg" alt="" class="cart-photo-thumb"/>-->
+                    <!--</div>-->
+                    <!--<ul class="flex1">-->
+                        <!--<li class="em0_8 pro-title">-->
+                            <!--德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】-->
+                        <!--</li>-->
+                        <!--<li class="colorF35F62">-->
+                            <!--￥99.00-->
+                        <!--</li>-->
+                        <!--<li class="color252525 flexRowBox justifyContentSpaceBetween">-->
+                            <!--<ul class="flexRowBox quantity-wrapper">-->
+                                <!--<li class="border1 txtCenter"> - </li>-->
+                                <!--<li class="border1 flexColBox">-->
+                                    <!--<input type="tel" value="1" class="flex1 width100 txtCenter"/>-->
+                                <!--</li>-->
+                                <!--<li class="border1 txtCenter"> + </li>-->
+                            <!--</ul>-->
+                            <!--<div>删除</div>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
+        <!--</div>-->
+        <!--<div class="aroundPadding23 borderBottom4">-->
+            <!--<div class="bottomPadding2 color252525">-->
+                <!--<i class="iconfont icon-checkedon"></i>-->
+                <!--可可吉米食品专营店-->
+            <!--</div>-->
+            <!--<ul class="flexRowBox justifyContentFlex-start alignItemCenter">-->
+                <!--<li>-->
+                    <!--<i class="iconfont icon-checkedon"></i>-->
+                <!--</li>-->
+                <!--<li class="flex1 flexRowBox alignItemCenter">-->
+                    <!--<div class="cart-product-cell-1">-->
+                        <!--<img src="https://img10.360buyimg.com/n7/s176x176_jfs/t5776/77/9199759403/243347/327cc9f7/5983bfc0N26fb4478.jpg!q70.jpg" alt="" class="cart-photo-thumb"/>-->
+                    <!--</div>-->
+                    <!--<ul class="flex1">-->
+                        <!--<li class="em0_8 pro-title">-->
+                            <!--德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】-->
+                        <!--</li>-->
+                        <!--<li class="colorF35F62">-->
+                            <!--￥99.00-->
+                        <!--</li>-->
+                        <!--<li class="color252525 flexRowBox">-->
+                            <!--<ul class="flexRowBox quantity-wrapper">-->
+                                <!--<li class="border1 txtCenter"> - </li>-->
+                                <!--<li class="border1 flexColBox">-->
+                                    <!--<input type="tel" value="1" class="flex1 width100 txtCenter"/>-->
+                                <!--</li>-->
+                                <!--<li class="border1 txtCenter"> + </li>-->
+                            <!--</ul>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<div class="clearFloat color252525 em0_8">-->
+                <!--<div class="rt">|编辑</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<div class="aroundPadding23 borderBottom4">-->
+            <!--<div class="bottomPadding2 color252525">-->
+                <!--<i class="iconfont icon-checkedon"></i>-->
+                <!--可可吉米食品专营店-->
+            <!--</div>-->
+            <!--<ul class="flexRowBox justifyContentFlex-start alignItemCenter">-->
+                <!--<li>-->
+                    <!--<i class="iconfont icon-checkedon"></i>-->
+                <!--</li>-->
+                <!--<li class="flex1 flexRowBox alignItemCenter">-->
+                    <!--<div class="cart-product-cell-1">-->
+                        <!--<img src="https://img10.360buyimg.com/n7/s176x176_jfs/t5776/77/9199759403/243347/327cc9f7/5983bfc0N26fb4478.jpg!q70.jpg" alt="" class="cart-photo-thumb"/>-->
+                    <!--</div>-->
+                    <!--<ul class="flex1">-->
+                        <!--<li class="em0_8 pro-title">-->
+                            <!--德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】-->
+                        <!--</li>-->
+                        <!--<li class="colorF35F62">-->
+                            <!--￥99.00-->
+                        <!--</li>-->
+                        <!--<li class="color252525 flexRowBox">-->
+                            <!--<ul class="flexRowBox quantity-wrapper">-->
+                                <!--<li class="border1 txtCenter"> - </li>-->
+                                <!--<li class="border1 flexColBox">-->
+                                    <!--<input type="tel" value="1" class="flex1 width100 txtCenter"/>-->
+                                <!--</li>-->
+                                <!--<li class="border1 txtCenter"> + </li>-->
+                            <!--</ul>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            <!--</ul>-->
+            <!--<div class="clearFloat color252525 em0_8">-->
+                <!--<div class="rt">|编辑</div>-->
+            <!--</div>-->
+        <!--</div>-->
     </section>
     <footer class="cartFooter em1_4 flexRowBox">
-        <div class="em0_9 allChecked flexRowBox alignItemCenter justifyContentCenter">
+        <div class="em0_9 allChecked flexRowBox alignItemCenter justifyContentCenter activeColor" aria-checked="true" id="checkAll">
             <i class="iconfont icon-checkedon"></i>
             全选
         </div>
-        <div class="cartMoney em0_9 flex1">
+        <div class="em0_9 flex1">
             <ul class="height100 flexColBox justifyContentSpaceAround">
-                <li><b>合计：￥89.00</b></li>
+                <li class="totalMoney">合计：￥<span id="total-fee">89.00</span></li>
                 <!--<li>总额:￥89.00 立减:￥0.00</li>-->
             </ul>
         </div>
@@ -253,21 +250,14 @@
 <div id="pop">
     <div class="pop-box">
         <h3>提示</h3>
-        <p></p>
-        <span>关闭</span>
+        <p>确认要删除该商品吗?</p>
+        <div class="settingWarn">
+            <span class="loginOutCancel  flexRowBox alignItemCenter justifyContentCenter">取消</span>
+            <span class="loginOutConfirm  flexRowBox alignItemCenter justifyContentCenter">确定</span>
+        </div>
     </div>
 </div>
 <script src="../../js/zepto_multiple.js"></script>
-<script>
-    $("#goSettlement").click(function(){
-        location.href="writeOrder.html"
-    });
-    !sessionStorage.getItem("addCartInfo")&& $("#shoppingCartContainer").html(`
-            <div class="emptyCart">
-                <p class="color666 em0_8">您的购物车为空</p>
-                <a href="//web.qianjiantech.com/startHTML/caterHTML/caterIndex.html" class="color252525 border1 em0_8">去逛逛</a>
-            </div>
-        `)
-</script>
+<script src="../../js/cater/shoppingCart.js"></script>
 </body>
 </html>
