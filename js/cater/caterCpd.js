@@ -18,6 +18,15 @@ $(function(){
         {product_id:sessionStorage.getItem("productId")},
         function(res){
             if(res.code==2000){
+                var htmlProIntro="";
+                $(res.info.goods_detail).each(function(k,v){
+                    htmlProIntro+=`
+                            <li class="borderBottom4">
+                                <img src="${v}" alt="" class="img-response">
+                            </li>
+                        `;
+                });
+                $(".productIntroBox").html(htmlProIntro);
                 var html="";
                 $(res.info.goods_rotation).each(function(k,v){
                     html+=`
@@ -36,15 +45,6 @@ $(function(){
                 $(".sale").text("已售:"+res.info.sell_count);
                 $(".presentPrice").text("￥"+res.info.shop_price);
                 $(".presentIntegral").text("赠送积分:"+res.info.market_price);
-                var htmlProIntro="";
-                $(res.info.goods_detail).each(function(k,v){
-                    htmlProIntro+=`
-                            <li class="borderBottom4">
-                                <img src="${v}" alt="" class="img-response">
-                            </li>
-                        `;
-                });
-                $(".productIntroBox").html(htmlProIntro);
             }
         }
     );
