@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1, user-scalable=no"/>
+    <meta name="author" content="web.qianjiantech.com">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="apple-mobile-app-capable" content="yes">
+    <meta name="apple-mobile-app-status-bar-style" content="black">
+    <meta name="description" content="仟健-立足大众生活服务行业，深度挖掘客户需求，整合市场资源，融合分享经济学与倍增学原理，奉开放分享为基本原则，以互利互惠为发展目标，旨在让更多人有房住、有车开">
+    <meta name="keywords" content="购物,积分,房产,特产,汽车,酒店">
+    <meta name="format-detection" content="telphone=no, email=no"/>
+    <link rel="shortcut icon" href="../../favicon.ico" />
+    <link rel="bookmark" href="../../favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="../../static/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="../../css/base.css"/>
+    <title>仟健科技</title>
+    <style>
+        body{
+            background-color: #f5f5f5;
+        }
+        .cart-photo-thumb{
+            max-width: 88px;
+            max-height: 88px;
+        }
+        .cart-product-cell-1{
+            width: auto;
+            height: auto;
+            max-height: 88px;
+            padding: 0 7px;
+        }
+        .pro-txt{
+            overflow: hidden;
+            line-height: 1.33em;
+            display: -webkit-box;
+            display: -webkit-flex;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+        }
+        .payPro{
+            -moz-box-shadow: 0 4px 5px #888;
+            box-shadow: 0 4px 5px #888;
+        }
+        .payWay{
+            margin: 1em 0;
+            background-color: #fff;
+        }
+        .payBtn{
+            display: inline-block;
+            width: 80%;
+            line-height: 50px;
+            border-radius: 6px;
+            background-color: #F55F62;
+            color: #fff;
+        }
+        [class*="icon-wx"]::before{
+            color: #00C800;
+            font-size: 1.1em;
+        }
+        [class*="icon-zfb"]::before{
+            color: #00A1EA;
+            font-size: 1.1em;
+        }
+        .payWaySel [class$="icon-yes"]::before{
+            color: #e4393c;
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+<header class="noRightHeader">
+    <a href="writeOrder.html" class="iconfont icon-left"></a>
+    支付订单
+</header>
+<section class="em1_4 paddingTop50">
+    <!--支付商品详情-->
+    <!--<div class="leftRightPadding3 flexRowBox alignItemCenter borderBottom4 payPro">-->
+        <!--<div class="cart-product-cell-1">-->
+            <!--<img src="http://image.qianjiantech.com/product_pic/timg(4).jpg" alt="" class="cart-photo-thumb"/>-->
+        <!--</div>-->
+        <!--<ul class="flex1">-->
+            <!--<li class="em0_9 color252525 txtLeft">￥13.00</li>-->
+            <!--<li class="pro-txt em0_8 color252525">薯片三连包多种口味</li>-->
+            <!--<li class="pro-txt em0_8 color252525">口味  :  原味,容量  :  1L</li>-->
+        <!--</ul>-->
+    <!--</div>-->
+    <!--支付方式-->
+    <div class="em0_8 borderBottom1">目前只支持微信支付</div>
+    <ul class="payWay txtLeft leftRightPadding3">
+        <li class="wxPay flexRowBox aroundPadding23 alignItemCenter borderBottom1 em0_9 payWaySel">
+            <span class="flex1 flexRowBox alignItemCenter"><i class="iconfont icon-wx"> 微信支付</i></span>
+            <i class="iconfont icon-yes"></i>
+        </li>
+        <li class="zfbPay flexRowBox aroundPadding23 alignItemCenter em0_9">
+            <span class="flex1 flexRowBox alignItemCenter"><i class="iconfont icon-zfb"> 支付宝支付</i></span>
+            <i class="iconfont icon-yes"></i>
+        </li>
+    </ul>
+    <!--支付按钮-->
+    <div class="payBtn em0_9">
+        确认支付 ￥<span>13.00</span>
+    </div>
+</section>
+
+<!--模态弹出框-->
+<div id="pop">
+    <div class="pop-box">
+        <h3>提示</h3>
+        <p></p>
+        <span>关闭</span>
+    </div>
+</div>
+<script src="../../js/zepto_multiple.js"></script>
+<script src="../../js/cater/pay.js"></script>
+</body>
+</html>
