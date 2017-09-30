@@ -284,8 +284,8 @@ $(function(){
     });
 
     //跳转商品详情页
-    $("section").on("click",".productContainer>li",function(){
-        sessionStorage.setItem("productId",$(this).attr("data-productid"));
+    $("section").on("click",".productBox",function(){
+        sessionStorage.setItem("productId",$(this).attr("data-productId"));
         location.href="../12/productDetailPage.html";
     })
 });
