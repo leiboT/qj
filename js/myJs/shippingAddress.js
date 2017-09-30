@@ -2,6 +2,7 @@ $(function(){
     var areaContainer=$("#areaContainer");
     var uid=sessionStorage.getItem("uid");
     var stateCode=sessionStorage.getItem("stateCode");
+    var shippingAddressBox=$("#shippingAddress");
     //输入提交提示模态框元素
     var pop=$("#pop");
     var p=$("#pop p");
@@ -63,7 +64,7 @@ $(function(){
         )
     };
 
-    $("#shippingAddress").on("click",".defaultAddressBox",function(){
+    shippingAddressBox.on("click",".defaultAddressBox",function(){
         $(".defaultAddressBox").each(function(k,v){
             $(v).removeClass("activeDefault");
         });
@@ -109,13 +110,14 @@ $(function(){
         </li>`;
             });
             sessionStorage.setItem("shippingAddress",JSON.stringify(shippingAddress));
-            $("#shippingAddress").html(html);
+            shippingAddressBox.html(html);
             //如果是从订单进入收获地址
             if(sessionStorage.getItem("isOrder")){
+                $(".addressDelete").remove();
                 //改变回退
-                $("header>a").attr("href","../../startHTML/12/writeOrder.html");
+                $(".shippingAddressHeader>a").attr("href","../../startHTML/12/writeOrder.html");
                 //点击切换地址同时设为默认并跳转回结算
-                $("#shippingAddress").on("click",".addressItems",function(){
+                shippingAddressBox.on("click",".addressItems",function(){
                     $(this).addClass("addressYesDefault").siblings(".addressYesDefault").removeClass("addressYesDefault");
                     setDefaultAdd(this);
                     jump("../../startHTML/12/writeOrder.html",100);
@@ -124,7 +126,7 @@ $(function(){
                 $(".addressYes").remove();
             }
         }else if(code==2001){
-            $("#shippingAddress").html(`<li>你的收货地址为空</li>`);
+            shippingAddressBox.html(`<li>你的收货地址为空</li>`);
         }else if(code==9000){
             reminderDeal("你已在其他设备登录!");
             closeBtn.text("即将进入登录页").unbind("click");
@@ -144,7 +146,7 @@ $(function(){
     );
 
     //收货地址删除操作
-    $("#shippingAddress").on("click",".addressManipulate>li",function(){
+    shippingAddressBox.on("click",".addressManipulate>li",function(){
         var _self=this;
         if($(_self).hasClass("addressDelete")){
             pop.addClass("pop-show");
@@ -161,7 +163,7 @@ $(function(){
                         function(result){
                             $(".settingWarn").unbind("click");
                             result.code==2000&&$(_self).parent().parent().parent().parent().remove();
-                            $("#shippingAddress").html()||$("#shippingAddress").html(`<li>你的收货地址为空</li>`)&&$("#addressEditBtn").remove();
+                            shippingAddressBox.html()||shippingAddressBox.html(`<li>你的收货地址为空</li>`)&&$("#addressEditBtn").remove();
                         }
                     )
                 }else{
