@@ -96,8 +96,8 @@
         }
         .quantity-wrapper>li{
             flex: 1;
-            min-width: 25px;
-            max-width: 35px;
+            min-width: 35px;
+            max-width: 50px;
         }
         .pro-info-footer{
             background-color: #F55F62;
@@ -304,11 +304,11 @@
             <div class="bundle-wrap"></div>
             <div class="services-wrap"></div>
             <div class="number-wrap flexRowBox justifyContentSpaceBetween">
-                <label for="number">购买数量</label>
-                <ul class="flexRowBox quantity-wrapper">
+                <label for="number" class="flexRowBox alignItemCenter">购买数量</label>
+                <ul class="flexRowBox quantity-wrapper em1_2">
                     <li class="border1 txtCenter" id="decrease"> - </li>
-                    <li class="border1 flexColBox">
-                        <input type="tel" id="number" value="1" class="flex1 width100 txtCenter" readonly/>
+                    <li class="border1 flexColBox rv">
+                        <input type="tel" id="number" value="1" class="flex1 width100 txtCenter" readonly unselectable="true"  onfocus="this.blur()"/>
                     </li>
                     <li class="border1 txtCenter" id="increase"> + </li>
                 </ul>
