@@ -19,7 +19,10 @@
     <file url="file://$PROJECT_DIR$/js/buyVoucher.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/cater/cater.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/cater/caterCpd.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/cater/caterDetail.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/cater/pay.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/cater/shoppingCart.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/cater/writeOrder.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/houseJs/houseClass.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/houseJs/houseIndex.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/myJs/balanceScore.js" charset="UTF-8" />
