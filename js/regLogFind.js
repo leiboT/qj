@@ -241,14 +241,11 @@ $(function(){
                 success:function(result){
                     var code=result.code;
                     if(code==2000){
-                        var statusCode=result.info.state_code;
-                        sessionStorage.setItem("stateCode",statusCode);
-                        var uid=result.info.id;
-                        sessionStorage.setItem("uid",uid);
-                        var t=result.info.token;
-                        sessionStorage.setItem("t",t);
-                        successPop.html("登录成功");
-                        successPop.show();
+                        sessionStorage.setItem("stateCode",result.info.state_code);
+                        sessionStorage.setItem("uid",result.info.id);
+                        sessionStorage.setItem("t",result.info.token);
+                        sessionStorage.setItem("oid",result.info.open_id);
+                        successPop.html("登录成功").show();
                         setTimeout(function(){
                             location.href="../start.html"
                         },900)
