@@ -256,14 +256,13 @@ $(function(){
             url:"http://api.qianjiantech.com/v1/recommend",
             dataType:"json",
             success:function(result){
-                console.log(result);
                 var code=result.code;
                 if(code==2000){
                     var info=result.info;
                     var html="";
                     $(info).each(function(k,v){
                         html+=`
-                            <li class="productBox rv" data-productId="${v.product_id}">
+                            <li class="productBox rv" data-productId="${v.product_id}" data-shopId="${v.shop_id}" data-classId="${v.product_class_id}">
                                 <div class="productPicture rv ui-lz">
                                     <img src="${v.img_url}" alt="${v.product_id}" data-img="${v.img_url}" class="ui-fb"/>
                                 </div>
@@ -291,9 +290,9 @@ $(function(){
     //跳转商品详情页
     $(".productContainer").on("click",".productBox",function(){
         sessionStorage.setItem("productId",$(this).attr("data-productId"));
-        if($(this).attr("data-productId")==5 || $(this).attr("data-productId")==12){
-            sessionStorage.setItem("shopId",3);
-            sessionStorage.setItem("allClassId",3);
+        if($(this).attr("data-classId")==3){
+            sessionStorage.setItem("shopId",$(this).attr("data-shopId"));
+            sessionStorage.setItem("allClassId",$(this).attr("data-classId"));
             location.href="startHTML/caterHTML/cpd.html";
         }else
             location.href="startHTML/12/productDetailPage.html";
