@@ -79,10 +79,10 @@ $(function(){
                                                 ￥${v.data.price}
                                             </li>
                                             <li class="color252525 flexRowBox justifyContentSpaceBetween">
-                                                <ul class="flexRowBox quantity-wrapper" data-singleTotal="${v.data.price*v.data.count}">
+                                                <ul class="flexRowBox quantity-wrapper em1_2" data-singleTotal="${v.data.price*v.data.count}">
                                                     <li class="border1 txtCenter" data-operation="decrease"> - </li>
-                                                    <li class="border1 flexColBox">
-                                                        <input type="tel" value="${v.data.count}" class="flex1 width100 txtCenter number" disabled/>
+                                                    <li class="border1 flexColBox rv">
+                                                        <input type="tel" value="${v.data.count}" class="flex1 width100 txtCenter number" readonly unselectable="true"  onfocus="this.blur()"/>
                                                     </li>
                                                     <li class="border1 txtCenter" data-operation="increase"> + </li>
                                                 </ul>
