@@ -3,6 +3,7 @@ $(function(){
     $(".payBtn>span").text(sessionStorage.getItem("tmy"));
     //异步再封装
     function customAjax(url,data,fn){
+        //alert(JSON.stringify(arguments));
         $.ajax({
             type:"post",
             url:url,
@@ -10,7 +11,13 @@ $(function(){
             dataType:"json",
             success:fn,
             error:function(error){
-                console.log(error)
+                //console.log(error)
+            },
+            beforeSend: function(){
+                $('body').append('<div class="loadingWrap"></div>');
+            },
+            complete: function(){
+                $(".loadingWrap").remove();
             }
         })
     }
@@ -23,7 +30,7 @@ $(function(){
     payBtn.click(function(){
         customAjax(
             "http://api.qianjiantech.com/JsPay",
-            {open_id:sessionStorage.getItem("oid"),order_id:sessionStorage.getItem("ord"),total_money:sessionStorage.getItem("tmy")},
+            {open_id:sessionStorage.getItem("oid"),order_id:sessionStorage.getItem("ord"),user_id:sessionStorage.getItem("uid")},
             function(res){
                 //console.log(typeof JSON.parse(res.info.jsApiParameters));
                 function jsApiCall()
