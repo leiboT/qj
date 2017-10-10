@@ -7,6 +7,26 @@ $(function(){
     if(city)
         $(".address").html(`<i class="iconfont icon-arrowdownb"></i>`+city);
 
+    //异步再封装
+    function customAjax(url,data,fn){
+        //alert(JSON.stringify(arguments));
+        $.ajax({
+            type:"post",
+            url:url,
+            data:data,
+            dataType:"json",
+            success:fn,
+            error:function(error){
+                //console.log(error)
+            },
+            beforeSend: function(){
+                $('body').append('<div class="loadingWrap"></div>');
+            },
+            complete: function(){
+                $(".loadingWrap").remove();
+            }
+        })
+    }
 
     //图片加载完清除占位图
     function clearPlaceholderShape(){
@@ -38,12 +58,10 @@ $(function(){
 
     //加载首页分类
     function loadSort(){
-        $.ajax({
-            type:"post",
-            url:"http://api.qianjiantech.com/v1/itemClass",
-            data:{class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId")},
-            dataType:"json",
-            success:function(result){
+        customAjax(
+            "http://api.qianjiantech.com/v1/itemClass",
+            {class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId")},
+            function(result){
                 var code=result.code;
                 if(code==2000){
                     var info=result.info;
@@ -63,7 +81,7 @@ $(function(){
                     `
                         }else if(len==5){
                             html+=
-                    `<li class="x5">
+                                `<li class="x5">
                         <a href="houseItem.html" data-classId="${itemId}" class="em0_8">
                             <div class="ui-lz rv nav-img">
                                 <img src="${info[i].item_url}" alt="${info[i].item_name}" class="ui-fb"/>
@@ -90,7 +108,7 @@ $(function(){
                     clearPlaceholderShape()
                 }
             }
-        })
+        );
     }
     loadSort();
     //保存房产当前分类ID值
@@ -100,12 +118,10 @@ $(function(){
 
     //轮播图
     function carousel(){
-        $.ajax({
-            type:"post",
-            url:"http://api.qianjiantech.com/v1/itemBanner",
-            data:{class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId")},
-            dataType:"json",
-            success:function(result){
+        customAjax(
+            "http://api.qianjiantech.com/v1/itemBanner",
+            {class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId")},
+            function(result){
                 var code=result.code;
                 if(code==2000){
                     var info=result.info;
@@ -168,7 +184,7 @@ $(function(){
                     //setInterval(task,4000);
                 }
             }
-        });
+        );
     }
     carousel();
 
@@ -228,12 +244,10 @@ $(function(){
     }
     //加载猜你喜欢
     function loadYouLick(){
-        $.ajax({
-            type:"post",
-            url:"http://api.qianjiantech.com/v1/rp",
-            data:{class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId") },
-            dataType:"json",
-            success:function(result){
+        customAjax(
+            "http://api.qianjiantech.com/v1/rp",
+            {class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId") },
+            function(result){
                 var code=result.code;
                 if(code==2000){
                     var info=result.info;
@@ -261,7 +275,7 @@ $(function(){
                 }
 
             }
-        })
+        );
     }
     loadYouLick();
 
