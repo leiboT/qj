@@ -16,6 +16,7 @@ $(function(){
 
     //异步再封装
     function customAjax(url,data,fn){
+        //alert(JSON.stringify(arguments));
         $.ajax({
             type:"post",
             url:url,
@@ -23,7 +24,13 @@ $(function(){
             dataType:"json",
             success:fn,
             error:function(error){
-                console.log(error)
+                //console.log(error)
+            },
+            beforeSend: function(){
+                $('body').append('<div class="loadingWrap"></div>');
+            },
+            complete: function(){
+                $(".loadingWrap").remove();
             }
         })
     }

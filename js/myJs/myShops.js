@@ -12,6 +12,7 @@ $(function(){
     }
     //异步再封装
     function customAjax(url,data,fn){
+        //alert(JSON.stringify(arguments));
         $.ajax({
             type:"post",
             url:url,
@@ -19,7 +20,13 @@ $(function(){
             dataType:"json",
             success:fn,
             error:function(error){
-                console.log(error)
+                //console.log(error)
+            },
+            beforeSend: function(){
+                $('body').append('<div class="loadingWrap"></div>');
+            },
+            complete: function(){
+                $(".loadingWrap").remove();
             }
         })
     }
@@ -36,12 +43,10 @@ $(function(){
         var pg;
 
         function promotionLoad(uid,page){
-            $.ajax({
-                url:"http://api.qianjiantech.com/v1/myBusiness",
-                type:"get",
-                data:{user_id:uid,page:page,state_code:sessionStorage.getItem("stateCode")},
-                dataType:"json",
-                success:function(result){
+            customAjax(
+                "http://api.qianjiantech.com/v1/myBusiness",
+                {user_id:uid,page:page,state_code:sessionStorage.getItem("stateCode")},
+                function(result){
                     //console.log(result);
                     var code=result.code;
                     //console.log(code);
@@ -76,13 +81,14 @@ $(function(){
                         sessionStorage.clear();
                     }
                 }
-            })
+            );
         }
         promotionLoad(uid,index);
 
         //下拉加载更多
-        $(window).scroll(function () {
-            if ($(document).scrollTop() + $(window).height() >= $(document).height()) {
+        $('body').scroll(function () {
+            console.log(123);
+            if ($(this).scrollTop() + $(this).height() >= $("#pro-list").height()+50) {
                 //console.log("哦哦,到底了.");
                 index+=1;
                 index<=pg?loadMore.html("<div>加载中...</div>"):loadMore.html("<div>没有更多了</div>");
