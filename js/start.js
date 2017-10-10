@@ -17,6 +17,27 @@ $(function(){
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
 
+    //异步再封装
+    function customAjax(url,data,fn){
+        //alert(JSON.stringify(arguments));
+        $.ajax({
+            type:"post",
+            url:url,
+            data:data,
+            dataType:"json",
+            success:fn,
+            error:function(error){
+                //console.log(error)
+            },
+            beforeSend: function(){
+                $('body').append('<div class="loadingWrap"></div>');
+            },
+            complete: function(){
+                $(".loadingWrap").remove();
+            }
+        })
+    }
+
     //调转到搜索页
     $("#searchDemo").click(function(){
         location.href="smallFeatureHTML/search.html"
@@ -51,11 +72,10 @@ $(function(){
 
     //加载首页分类
     function loadSort(){
-        $.ajax({
-            type:"get",
-            url:"http://api.qianjiantech.com/v1/class",
-            dataType:"json",
-            success:function(result){
+        customAjax(
+            "http://api.qianjiantech.com/v1/class",
+            {},
+            function(result){
                 var code=result.code;
                 if(code==2000){
                     var info=result.info;
@@ -78,7 +98,7 @@ $(function(){
                             html+=`
                     <li class="x5">
                         <a href="startHTML/${
-                            jump=='house'?'houseHTML/houseIndex':jump=='car'?'carHTML/carIndex':jump=='food'?'caterHTML/caterIndex':jump=='hotel'?'hotelHTML/hotelIndex':jump=='tourism'?'travelHtml/travelIndex':jump=='education'?'educateHTML/educateIndex':jump=='health'?'healthHTML/healthIndex':jump=='Fine'?'boutiqueHTML/boutiqueIndex':jump=='about_us'?'aboutHTML':'moreHTML/moreIndex'}.html" data-classifyClassId="${info[i].id}">
+                                jump=='house'?'houseHTML/houseIndex':jump=='car'?'carHTML/carIndex':jump=='food'?'caterHTML/caterIndex':jump=='hotel'?'hotelHTML/hotelIndex':jump=='tourism'?'travelHtml/travelIndex':jump=='education'?'educateHTML/educateIndex':jump=='health'?'healthHTML/healthIndex':jump=='Fine'?'boutiqueHTML/boutiqueIndex':jump=='about_us'?'aboutHTML':'moreHTML/moreIndex'}.html" data-classifyClassId="${info[i].id}">
                             <img src="" alt="${info[i].class_name}" data-img="${info[i].img_url}"/>
                             <span>${info[i].class_name}</span>
                         </a>
@@ -99,7 +119,7 @@ $(function(){
                     clearPlaceholderShape();
                 }
             }
-        })
+        );
     }
     loadSort();
 
@@ -129,11 +149,10 @@ $(function(){
 
     //轮播图
     function carousel(){
-        $.ajax({
-            type:"post",
-            url:"http://api.qianjiantech.com/v1/rotation",
-            dataType:"json",
-            success:function(result){
+        customAjax(
+            "http://api.qianjiantech.com/v1/rotation",
+            {},
+            function(result){
                 var code=result.code;
                 if(code==2000){
                     var info=result.info;
@@ -150,11 +169,15 @@ $(function(){
                         ".carousel-box",
                         function(){
                             new Swiper('.swiper-container', {
-                            pagination: '.swiper-pagination',
-                            paginationClickable: true,
-                            loop: true,
-                            autoplayDisableOnInteraction: false,
-                            autoplay: 3000
+                                //pagination: '.swiper-pagination',
+                                scrollbar:'.swiper-scrollbar',
+                                scrollbarHide : false,
+                                scrollbarDraggable : true ,
+                                scrollbarSnapOnRelease : true ,
+                                paginationClickable: true,
+                                loop: true,
+                                autoplayDisableOnInteraction: false,
+                                autoplay: 3000
                             })
                         },
                         ".loadingImg1"
@@ -197,7 +220,7 @@ $(function(){
                     //setInterval(task,4000);
                 }
             }
-        });
+        );
     }
     carousel();
 
@@ -234,28 +257,38 @@ $(function(){
             $(".address").html(`
                         <a>
                             ${userCity}
-                            <i class="iconfont icon-arrowdownb"></i>
+                            <!--<i class="iconfont icon-arrowdownb"></i>-->
                         </a>
                     `)
         }
+
         //解析定位错误信息
         function onError(data) {
             $(".address").html("定位失败");
+            var citySearch = new AMap.CitySearch();
+            //自动获取用户IP，返回当前城市
+            citySearch.getLocalCity(function(status, result) {
+                if (status === 'complete' && result.info === 'OK') {
+                    if (result && result.city && result.bounds) {
+                        var cityInfo = result.city;
+                        $(".address").html(cityInfo);
+                        //var cityBounds = result.bounds;
+                        //地图显示当前城市
+                        //map.setBounds(cityBounds);
+                    }
+                }
+            });
             sessionStorage.setItem("userDistrict","东莞市");
         }
     }
-    //if(!city){
-    //    showCityInfo()
-    //}
     showCityInfo();
 
     //加载特别推荐
     function loadYouLick(){
-        $.ajax({
-            type:"post",
-            url:"http://api.qianjiantech.com/v1/recommend",
-            dataType:"json",
-            success:function(result){
+        customAjax(
+            "http://api.qianjiantech.com/v1/recommend",
+            {},
+            function(result){
                 var code=result.code;
                 if(code==2000){
                     var info=result.info;
@@ -283,7 +316,7 @@ $(function(){
                 }
 
             }
-        })
+        );
     }
     loadYouLick();
 

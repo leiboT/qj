@@ -28,15 +28,34 @@ $(function(){
         }
     });
 
+    //异步再封装
+    function customAjax(url,data,fn){
+        //alert(JSON.stringify(arguments));
+        $.ajax({
+            type:"post",
+            url:url,
+            data:data,
+            dataType:"json",
+            success:fn,
+            error:function(error){
+                //console.log(error)
+            },
+            beforeSend: function(){
+                $('body').append('<div class="loadingWrap"></div>');
+            },
+            complete: function(){
+                $(".loadingWrap").remove();
+            }
+        })
+    }
+
     //验证码处理函数
     function getCode(){
         var userPhone=$("#userPhone").val();
-        $.ajax({
-            url:"http://api.qianjiantech.com/v1/sm",
-            type:"post",
-            data:{phone:userPhone},
-            dataType:"json",
-            success:function(result){
+        customAjax(
+            "http://api.qianjiantech.com/v1/sm",
+            {phone:userPhone},
+            function(result){
                 var code=result.code;
                 if(code==2000){
                     reminderDeal("验证码已发送!");
@@ -47,11 +66,8 @@ $(function(){
                 }else if(code==4000){
                     reminderDeal("信息不全!");
                 }
-            },
-            error:function(error){
-                //console.log(error);
             }
-        });
+        );
     }
 
     //表单判断处理函数
@@ -120,17 +136,16 @@ $(function(){
 
     //弹出注册协议
     $("span.protocolTxt").click(function(){
-        $.ajax({
-            type:"post",
-            url:"http://api.qianjiantech.com/v1/protocol",
-            dataType:"json",
-            success:function(result){
+        customAjax(
+            "http://api.qianjiantech.com/v1/protocol",
+            {},
+            function(result){
                 var info=result.info;
                 var title=info.title;
                 var content=info.content;
                 protocolContentContainer.html(title+content);
             }
-        });
+        );
         protocolBox.addClass("pop-show");
     });
     //关闭注册协议
@@ -151,12 +166,10 @@ $(function(){
 
         if(a&&b&&c&&d&&$("#userCode").val()&&h){
             var data=$("#reg-form").serialize();
-            $.ajax({
-                type:"post",
-                url:"http://api.qianjiantech.com/v1/register",
-                data:data,
-                dataType:"json",
-                success:function(result){
+            customAjax(
+                "http://api.qianjiantech.com/v1/register",
+                data,
+                function(result){
                     var code=result.code;
                     if(code==2000){
                         successPop.html("注册成功");
@@ -176,7 +189,7 @@ $(function(){
                         reminderDeal("信息不全!");
                     }
                 }
-            })
+            );
         }else if(!$("#userPhone").val()){
             reminderDeal("请输入手机号!");
         }else if(!a){
@@ -233,12 +246,10 @@ $(function(){
         var b=judgePwd();
         if(a&&b){
             var data=$("#login-form").serialize();
-            $.ajax({
-                type:"post",
-                url:"http://api.qianjiantech.com/v1/login",
-                data:data,
-                dataType:"json",
-                success:function(result){
+            customAjax(
+                "http://api.qianjiantech.com/v1/login",
+                data,
+                function(result){
                     var code=result.code;
                     if(code==2000){
                         sessionStorage.setItem("stateCode",result.info.state_code);
@@ -254,11 +265,8 @@ $(function(){
                     }else if(code==4000){
                         reminderDeal("信息不全");
                     }
-                },
-                error:function(error){
-                    //console.log(error)
                 }
-            })
+            );
         }else if(!$("#userPhone").val()){
             reminderDeal("请输入账号!");
         }else if(!a){
@@ -279,12 +287,10 @@ $(function(){
         //var c=judgeCode();
         if(a&&b){
             var data=$("#find-form").serialize();
-            $.ajax({
-                type:"post",
-                url:"http://api.qianjiantech.com/v1/forgetPsd",
-                data:data,
-                dataType:"json",
-                success:function(result){
+            customAjax(
+                "http://api.qianjiantech.com/v1/forgetPsd",
+                data,
+                function(result){
                     var code=result.code;
                     if(code==2000){
                         successPop.html("修改成功");
@@ -301,11 +307,8 @@ $(function(){
                     }else if(code==3002){
                         reminderDeal("验证码超时!");
                     }
-                },
-                error:function(){
-                    //console.log("出错了")
                 }
-            })
+            );
         }else if(!$("#userPhone").val()){
             reminderDeal("请输入账号!");
         }else if(!a){

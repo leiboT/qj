@@ -11,16 +11,35 @@ $(function(){
         pop.addClass("pop-show");
     }
 
+    //异步再封装
+    function customAjax(url,data,fn){
+        //alert(JSON.stringify(arguments));
+        $.ajax({
+            type:"post",
+            url:url,
+            data:data,
+            dataType:"json",
+            success:fn,
+            error:function(error){
+                //console.log(error)
+            },
+            beforeSend: function(){
+                $('body').append('<div class="loadingWrap"></div>');
+            },
+            complete: function(){
+                $(".loadingWrap").remove();
+            }
+        })
+    }
+
     function cutMoney(price){
         return price.length>4?price.substring(0,price.length-4)+"万":price.length>8?price.substring(0,price.length-8)+"亿":price;
     }
 
-    $.ajax({
-        type:"post",
-        url:"http://api.qianjiantech.com/v1/productInfo",
-        data:{product_id:sessionStorage.getItem("productId")},
-        dataType:"json",
-        success:function(result){
+    customAjax(
+        "http://api.qianjiantech.com/v1/productInfo",
+        {product_id:sessionStorage.getItem("productId")},
+        function(result){
             if(result.code==2000){
                 var info=result.info;
                 //加载商品介绍图片
@@ -196,6 +215,5 @@ $(function(){
                 }
             }
         }
-    });
-
+    );
 });

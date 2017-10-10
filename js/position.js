@@ -2,7 +2,6 @@ $(function(){
     var hotCityList=$(".hotCityList");
     var str="abcdefghijklmnopqrstuvwxyz";
     for(var i=0,html=""; i<str.length; i++){
-        console.log(str[i])
         html+=`
             <li id="${str[i]}">
                 <div class="pageTitle">${str[i].toUpperCase()}</div>
@@ -13,6 +12,27 @@ $(function(){
         `;
     }
     $(hotCityList).html(html);
+
+    //异步再封装
+    function customAjax(url,data,fn){
+        //alert(JSON.stringify(arguments));
+        $.ajax({
+            type:"post",
+            url:url,
+            data:data,
+            dataType:"json",
+            success:fn,
+            error:function(error){
+                //console.log(error)
+            },
+            beforeSend: function(){
+                $('body').append('<div class="loadingWrap"></div>');
+            },
+            complete: function(){
+                $(".loadingWrap").remove();
+            }
+        })
+    }
 
     //根据分类ID使返回不同页面
     var getBack=$("#cutCity");
@@ -40,13 +60,14 @@ $(function(){
             break;
         case 8:
             $(getBack).attr("href","../startHTML/boutiqueHTML/boutiqueIndex.html");
+
             break;
     }
 
-    $.ajax({
-        url:"../static/data/cityList.json",
-        dataType:"json",
-        success:function(result){
+    customAjax(
+        "../static/data/cityList.json",
+        {},
+        function(result){
             var html="";
             $(result).each(function(k,v){
                 var py=v.pinyin;
@@ -137,7 +158,7 @@ $(function(){
 
             });
         }
-    });
+    );
 
     function showCityInfo() {
         //实例化城市查询类

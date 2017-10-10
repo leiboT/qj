@@ -38,6 +38,12 @@ $(function(){
             success:fn,
             error:function(error){
                 //console.log(error)
+            },
+            beforeSend: function(){
+                $('body').append('<div class="loadingWrap"></div>');
+            },
+            complete: function(){
+                $(".loadingWrap").remove();
             }
         })
     }
@@ -125,12 +131,10 @@ $(function(){
     //加载用户数据
     function loadUserInfo(uid){
         if(uid){
-            $.ajax({
-                type:"get",
-                url:"http://api.qianjiantech.com/v1/myinfo",
-                data:{user_id:uid,state_code:sessionStorage.getItem("stateCode")},
-                dataType:"json",
-                success:function(result){
+            customAjax(
+                "http://api.qianjiantech.com/v1/myinfo",
+                {user_id:uid,state_code:sessionStorage.getItem("stateCode")},
+                function(result){
                     var code=result.code;
                     if(code==2000){
                         var info=result.info;
@@ -151,7 +155,7 @@ $(function(){
                         sessionStorage.clear();
                     }
                 }
-            })
+            );
         }
     }
     if(!sessionStorage.getItem("userInfo"))
