@@ -15,7 +15,8 @@
     <file url="file://$PROJECT_DIR$/css/search.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/base.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/business.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/js/businessJs/shopsEnter.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/businessJS/shopsEnter.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/businessJS/shopsOrder.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/buyVoucher.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/cater/cater.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/cater/caterCpd.js" charset="UTF-8" />

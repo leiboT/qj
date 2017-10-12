@@ -5,54 +5,65 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1e906e2-78fd-41ce-a288-9c4670af8113" name="Default" comment="big change">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/static/img/loading.gif" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Generated_files.xml" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/myHTML/myOrder.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/myJs/myOrder.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/qianjian_node_modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/watcherTasks.xml" />
-      <change type="DELETED" beforePath="F:\qianjian\static\img\loading\lazyload.gif" afterPath="" />
-      <change type="DELETED" beforePath="F:\qianjian\static\img\loading\loading1.gif" afterPath="" />
-      <change type="DELETED" beforePath="F:\qianjian\static\img\loading\loading2.jpg" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/iconfont/iconfont.eot" afterPath="$PROJECT_DIR$/static/iconfont/iconfont.eot" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/iconfont/iconfont.ttf" afterPath="$PROJECT_DIR$/static/iconfont/iconfont.ttf" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/iconfont/iconfont.woff" afterPath="$PROJECT_DIR$/static/iconfont/iconfont.woff" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/startHTML/12/payEnd.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/startHTML/12/payOut.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/businessHTML/shopsOrder.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/businessJS/shopsOrder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/settingHTML/addEditAddress.html" afterPath="$PROJECT_DIR$/myHTML/settingHTML/addEditAddress.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/base.css" afterPath="$PROJECT_DIR$/css/base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business.html" afterPath="$PROJECT_DIR$/business.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/business.js" afterPath="$PROJECT_DIR$/js/business.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/12/buyVoucher.html" afterPath="$PROJECT_DIR$/startHTML/12/buyVoucher.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/buyVoucher.js" afterPath="$PROJECT_DIR$/js/buyVoucher.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/cater.js" afterPath="$PROJECT_DIR$/js/cater/cater.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/caterCpd.js" afterPath="$PROJECT_DIR$/js/cater/caterCpd.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/caterDetail.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/caterDetail.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/caterDetail.js" afterPath="$PROJECT_DIR$/js/cater/caterDetail.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/caterDetail2.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/caterDetail2.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/caterIndex.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/caterIndex.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/settingHTML/changePassword.html" afterPath="$PROJECT_DIR$/myHTML/settingHTML/changePassword.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/cpd.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/cpd.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/cpd2.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/cpd2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/cpd3.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/cpd3.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/cpd4.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/cpd4.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/settingHTML/editNickname.html" afterPath="$PROJECT_DIR$/myHTML/settingHTML/editNickname.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/houseJs/houseClass.js" afterPath="$PROJECT_DIR$/js/houseJs/houseClass.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/houseHTML/houseIndex.html" afterPath="$PROJECT_DIR$/startHTML/houseHTML/houseIndex.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/houseJs/houseIndex.js" afterPath="$PROJECT_DIR$/js/houseJs/houseIndex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/iconfont/iconfont.css" afterPath="$PROJECT_DIR$/static/iconfont/iconfont.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/iconfont/iconfont.js" afterPath="$PROJECT_DIR$/static/iconfont/iconfont.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/static/iconfont/iconfont.svg" afterPath="$PROJECT_DIR$/static/iconfont/iconfont.svg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/houseHTML/houseItem.html" afterPath="$PROJECT_DIR$/startHTML/houseHTML/houseItem.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my.html" afterPath="$PROJECT_DIR$/my.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/my.js" afterPath="$PROJECT_DIR$/js/my.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/myBalance.html" afterPath="$PROJECT_DIR$/myHTML/myBalance.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/myCode.html" afterPath="$PROJECT_DIR$/myHTML/myCode.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/myCode.js" afterPath="$PROJECT_DIR$/js/myJs/myCode.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/myIntegral.html" afterPath="$PROJECT_DIR$/myHTML/myIntegral.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/myOrder.html" afterPath="$PROJECT_DIR$/myHTML/myOrder.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/myOrder.js" afterPath="$PROJECT_DIR$/js/myJs/myOrder.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/myPromotion.html" afterPath="$PROJECT_DIR$/myHTML/myPromotion.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/myPromotion.js" afterPath="$PROJECT_DIR$/js/myJs/myPromotion.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/myShops.html" afterPath="$PROJECT_DIR$/myHTML/myShops.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/myShops.js" afterPath="$PROJECT_DIR$/js/myJs/myShops.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/12/pay.html" afterPath="$PROJECT_DIR$/startHTML/12/pay.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/pay.js" afterPath="$PROJECT_DIR$/js/cater/pay.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smallFeatureHTML/position.html" afterPath="$PROJECT_DIR$/smallFeatureHTML/position.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/position.js" afterPath="$PROJECT_DIR$/js/position.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/12/productDetailPage.html" afterPath="$PROJECT_DIR$/startHTML/12/productDetailPage.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/productDetailPage.js" afterPath="$PROJECT_DIR$/js/productDetailPage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/qianjian.iml" afterPath="$PROJECT_DIR$/.idea/qianjian.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/regLogFind.js" afterPath="$PROJECT_DIR$/js/regLogFind.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/setting.html" afterPath="$PROJECT_DIR$/myHTML/setting.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/setting.js" afterPath="$PROJECT_DIR$/js/myJs/setting.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/settingHTML/shippingAddress.html" afterPath="$PROJECT_DIR$/myHTML/settingHTML/shippingAddress.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/shippingAddress.js" afterPath="$PROJECT_DIR$/js/myJs/shippingAddress.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/12/shoppingCart.html" afterPath="$PROJECT_DIR$/startHTML/12/shoppingCart.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/shoppingCart.js" afterPath="$PROJECT_DIR$/js/cater/shoppingCart.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/businessHTML/shopsEnter.html" afterPath="$PROJECT_DIR$/businessHTML/shopsEnter.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/businessJS/shopsEnter.js" afterPath="$PROJECT_DIR$/js/businessJS/shopsEnter.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start.html" afterPath="$PROJECT_DIR$/start.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/start.js" afterPath="$PROJECT_DIR$/js/start.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/12/writeOrder.html" afterPath="$PROJECT_DIR$/startHTML/12/writeOrder.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/writeOrder.js" afterPath="$PROJECT_DIR$/js/cater/writeOrder.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/zepto_multiple.js" afterPath="$PROJECT_DIR$/js/zepto_multiple.js" />
     </list>
@@ -80,9 +91,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="CSS File" />
-        <option value="Html5" />
-        <option value="JavaScript File" />
         <option value="package_json" />
+        <option value="JavaScript File" />
+        <option value="Html5" />
       </list>
     </option>
   </component>
@@ -100,57 +111,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/startHTML/12/pay.html" />
-        <option value="$PROJECT_DIR$/myHTML/settingHTML/shippingAddress.html" />
-        <option value="$PROJECT_DIR$/myHTML/settingHTML/changePassword.html" />
-        <option value="$PROJECT_DIR$/startHTML/carHTML/carDetailPage1.html" />
-        <option value="$PROJECT_DIR$/startHTML/carHTML/carDetailPage2.html" />
-        <option value="$PROJECT_DIR$/startHTML/carHTML/carDetailPage3.html" />
-        <option value="$PROJECT_DIR$/startHTML/carHTML/carDetailPage4.html" />
-        <option value="$PROJECT_DIR$/startHTML/carHTML/carDetailPage5.html" />
-        <option value="$PROJECT_DIR$/startHTML/carHTML/carDetailPage6.html" />
-        <option value="$PROJECT_DIR$/startHTML/hotelHTML/hotelDetail1.html" />
-        <option value="$PROJECT_DIR$/startHTML/hotelHTML/hotelDetail2.html" />
-        <option value="$PROJECT_DIR$/startHTML/hotelHTML/hotelDetail3.html" />
-        <option value="$PROJECT_DIR$/startHTML/hotelHTML/hotelDetail4.html" />
-        <option value="$PROJECT_DIR$/startHTML/hotelHTML/hotelDetail5.html" />
-        <option value="$PROJECT_DIR$/js/regLogFind.min.js" />
-        <option value="$PROJECT_DIR$/startHTML/12/writeOrder.html" />
-        <option value="$PROJECT_DIR$/startHTML/12/shoppingCart.html" />
-        <option value="$PROJECT_DIR$/cccccccccc/zepto_scroll.js" />
-        <option value="$PROJECT_DIR$/cccccccccc/t.html" />
-        <option value="$PROJECT_DIR$/myHTML/myOrder.html" />
-        <option value="$PROJECT_DIR$/my.html" />
-        <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/babel.babelrc" />
-        <option value="$PROJECT_DIR$/dist/js/position.js" />
-        <option value="$PROJECT_DIR$/dist/js/productDetailPage.js" />
-        <option value="$PROJECT_DIR$/js/zepto_multiple.js" />
-        <option value="$PROJECT_DIR$/startHTML/caterHTML/cpd.html" />
-        <option value="$PROJECT_DIR$/css/base.css" />
-        <option value="$PROJECT_DIR$/js/productDetailPage.js" />
-        <option value="$PROJECT_DIR$/start.html" />
-        <option value="$PROJECT_DIR$/js/start.js" />
-        <option value="$PROJECT_DIR$/js/position.js" />
-        <option value="$PROJECT_DIR$/js/my.js" />
-        <option value="$PROJECT_DIR$/js/buyVoucher.js" />
-        <option value="$PROJECT_DIR$/js/business.js" />
-        <option value="$PROJECT_DIR$/js/regLogFind.js" />
-        <option value="$PROJECT_DIR$/js/myJs/myCode.js" />
-        <option value="$PROJECT_DIR$/js/myJs/myOrder.js" />
-        <option value="$PROJECT_DIR$/js/myJs/myPromotion.js" />
+        <option value="$PROJECT_DIR$/myHTML/myShops.html" />
         <option value="$PROJECT_DIR$/js/myJs/myShops.js" />
-        <option value="$PROJECT_DIR$/js/myJs/setting.js" />
+        <option value="$PROJECT_DIR$/myHTML/myPromotion.html" />
+        <option value="$PROJECT_DIR$/js/myJs/myPromotion.js" />
+        <option value="$PROJECT_DIR$/myHTML/myCode.html" />
+        <option value="$PROJECT_DIR$/js/myJs/myCode.js" />
+        <option value="$PROJECT_DIR$/myHTML/settingHTML/shippingAddress.html" />
         <option value="$PROJECT_DIR$/js/myJs/shippingAddress.js" />
-        <option value="$PROJECT_DIR$/js/houseJs/houseIndex.js" />
-        <option value="$PROJECT_DIR$/js/houseJs/houseClass.js" />
-        <option value="$PROJECT_DIR$/js/cater/writeOrder.js" />
+        <option value="$PROJECT_DIR$/myHTML/settingHTML/editNickname.html" />
+        <option value="$PROJECT_DIR$/myHTML/settingHTML/changePassword.html" />
+        <option value="$PROJECT_DIR$/myHTML/settingHTML/addEditAddress.html" />
+        <option value="$PROJECT_DIR$/businessHTML/shopsEnter.html" />
+        <option value="$PROJECT_DIR$/js/businessJS/shopsEnter.js" />
+        <option value="$PROJECT_DIR$/startHTML/12/buyVoucher.html" />
+        <option value="$PROJECT_DIR$/startHTML/12/pay.html" />
+        <option value="$PROJECT_DIR$/startHTML/12/productDetailPage.html" />
+        <option value="$PROJECT_DIR$/startHTML/12/shoppingCart.html" />
         <option value="$PROJECT_DIR$/js/cater/shoppingCart.js" />
-        <option value="$PROJECT_DIR$/js/cater/pay.js" />
-        <option value="$PROJECT_DIR$/js/cater/caterDetail.js" />
-        <option value="$PROJECT_DIR$/js/cater/caterCpd.js" />
+        <option value="$PROJECT_DIR$/startHTML/12/writeOrder.html" />
+        <option value="$PROJECT_DIR$/startHTML/houseHTML/houseIndex.html" />
+        <option value="$PROJECT_DIR$/js/houseJs/houseIndex.js" />
+        <option value="$PROJECT_DIR$/startHTML/houseHTML/houseItem.html" />
+        <option value="$PROJECT_DIR$/js/houseJs/houseClass.js" />
+        <option value="$PROJECT_DIR$/start.html" />
+        <option value="$PROJECT_DIR$/business.html" />
+        <option value="$PROJECT_DIR$/myHTML/myOrder.html" />
+        <option value="$PROJECT_DIR$/js/cater/writeOrder.js" />
+        <option value="$PROJECT_DIR$/js/my.js" />
+        <option value="$PROJECT_DIR$/js/business.js" />
+        <option value="$PROJECT_DIR$/businessHTML/shopsOrder.html" />
+        <option value="$PROJECT_DIR$/myHTML/myBalance.html" />
+        <option value="$PROJECT_DIR$/myHTML/myIntegral.html" />
+        <option value="$PROJECT_DIR$/js/base.js" />
+        <option value="$PROJECT_DIR$/my.html" />
         <option value="$PROJECT_DIR$/js/cater/cater.js" />
-        <option value="$PROJECT_DIR$/js/businessJs/shopsEnter.js" />
+        <option value="$PROJECT_DIR$/js/myJs/myOrder.js" />
+        <option value="$PROJECT_DIR$/js/businessJS/shopsOrder.js" />
+        <option value="$PROJECT_DIR$/startHTML/caterHTML/caterIndex.html" />
+        <option value="$PROJECT_DIR$/js/cater/caterDetail.js" />
+        <option value="$PROJECT_DIR$/startHTML/caterHTML/caterDetail.html" />
+        <option value="$PROJECT_DIR$/js/cater/pay.js" />
+        <option value="$PROJECT_DIR$/js/productDetailPage.js" />
+        <option value="$PROJECT_DIR$/js/buyVoucher.js" />
+        <option value="$PROJECT_DIR$/startHTML/12/payEnd.html" />
+        <option value="$PROJECT_DIR$/smallFeatureHTML/position.html" />
+        <option value="$PROJECT_DIR$/js/position.js" />
+        <option value="$PROJECT_DIR$/startHTML/12/payOut.html" />
+        <option value="$PROJECT_DIR$/js/cater/caterCpd.js" />
+        <option value="$PROJECT_DIR$/css/base.css" />
+        <option value="$PROJECT_DIR$/startHTML/caterHTML/cpd.html" />
+        <option value="$PROJECT_DIR$/js/start.js" />
       </list>
     </option>
   </component>
@@ -216,7 +227,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/dist" />
+    <property name="last_opened_file_path" value="F:/learn/vue2.0_project01" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -315,114 +326,6 @@
       <created>1501824936111</created>
       <option name="number" value="Default" />
       <updated>1501824936111</updated>
-    </task>
-    <task id="LOCAL-00038" summary="caterCpd">
-      <created>1506510212491</created>
-      <option name="number" value="00038" />
-      <option name="project" value="LOCAL" />
-      <updated>1506510212491</updated>
-    </task>
-    <task id="LOCAL-00039" summary="9/28">
-      <created>1506591237432</created>
-      <option name="number" value="00039" />
-      <option name="project" value="LOCAL" />
-      <updated>1506591237432</updated>
-    </task>
-    <task id="LOCAL-00040" summary="add one public style">
-      <created>1506591307733</created>
-      <option name="number" value="00040" />
-      <option name="project" value="LOCAL" />
-      <updated>1506591307733</updated>
-    </task>
-    <task id="LOCAL-00041" summary="add jump handle">
-      <created>1506592012057</created>
-      <option name="number" value="00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592012057</updated>
-    </task>
-    <task id="LOCAL-00042" summary="shoppingCartJs">
-      <created>1506592051082</created>
-      <option name="number" value="00042" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592051082</updated>
-    </task>
-    <task id="LOCAL-00043" summary="add clear placeholderShape handle">
-      <created>1506592125258</created>
-      <option name="number" value="00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592125258</updated>
-    </task>
-    <task id="LOCAL-00044" summary="add clear placeholderShape">
-      <created>1506592152882</created>
-      <option name="number" value="00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592152882</updated>
-    </task>
-    <task id="LOCAL-00045" summary="add pop-up box function">
-      <created>1506592206231</created>
-      <option name="number" value="00045" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592206231</updated>
-    </task>
-    <task id="LOCAL-00046" summary="handle enter from order">
-      <created>1506592257184</created>
-      <option name="number" value="00046" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592257184</updated>
-    </task>
-    <task id="LOCAL-00047" summary="add try catch">
-      <created>1506592295063</created>
-      <option name="number" value="00047" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592295063</updated>
-    </task>
-    <task id="LOCAL-00048" summary="add clear placeholder handle">
-      <created>1506592332819</created>
-      <option name="number" value="00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592332819</updated>
-    </task>
-    <task id="LOCAL-00049" summary="modify input placeholder color and delete form padding and add input">
-      <created>1506592472440</created>
-      <option name="number" value="00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592472440</updated>
-    </task>
-    <task id="LOCAL-00050" summary="modify header style,add style class &quot;addressEditList,addressYesDefault&quot;">
-      <created>1506592557683</created>
-      <option name="number" value="00050" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592557684</updated>
-    </task>
-    <task id="LOCAL-00051" summary="modify meta">
-      <created>1506592592286</created>
-      <option name="number" value="00051" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592592286</updated>
-    </task>
-    <task id="LOCAL-00052" summary="add type=tel style, .pro-title =&gt;.pro-txt,comment pro ele">
-      <created>1506592745237</created>
-      <option name="number" value="00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592745238</updated>
-    </task>
-    <task id="LOCAL-00053" summary="add js code inside page">
-      <created>1506592788674</created>
-      <option name="number" value="00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592788674</updated>
-    </task>
-    <task id="LOCAL-00054" summary="become  dynamic page">
-      <created>1506592887002</created>
-      <option name="number" value="00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592887002</updated>
-    </task>
-    <task id="LOCAL-00055" summary="9/28">
-      <created>1506592927046</created>
-      <option name="number" value="00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1506592927046</updated>
     </task>
     <task id="LOCAL-00056" summary="become dynamic page, change js into external">
       <created>1506593097869</created>
@@ -610,31 +513,139 @@
       <option name="project" value="LOCAL" />
       <updated>1506758168998</updated>
     </task>
-    <option name="localTasksCounter" value="87" />
+    <task id="LOCAL-00087" summary="10/10">
+      <created>1507605558261</created>
+      <option name="number" value="00087" />
+      <option name="project" value="LOCAL" />
+      <updated>1507605558262</updated>
+    </task>
+    <task id="LOCAL-00088" summary="add loadingWrap style">
+      <created>1507605590798</created>
+      <option name="number" value="00088" />
+      <option name="project" value="LOCAL" />
+      <updated>1507605590798</updated>
+    </task>
+    <task id="LOCAL-00089" summary="add ajax loading">
+      <created>1507605619914</created>
+      <option name="number" value="00089" />
+      <option name="project" value="LOCAL" />
+      <updated>1507605619914</updated>
+    </task>
+    <task id="LOCAL-00090" summary="add ajax loading">
+      <created>1507605639740</created>
+      <option name="number" value="00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1507605639740</updated>
+    </task>
+    <task id="LOCAL-00091" summary="add ajax loading">
+      <created>1507605660198</created>
+      <option name="number" value="00091" />
+      <option name="project" value="LOCAL" />
+      <updated>1507605660198</updated>
+    </task>
+    <task id="LOCAL-00092" summary="add ajax loading &amp; modify transfer data">
+      <created>1507605746635</created>
+      <option name="number" value="00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1507605746635</updated>
+    </task>
+    <task id="LOCAL-00093" summary="add ajax loading">
+      <created>1507605875252</created>
+      <option name="number" value="00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1507605875253</updated>
+    </task>
+    <task id="LOCAL-00094" summary="add ajax loading">
+      <created>1507605888309</created>
+      <option name="number" value="00094" />
+      <option name="project" value="LOCAL" />
+      <updated>1507605888309</updated>
+    </task>
+    <task id="LOCAL-00095" summary="add ajax loading">
+      <created>1507605912827</created>
+      <option name="number" value="00095" />
+      <option name="project" value="LOCAL" />
+      <updated>1507605912827</updated>
+    </task>
+    <task id="LOCAL-00096" summary="myOrderJs">
+      <created>1507605934104</created>
+      <option name="number" value="00096" />
+      <option name="project" value="LOCAL" />
+      <updated>1507605934104</updated>
+    </task>
+    <task id="LOCAL-00097" summary="add ajax loading">
+      <created>1507605979334</created>
+      <option name="number" value="00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1507605979335</updated>
+    </task>
+    <task id="LOCAL-00098" summary="myOrderPage">
+      <created>1507605998626</created>
+      <option name="number" value="00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1507605998627</updated>
+    </task>
+    <task id="LOCAL-00099" summary="modify .pro-txt style">
+      <created>1507606037233</created>
+      <option name="number" value="00099" />
+      <option name="project" value="LOCAL" />
+      <updated>1507606037233</updated>
+    </task>
+    <task id="LOCAL-00100" summary="style change">
+      <created>1507606065863</created>
+      <option name="number" value="00100" />
+      <option name="project" value="LOCAL" />
+      <updated>1507606065863</updated>
+    </task>
+    <task id="LOCAL-00101" summary="10/10">
+      <created>1507606086575</created>
+      <option name="number" value="00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1507606086575</updated>
+    </task>
+    <task id="LOCAL-00102" summary="modify a href value">
+      <created>1507606127751</created>
+      <option name="number" value="00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1507606127751</updated>
+    </task>
+    <task id="LOCAL-00103" summary="add loading scroll_bar">
+      <created>1507606162828</created>
+      <option name="number" value="00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1507606162828</updated>
+    </task>
+    <task id="LOCAL-00104" summary="add ajax loading">
+      <created>1507606319468</created>
+      <option name="number" value="00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1507606319468</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2015625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33016878" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33016878" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33016878" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32805908" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -652,16 +663,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="become  dynamic page" />
-    <MESSAGE value="9/28" />
-    <MESSAGE value="become dynamic page, change js into external" />
-    <MESSAGE value="add loading element" />
-    <MESSAGE value="modify header class" />
-    <MESSAGE value="add yes font" />
-    <MESSAGE value="comment loading element" />
-    <MESSAGE value="loading svg" />
-    <MESSAGE value="handle ios bug that click twinkle" />
-    <MESSAGE value="handle picture loading problem" />
     <MESSAGE value="caterDetailJs" />
     <MESSAGE value="payJs" />
     <MESSAGE value="handle ios bug about input" />
@@ -677,7 +678,17 @@
     <MESSAGE value="9/30" />
     <MESSAGE value="modify js external" />
     <MESSAGE value="modify + - width" />
-    <option name="LAST_COMMIT_MESSAGE" value="modify + - width" />
+    <MESSAGE value="add loadingWrap style" />
+    <MESSAGE value="add ajax loading &amp; modify transfer data" />
+    <MESSAGE value="myOrderJs" />
+    <MESSAGE value="myOrderPage" />
+    <MESSAGE value="modify .pro-txt style" />
+    <MESSAGE value="style change" />
+    <MESSAGE value="10/10" />
+    <MESSAGE value="modify a href value" />
+    <MESSAGE value="add loading scroll_bar" />
+    <MESSAGE value="add ajax loading" />
+    <option name="LAST_COMMIT_MESSAGE" value="add ajax loading" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -686,534 +697,434 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myHTML/settingHTML/addEditAddress.html">
+    <entry file="file://$PROJECT_DIR$/myHTML/settingHTML/aboutUs.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3566592">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myHTML/settingHTML/shippingAddress.html">
+    <entry file="file://$PROJECT_DIR$/businessHTML/shopsEnter.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7020316">
-          <caret line="72" column="43" selection-start-line="72" selection-start-column="43" selection-end-line="72" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.81038374">
+          <caret line="154" column="39" selection-start-line="154" selection-start-column="39" selection-end-line="154" selection-end-column="39" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/carHTML/carDetailPage6.html">
+    <entry file="file://$PROJECT_DIR$/smallFeatureHTML/search.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3792325">
-          <caret line="86" column="29" selection-start-line="86" selection-start-column="29" selection-end-line="86" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/carHTML/carDetailPage5.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4604966">
-          <caret line="95" column="41" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/carHTML/carDetailPage4.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54176074">
-          <caret line="95" column="41" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/carHTML/carDetailPage3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54176074">
-          <caret line="95" column="41" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/carHTML/carDetailPage2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54176074">
-          <caret line="95" column="41" selection-start-line="95" selection-start-column="41" selection-end-line="95" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/carHTML/carDetailPage1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2979684">
-          <caret line="86" column="41" selection-start-line="86" selection-start-column="23" selection-end-line="86" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/carHTML/carIndex.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.89390516">
+        <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/hotelHTML/hotelDetail5.html">
+    <entry file="file://$PROJECT_DIR$/js/cater/shoppingCart.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3792325">
-          <caret line="86" column="41" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
+        <state vertical-scroll-proportion="-7.1741023">
+          <caret line="12" column="80" selection-start-line="12" selection-start-column="80" selection-end-line="12" selection-end-column="80" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/hotelHTML/hotelDetail4.html">
+    <entry file="file://$PROJECT_DIR$/startHTML/12/shoppingCart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3792325">
-          <caret line="86" column="41" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/hotelHTML/hotelDetail3.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54176074">
-          <caret line="86" column="41" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/hotelHTML/hotelDetail2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3792325">
-          <caret line="86" column="41" selection-start-line="86" selection-start-column="41" selection-end-line="86" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/hotelHTML/hotelDetail1.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.54176074">
-          <caret line="89" column="41" selection-start-line="89" selection-start-column="41" selection-end-line="89" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myHTML/myPromotion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.24379233">
-          <caret line="9" column="17" selection-start-line="0" selection-start-column="0" selection-end-line="37" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myHTML/setting.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.73137695">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.81038374">
+          <caret line="263" column="35" selection-start-line="263" selection-start-column="35" selection-end-line="263" selection-end-column="35" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/startHTML/12/writeOrder.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.030303">
-          <caret line="129" column="27" selection-start-line="129" selection-start-column="27" selection-end-line="129" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/my.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="227" column="4" selection-start-line="227" selection-start-column="4" selection-end-line="227" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myHTML/myShops.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.848485">
-          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="23" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/myHTML/myOrder.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-21.030304">
-          <caret line="221" column="34" selection-start-line="221" selection-start-column="34" selection-end-line="221" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/zepto_multiple.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4295302">
-          <caret line="16" column="91" selection-start-line="16" selection-start-column="91" selection-end-line="16" selection-end-column="91" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/12/productDetailPage.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3860044">
-          <caret line="17" column="60" selection-start-line="17" selection-start-column="60" selection-end-line="17" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/caterHTML/cpd.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6038375">
-          <caret line="211" column="23" selection-start-line="211" selection-start-column="23" selection-end-line="211" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/smallFeatureHTML/position.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/my.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.212121">
-          <caret line="93" column="33" selection-start-line="93" selection-start-column="33" selection-end-line="93" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/css/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="182" column="29" selection-start-line="182" selection-start-column="29" selection-end-line="182" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/my.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="13" selection-start-line="46" selection-start-column="13" selection-end-line="46" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/buyVoucher.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/business.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <marker date="1507601826110" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601826110" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601826110" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/regLogFind.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="321" column="9" selection-start-line="321" selection-start-column="9" selection-end-line="321" selection-end-column="9" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/start.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="173" column="54" selection-start-line="173" selection-start-column="54" selection-end-line="173" selection-end-column="54" />
-          <folding>
-            <marker date="1507601328882" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601328882" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601328882" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601328882" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601328882" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601328882" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601328882" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601328882" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601328882" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601328882" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601328882" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601328882" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601328882" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/productDetailPage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="18" selection-start-line="19" selection-start-column="18" selection-end-line="19" selection-end-column="18" />
-          <folding>
-            <marker date="1507544251009" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507544251009" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/position.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="44" selection-start-line="3" selection-start-column="44" selection-end-line="3" selection-end-column="44" />
-          <folding>
-            <marker date="1507601502671" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507601502671" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/myJs/myPromotion.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="5" selection-start-line="31" selection-start-column="5" selection-end-line="31" selection-end-column="5" />
-          <folding>
-            <marker date="1507602605245" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605245" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605245" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/myJs/myShops.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="16" selection-start-line="20" selection-start-column="16" selection-end-line="20" selection-end-column="16" />
-          <folding>
-            <marker date="1507602605178" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605178" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605178" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/myJs/setting.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/myJs/myCode.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/myJs/balanceScore.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/houseJs/houseIndex.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="273" column="43" selection-start-line="273" selection-start-column="43" selection-end-line="273" selection-end-column="43" />
-          <folding>
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605148" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.81038374">
+          <caret line="198" column="32" selection-start-line="198" selection-start-column="32" selection-end-line="198" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/houseJs/houseClass.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="193" column="5" selection-start-line="193" selection-start-column="5" selection-end-line="193" selection-end-column="5" />
-          <folding>
-            <marker date="1507602605199" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605199" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605199" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605199" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605199" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605199" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605199" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605199" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605199" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605199" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605199" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.37323177">
+          <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myHTML/myShops.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7832957">
+          <caret line="36" column="30" selection-start-line="36" selection-start-column="30" selection-end-line="36" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/my.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5821545">
+          <caret line="296" column="15" selection-start-line="296" selection-start-column="15" selection-end-line="296" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/cater/writeOrder.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
-          <folding>
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605230" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <caret line="90" column="26" selection-start-line="90" selection-start-column="26" selection-end-line="90" selection-end-column="26" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cater/pay.js">
+    <entry file="file://$PROJECT_DIR$/myHTML/setting.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding />
+        <state vertical-scroll-proportion="-21.030304">
+          <caret line="111" column="32" selection-start-line="111" selection-start-column="32" selection-end-line="111" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cater/caterDetail.js">
+    <entry file="file://$PROJECT_DIR$/js/my.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="5" selection-start-line="41" selection-start-column="5" selection-end-line="41" selection-end-column="5" />
-          <folding>
-            <marker date="1507602605257" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605257" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605257" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605257" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605257" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+        <state vertical-scroll-proportion="0.515778">
+          <caret line="143" column="147" selection-start-line="143" selection-start-column="147" selection-end-line="143" selection-end-column="147" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cater/caterCpd.js">
+    <entry file="file://$PROJECT_DIR$/js/myJs/setting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47007617">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/businessHTML/shopsManage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.24604966">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myHTML/myOrder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16252822">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/business.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8095756">
+          <caret line="70" column="92" selection-start-line="70" selection-start-column="92" selection-end-line="70" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/business.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.67494357">
+          <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/businessHTML/shopsOrder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0835215">
+          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myHTML/myBalance.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.636364">
+          <caret line="16" column="10" selection-start-line="16" selection-start-column="10" selection-end-line="16" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myHTML/myIntegral.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4334086">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38713318">
+          <caret line="47" column="25" selection-start-line="47" selection-start-column="25" selection-end-line="47" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <marker date="1507602605171" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605171" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605171" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/businessJS/shopsOrder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8291621">
+          <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startHTML/caterHTML/caterIndex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.051918738">
+          <caret line="151" column="22" selection-start-line="151" selection-start-column="22" selection-end-line="151" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/cater/cater.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <caret line="143" column="77" selection-start-line="143" selection-start-column="77" selection-end-line="143" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startHTML/houseHTML/houseItem.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8408578">
+          <caret line="73" column="41" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/houseCss/houseIndex.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startHTML/houseHTML/houseIndex.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.09091">
+          <caret line="59" column="10" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/businessHTML/enterMap.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.758465">
+          <caret line="184" column="22" selection-start-line="184" selection-start-column="22" selection-end-line="184" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/houseCss/productDetailPage.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39173013">
+          <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/businessJS/shopsEnter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.4961915">
+          <caret line="61" column="19" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/cater/caterDetail.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.47007617">
+          <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
           <folding>
-            <marker date="1507602605164" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605164" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605164" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605164" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605164" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605164" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605164" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605164" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605164" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605164" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605164" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605164" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605164" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605164" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507773528319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507773528319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507773528319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507773528319" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507773528319" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/businessJs/shopsEnter.js">
+    <entry file="file://$PROJECT_DIR$/startHTML/caterHTML/caterDetail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0184984">
-          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state vertical-scroll-proportion="-0.18735892">
+          <caret line="62" column="12" selection-start-line="62" selection-start-column="16" selection-end-line="117" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/houseJs/houseIndex.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39173013">
+          <caret line="81" column="90" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startHTML/12/pay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.8939052">
+          <caret line="109" column="13" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startHTML/12/productDetailPage.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7832957">
+          <caret line="135" column="37" selection-start-line="135" selection-start-column="37" selection-end-line="135" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/productDetailPage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5038085">
+          <caret line="165" column="30" selection-start-line="165" selection-start-column="30" selection-end-line="165" selection-end-column="30" />
+          <folding>
+            <marker date="1507776038657" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507776038657" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startHTML/12/buyVoucher.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7866817">
+          <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/buyVoucher.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.62676823">
+          <caret line="110" column="51" selection-start-line="110" selection-start-column="51" selection-end-line="110" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/position.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6789989">
+          <caret line="188" column="51" selection-start-line="188" selection-start-column="51" selection-end-line="188" selection-end-column="51" />
+          <folding>
+            <marker date="1507777195704" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507777195704" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/smallFeatureHTML/position.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33295712">
+          <caret line="18" column="161" selection-start-line="18" selection-start-column="161" selection-end-line="18" selection-end-column="161" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.39934713">
+          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startHTML/12/payEnd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6772009">
+          <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startHTML/12/payOut.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78555304">
+          <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/myJs/myOrder.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70511425">
-          <caret line="37" column="5" selection-start-line="18" selection-start-column="4" selection-end-line="37" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.15669206">
+          <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
           <folding>
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605238" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/startHTML/12/shoppingCart.html">
+    <entry file="file://$PROJECT_DIR$/js/cater/pay.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40632054">
-          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        <state vertical-scroll-proportion="0.75734496">
+          <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/cater/shoppingCart.js">
+    <entry file="file://$PROJECT_DIR$/js/cater/caterCpd.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8095756">
-          <caret line="44" column="5" selection-start-line="44" selection-start-column="5" selection-end-line="44" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.026115343">
+          <caret line="66" column="65" selection-start-line="66" selection-start-column="65" selection-end-line="66" selection-end-column="65" />
           <folding>
-            <marker date="1507602605156" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605156" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605156" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605156" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605156" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605156" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605156" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605156" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605156" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605156" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605156" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605156" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605156" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605156" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/myJs/shippingAddress.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.9727965">
-          <caret line="96" column="30" selection-start-line="96" selection-start-column="30" selection-end-line="96" selection-end-column="30" />
-          <folding>
-            <marker date="1507602605215" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605215" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605215" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605215" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605215" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605215" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507602605215" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780568414" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780568414" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780568414" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/start.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40632054">
-          <caret line="15" column="31" selection-start-line="15" selection-start-column="31" selection-end-line="15" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.43115124">
+          <caret line="197" column="18" selection-start-line="197" selection-start-column="18" selection-end-line="197" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3068553">
+          <caret line="174" column="10" selection-start-line="174" selection-start-column="10" selection-end-line="174" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/start.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6789989">
+          <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
+          <folding>
+            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/startHTML/caterHTML/cpd.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="4.440181">
+          <caret line="301" column="20" selection-start-line="301" selection-start-column="20" selection-end-line="301" selection-end-column="20" />
+          <folding>
+            <element signature="n#style#0;n#li#1;n#ul#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
