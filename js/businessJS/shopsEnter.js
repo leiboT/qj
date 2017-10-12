@@ -18,40 +18,6 @@ $(function(){
     var p=$("#pop p");
     var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
 
-    //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
-
-    //跳转
-    function jump(url,t){
-        setTimeout(function(){
-            location.href=url
-        },t)
-    }
-
-    //提示弹出框处理函数
-    function  reminderDeal(txt){
-        p.html(txt);
-        pop.addClass("pop-show");
-    }
-
     var input = $("div.inputBeautify input");
     var token,
         userId,
@@ -88,11 +54,7 @@ $(function(){
         $(".storeIndex a").click(function(e){
             e=e||window.event;
             e.preventDefault();
-            reminderDeal("请先登录!");
-            closeBtn.text("进入登录页");
-            closeBtn.on("click",function(){
-                jump("loginRegisterHTML/login.html",0);
-            });
+            $.pleaseLogin(p,pop,closeBtn,"loginRegisterHTML/login.html");
         })
     }
 
@@ -231,45 +193,41 @@ $(function(){
 
     //异步提交处理函数
     function storeAjax(data){
-        customAjax(
+        $.customAjax(
             "http://api.qianjiantech.com/v1/as",
             data,
             function(result){
                 var code=result.code;
                 if(code==2005){
-                    $.ajax({
-                        type:"post",
-                        url:"http://api.qianjiantech.com/v1/getToken",
-                        data:{
+                    $.customAjax(
+                        "http://api.qianjiantech.com/v1/getToken",
+                        {
                             user_id:userId,
                             state_code:sessionStorage.getItem("stateCode")
                         },
-                        success:function(key){
+                        function(key){
                             //var startHTML=key.indexOf('"');
                             //var end=key.indexOf('"',startHTML+1);
                             //    token=key.slice(startHTML,end);
                             token=key.info.token;
                             storeAjax(storeInfo+"&token="+token);
                         }
-                    })
+                    );
                 }else if(code==2000){
-                    reminderDeal("提交成功,请等待审核!");
-                    jump("../business.html",1500);
+                    $.reminderDeal(p,pop,"提交成功,请等待审核!");
+                    $.jump("../business.html",1500);
                 }else if(code==2001){
-                    reminderDeal("推荐人等级不够!");
+                    $.reminderDeal(p,pop,"推荐人等级不够!");
                 }else if(code==2002){
-                    reminderDeal("提交失败!");
+                    $.reminderDeal(p,pop,"提交失败!");
                 }else if(code==4000){
-                    reminderDeal("信息不全,重新输入!");
+                    $.reminderDeal(p,pop,"信息不全,重新输入!");
                 }else if(code==6000){
-                    reminderDeal("推荐人不存在!");
+                    $.reminderDeal(p,pop,"推荐人不存在!");
                 }else if(code==500){
-                    reminderDeal("服务繁忙,请稍后重试!");
+                    $.reminderDeal(p,pop,"服务繁忙,请稍后重试!");
                 }else if(code==9000){
-                    reminderDeal("你已在其他设备登录");
-                    closeBtn.text("即将进入登录页").unbind("click");
-                    jump("../loginRegisterHTML/login.html",1500);
-                    sessionStorage.clear();
+                    $.loginOtherDevice(p,pop,closeBtn,"../loginRegisterHTML/login.html");
                 }
             }
         );
@@ -295,43 +253,39 @@ $(function(){
         if(a&&b&&c&&d&&ee&&f&&g&&h&&i&&j&&k&&province){
             storeAjax(storeAllInfo);
         }else if(!userId){
-            reminderDeal("请先登录!");
-            closeBtn.text("进入登录页");
-            closeBtn.on("click",function(){
-                jump("../loginRegisterHTML/login.html",0);
-            });
+            $.pleaseLogin(p,pop,closeBtn,"../loginRegisterHTML/login.html");
         }else if(!a){
-            reminderDeal("商家名称不能为空!");
+            $.reminderDeal(p,pop,"商家名称不能为空!");
         }else if(!b){
-            reminderDeal("请选择行业!");
+            $.reminderDeal(p,pop,"请选择行业!");
         }else if(!c){
-            reminderDeal("请获取您的位置!");
+            $.reminderDeal(p,pop,"请获取您的位置!");
         }else if(!d){
-            reminderDeal("商家法人不能为空!");
+            $.reminderDeal(p,pop,"商家法人不能为空!");
         }else if(!$("[name='id_number']").val()){
-            reminderDeal("请输入身份证号!")
+            $.reminderDeal(p,pop,"请输入身份证号!")
         }else if(!ee){
-            reminderDeal("身份证号格式有误!");
+            $.reminderDeal(p,pop,"身份证号格式有误!");
         }else if(!$("[name='shop_phone']").val()){
-            reminderDeal("请输入商家电话!")
+            $.reminderDeal(p,pop,"请输入商家电话!")
         }else if(!f){
-            reminderDeal("商家电话格式有误!");
+            $.reminderDeal(p,pop,"商家电话格式有误!");
         }else if(!$("[name='server_phone']").val()){
-            reminderDeal("请输入服务电话!");
+            $.reminderDeal(p,pop,"请输入服务电话!");
         }else if(!g){
-            reminderDeal("服务电话格式有误!");
+            $.reminderDeal(p,pop,"服务电话格式有误!");
         }else if(!$("[name='recommend_phone']").val()){
-            reminderDeal("请输入推荐人手机号!")
+            $.reminderDeal(p,pop,"请输入推荐人手机号!")
         }else if(!h){
-            reminderDeal("推荐人手机格式有误!");
+            $.reminderDeal(p,pop,"推荐人手机格式有误!");
         }else if(!i){
-            reminderDeal("请上传身份证正面图!");
+            $.reminderDeal(p,pop,"请上传身份证正面图!");
         }else if(!j){
-            reminderDeal("请上传身份证反面图!");
+            $.reminderDeal(p,pop,"请上传身份证反面图!");
         }else if(!k) {
-            reminderDeal("请上传营业执照图!");
+            $.reminderDeal(p,pop,"请上传营业执照图!");
         }else if(!province){
-            reminderDeal("请获取您的位置!");
+            $.reminderDeal(p,pop,"请获取您的位置!");
         }
     });
 
@@ -340,12 +294,7 @@ $(function(){
         pop.removeClass("pop-show");
     });
     //点击其他区域关闭弹框
-    $(pop).mouseup(function(e){
-        var _con = $('.pop-box');
-        if(_con != e.target && _con.has(e.target).length === 0){
-            $(this).removeClass("pop-show");
-        }
-    });
+    $.elseClosePop(pop);
 
     //行业分类弹出
     $(industryBtn).click(function(){
@@ -377,7 +326,7 @@ $(function(){
 
     //获取行业分类数据
     function getIndustryList(){
-        customAjax(
+        $.customAjax(
             "http://api.qianjiantech.com/v1/chooseItem",
             null,
             function(data){
