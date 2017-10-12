@@ -17,46 +17,42 @@ $(function(){
     var uid=sessionStorage.getItem("uid");
 
     //提示弹出框处理函数
-    function  reminderDeal(txt){
-        p.html(txt);
-        pop.addClass("pop-show");
-    }
+    //function  reminderDeal(txt){
+    //    p.html(txt);
+    //    pop.addClass("pop-show");
+    //}
     //跳转
-    function jump(url,t){
-        setTimeout(function(){
-            location.href=url
-        },t)
-    }
+    //function jump(url,t){
+    //    setTimeout(function(){
+    //        location.href=url
+    //    },t)
+    //}
     //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
+    //function customAjax(url,data,fn){
+    //    //alert(JSON.stringify(arguments));
+    //    $.ajax({
+    //        type:"post",
+    //        url:url,
+    //        data:data,
+    //        dataType:"json",
+    //        success:fn,
+    //        error:function(error){
+    //            //console.log(error)
+    //        },
+    //        beforeSend: function(){
+    //            $('body').append('<div class="loadingWrap"></div>');
+    //        },
+    //        complete: function(){
+    //            $(".loadingWrap").remove();
+    //        }
+    //    })
+    //}
 
     //请先登录处理函数
     function pleaseLogin(e){
         e = e || window.event;
         e.preventDefault();
-        reminderDeal("请先登录!");
-        closeBtn.html("进入登录页");
-        closeBtn.on("click",function(){
-            jump("loginRegisterHTML/login.html",0);
-        });
+        $.pleaseLogin(p,pop,closeBtn,"loginRegisterHTML/login.html");
     }
 
     if(!uid) {
@@ -96,12 +92,14 @@ $(function(){
     //}
 
     //点击其他区域关闭弹框
-    $(pop).mouseup(function(e){
-        var _con = $('.pop-box');
-        if(_con != e.target && _con.has(e.target).length === 0){
-            $(this).removeClass("pop-show");
-        }
-    });
+    $.elseClosePop(pop);
+    //$(pop).mouseup(function(e){
+    //    var _con = $('.pop-box');
+    //    if(_con != e.target && _con.has(e.target).length === 0){
+    //        $(this).removeClass("pop-show");
+    //    }
+    //});
+
 
     //加载用户二维码
     //function loadUserCode(uid){
@@ -131,7 +129,7 @@ $(function(){
     //加载用户数据
     function loadUserInfo(uid){
         if(uid){
-            customAjax(
+            $.customAjax(
                 "http://api.qianjiantech.com/v1/myinfo",
                 {user_id:uid,state_code:sessionStorage.getItem("stateCode")},
                 function(result){
@@ -146,27 +144,25 @@ $(function(){
                         sessionStorage.setItem("userInfo",JSON.stringify({"uPic":uPic,"uName":uName,"uPhone":phone,"uMoney":money,"uScore":score}));
                         u.html(uName);
                         uAvatar.attr("src",uPic);
-                        balance.html("余额："+money+"元");
-                        integral.html("积分："+score+"分");
+                        balance.html("仟健余额："+money+"元");
+                        integral.html("仟健积分："+score+"分");
                     }else if(code==9000){
-                        reminderDeal("你已在其他设备登录!");
-                        closeBtn.html("即将进入登录页").unbind("click");
-                        jump("loginRegisterHTML/login.html",1500);
-                        sessionStorage.clear();
+                        $.loginOtherDevice(p,pop,closeBtn,"loginRegisterHTML/login.html");
                     }
                 }
             );
         }
     }
-    if(!sessionStorage.getItem("userInfo"))
-        loadUserInfo(uid);
-    else{
-        var userInfo=JSON.parse(sessionStorage.getItem("userInfo"));
-        u.html(userInfo.uName);
-        uAvatar.attr("src",userInfo.uPic);
-        balance.html("余额："+userInfo.uMoney+"元");
-        integral.html("积分："+userInfo.uScore+"分");
-    }
+    loadUserInfo(uid);
+    //if(!sessionStorage.getItem("userInfo"))
+    //    loadUserInfo(uid);
+    //else{
+    //    var userInfo=JSON.parse(sessionStorage.getItem("userInfo"));
+    //    u.html(userInfo.uName);
+    //    uAvatar.attr("src",userInfo.uPic);
+    //    balance.html("余额："+userInfo.uMoney+"元");
+    //    integral.html("仟健积分："+userInfo.uScore+"分");
+    //}
 
     ////余额积分页处理函数
     //function balanceScore(){

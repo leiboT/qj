@@ -5,42 +5,11 @@ $(function(){
     var pop=$("#pop");
     var p=$("#pop p");
     var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
-    //提示弹出框处理函数
-    function  reminderDeal(txt){
-        p.html(txt);
-        pop.addClass("pop-show");
-    }
-    //跳转
-    function jump(url,t){
-        setTimeout(function(){
-            location.href=url
-        },t)
-    }
-    //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
     var loadMore=$(".loadMore");
     var index=1;
     var pg;
     var myOrderLoad=function(page){
-        customAjax(
+        $.customAjax(
             "http://api.qianjiantech.com/v1/myOrder",
             {
                 user_id:sessionStorage.getItem("uid"),
@@ -101,34 +70,66 @@ $(function(){
                                     ${proHtml}
                                     </ul>
                                     </li>
-                                    <li class="borderBottom1 color252525 em0_8 txtRight rightPadding3">
+                                    ${v.order_type==0?`<li class="borderBottom1 color252525 em0_8 txtRight rightPadding3">
                                     共${number}件商品 合计:￥${total}(含运费:￥0.00)
-                                    </li>
-                                    <li class="orderInfoFooter em0_8 txtRight">
+                                    </li>`:''}
+                                    <li class="orderInfoFooter em0_8 txtRight" data-totalM="${total}">
                                     <span class="lf orderType">${v.order_type==0?"普通订单":"凭证订单"}</span>
-                                    <div class="color252525 returnGood">&nbsp;退货&nbsp;</div>
-                                    <div class="colorF35F62 confirmReceive">&nbsp;确认收货&nbsp;</div>
+                                    ${v.state==0?`<div class="goPay">&nbsp;去支付&nbsp;</div>`:v.state>=1?`<div class="confirmReceive">&nbsp;确认收货&nbsp;</div>`:v.state>=6?`<div class="returnGood">&nbsp;退货&nbsp;</div>`:`<div class="color252525">&nbsp;已完成&nbsp;</div>`}
                                     </li>
                                     </ul>
                                     </li>
                             `;
                         });
                         loadMore.before(html);
+                        orderBox.on("click",".orderInfoFooter>div",function(){
+                            sessionStorage.setItem("ord",$(this).parent().parent().parent().attr("data-orderId"));
+                            sessionStorage.setItem("tmy",$(this).parent().attr("data-totalM"));
+                            //console.log($(this)[0].className);
+                            switch ($(this)[0].className){
+                                case "goPay":
+                                    cancelConfirmDeal("../startHTML/12/pay.html");
+                                    $.reminderDeal(p,pop,"确认去支付?");
+                                    break;
+                                //case "confirmReceive":
+                                //    $.reminderDeal(p,pop,"确认收货?");
+                                //    break;
+                            }
+                        });
                         break;
                     case 2001:
                         loadMore.html(`<div>你还没有订单</div>`);
                         break;
                     case 9000:
-                        reminderDeal("你已在其他设备登录!");
-                        closeBtn.html("即将进入登录页").unbind("click");
-                        jump("../loginRegisterHTML/login.html",1500);
-                        sessionStorage.clear();
+                        $.loginOtherDevice(p,pop,closeBtn,"../loginRegisterHTML/login.html");
+                        break;
                 }
             }
         );
     };
     myOrderLoad(index);
-
+    //点击其他区域关闭弹框
+    $.elseClosePop(pop);
+    //弹框确认取消处理
+    var cancelConfirmDeal = function(path){
+        $(".settingWarn").on("click","span",function(e){
+            e= e||window.event;
+            switch($(e.target).html()){
+                case "取消":
+                    pop.removeClass("pop-show");
+                    $(".settingWarn").unbind("click");
+                    break;
+                case "确定":
+                    sessionStorage.setItem("isMyOrder","111");
+                    $.jump(path,200);
+                    break;
+            }
+        });
+    };
+    //清除ord
+    $("header>a").click(function(){
+        sessionStorage.removeItem("ord")
+    });
     //下拉加载更多
     $('body').scroll(function () {
         if ($(this).scrollTop() + $(this).height() >= orderBox.height()+50) {
@@ -136,7 +137,7 @@ $(function(){
             index<=pg?loadMore.html("<div>加载中...</div>"):loadMore.html("<div>没有更多了</div>");
             setTimeout(function(){
                 index<=pg&&myOrderLoad(index);
-            },1000);
+            },300);
         }
     });
 

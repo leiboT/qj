@@ -8,49 +8,12 @@ $(function(){
     var p=$("#pop p");
     var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
 
-    //提示弹出框处理函数
-    function  reminderDeal(txt){
-        p.html(txt);
-        pop.addClass("pop-show");
-    }
-
-    //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
-    //跳转
-    function jump(url,t){
-        setTimeout(function(){
-            location.href=url
-        },t)
-    }
     //点击其他区域关闭弹框
-    $(pop).mouseup(function(e){
-        var _con = $('.pop-box');
-        if(_con != e.target && _con.has(e.target).length === 0){
-            $(this).removeClass("pop-show");
-        }
-    });
+    $.elseClosePop(pop);
 
     //设为默认地址
     var setDefaultAdd=function(ele){
-        customAjax(
+        $.customAjax(
             "http://api.qianjiantech.com/v1/setDefault",
             {
                 user_id:uid,
@@ -61,10 +24,7 @@ $(function(){
             function(result){
                 switch (result.code){
                     case 9000:
-                        reminderDeal("你已在其他设备登录!");
-                        closeBtn.html("即将进入登录页").unbind("click");
-                        jump("../../loginRegisterHTML/login.html",1500);
-                        sessionStorage.clear();
+                        $.loginOtherDevice(p,pop,closeBtn,"../../loginRegisterHTML/login.html");
                         break;
                 }
             }
@@ -127,7 +87,7 @@ $(function(){
                 shippingAddressBox.on("click",".addressItems",function(){
                     $(this).addClass("addressYesDefault").siblings(".addressYesDefault").removeClass("addressYesDefault");
                     setDefaultAdd(this);
-                    jump("../../startHTML/12/writeOrder.html",100);
+                    $.jump("../../startHTML/12/writeOrder.html",100);
                 })
             }else{
                 $(".addressYes").remove();
@@ -135,13 +95,10 @@ $(function(){
         }else if(code==2001){
             shippingAddressBox.html(`<li>你的收货地址为空</li>`);
         }else if(code==9000){
-            reminderDeal("你已在其他设备登录!");
-            closeBtn.text("即将进入登录页").unbind("click");
-            jump("../../loginRegisterHTML/login.html",1500);
-            sessionStorage.clear();
+            $.loginOtherDevice(p,pop,closeBtn,"../../loginRegisterHTML/login.html");
         }
     }
-    customAjax(
+    $.customAjax(
         "http://api.qianjiantech.com/v1/myAddress",
         {
             user_id:uid,
@@ -160,7 +117,7 @@ $(function(){
             $(".settingWarn").on("click","span",function(){
                 pop.removeClass("pop-show");
                 if($(this).html()=="确定"){
-                    customAjax(
+                    $.customAjax(
                         "http://api.qianjiantech.com/v1/deleteAddress",
                         {
                             user_id:uid,
@@ -243,7 +200,7 @@ $(function(){
             if(a&&b&&c&&d&&f&&g&&h){
                 var url=sessionStorage.getItem("editAddress")?"http://api.qianjiantech.com/v1/editAddress":"http://api.qianjiantech.com/v1/addAddress";
                 var data=sessionStorage.getItem("editAddress")?$("#shippingAddressForm").serialize()+"&user_id="+uid+"&state_code="+sessionStorage.getItem("stateCode")+"&province="+province+"&city="+city+"&district="+county+"&value="+$(".userSelectArea").attr("val")+"&address_id="+sessionStorage.getItem("addressId"):$("#shippingAddressForm").serialize()+"&user_id="+uid+"&state_code="+sessionStorage.getItem("stateCode")+"&province="+province+"&city="+city+"&district="+county+"&value="+$(".userSelectArea").attr("val");
-                customAjax(
+                $.customAjax(
                     url,
                     data,
                     function(result){
@@ -254,10 +211,7 @@ $(function(){
                                 sessionStorage.removeItem("editAddress");
                                 break;
                             case 9000:
-                                reminderDeal("你已在其他设备登录!");
-                                closeBtn.html("即将进入登录页").unbind("click");
-                                jump("../../loginRegisterHTML/login.html",1500);
-                                sessionStorage.clear();
+                                $.loginOtherDevice(p,pop,closeBtn,"../../loginRegisterHTML/login.html");
                                 break;
                         }
                     }

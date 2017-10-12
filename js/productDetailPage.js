@@ -5,38 +5,11 @@ $(function(){
     var p=$("#pop p");
     var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
 
-    //提示弹出框处理函数
-    function  reminderDeal(txt){
-        p.html(txt);
-        pop.addClass("pop-show");
-    }
-
-    //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
-
     function cutMoney(price){
         return price.length>4?price.substring(0,price.length-4)+"万":price.length>8?price.substring(0,price.length-8)+"亿":price;
     }
 
-    customAjax(
+    $.customAjax(
         "http://api.qianjiantech.com/v1/productInfo",
         {product_id:sessionStorage.getItem("productId")},
         function(result){
@@ -131,13 +104,7 @@ $(function(){
                 asyncJudge=true;
                 if(asyncJudge){
                     //点击其他区域关闭弹框
-                    $(pop).mouseup(function(e){
-                        var _con = $('.pop-box');
-                        if(_con != e.target && _con.has(e.target).length === 0){
-                            $(this).removeClass("pop-show");
-                        }
-                    });
-
+                    $.elseClosePop(pop);
                     var collect=false;
                     //点击切换处理函数
                     function switchToggle(selector){
@@ -176,7 +143,7 @@ $(function(){
                         };
                         xhr.send();
                     } catch (e) {
-                        console.log(e)
+                        //console.log(e)
                     }
 
                     var NavData={"longitude":113.619790,"latitude":22.931441,"address":"碧桂园"};
@@ -196,7 +163,7 @@ $(function(){
                                 infoUrl : 'http://weixin.qq.com' // 在查看位置界面底部显示的超链接,可点击跳转（测试好像不可用）
                             });
                         }catch(e){
-                            console.log(e)
+                            //console.log(e)
                         }
                     });
 
@@ -205,11 +172,7 @@ $(function(){
                         if(sessionStorage.getItem("uid")&&sessionStorage.getItem("t")&&sessionStorage.getItem("stateCode")){
                             location.href="buyVoucher.html";
                         }else{
-                            reminderDeal("请先登录!");
-                            closeBtn.text("进入登录页");
-                            closeBtn.on("click",function(){
-                                location.href="../../loginRegisterHTML/login.html";
-                            });
+                            $.pleaseLogin(p,pop,closeBtn,"../../loginRegisterHTML/login.html")
                         }
                     });
                 }

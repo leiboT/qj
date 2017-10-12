@@ -13,27 +13,6 @@ $(function(){
     }
     $(hotCityList).html(html);
 
-    //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
-
     //根据分类ID使返回不同页面
     var getBack=$("#cutCity");
     switch (Number(sessionStorage.getItem("allClassId"))){
@@ -64,7 +43,7 @@ $(function(){
             break;
     }
 
-    customAjax(
+    $.customAjax(
         "../static/data/cityList.json",
         {},
         function(result){
@@ -214,9 +193,9 @@ $(function(){
                 noIpLocate:3,
                 buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
                 zoomToAccuracy: true,      //定位成功后调整地图视野范围使定位位置及精度范围视野内可见，默认：false
-                buttonPosition:'RB',
-                GeoLocationFirst:true,
-                useNative:true
+                buttonPosition:'RB'
+                //GeoLocationFirst:true,
+                //useNative:true
             });
             map.addControl(geolocation);
             geolocation.getCurrentPosition();

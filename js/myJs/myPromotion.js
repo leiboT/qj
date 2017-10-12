@@ -6,36 +6,36 @@ $(function(){
     var p=$("#pop p");
     var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
     //提示弹出框处理函数
-    function  reminderDeal(txt){
-        p.html(txt);
-        pop.addClass("pop-show");
-    }
+    //function  reminderDeal(txt){
+    //    p.html(txt);
+    //    pop.addClass("pop-show");
+    //}
     //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
+    //function customAjax(url,data,fn){
+    //    //alert(JSON.stringify(arguments));
+    //    $.ajax({
+    //        type:"post",
+    //        url:url,
+    //        data:data,
+    //        dataType:"json",
+    //        success:fn,
+    //        error:function(error){
+    //            //console.log(error)
+    //        },
+    //        beforeSend: function(){
+    //            $('body').append('<div class="loadingWrap"></div>');
+    //        },
+    //        complete: function(){
+    //            $(".loadingWrap").remove();
+    //        }
+    //    })
+    //}
     //跳转
-    function jump(url,t){
-        setTimeout(function(){
-            location.href=url
-        },t)
-    }
+    //function jump(url,t){
+    //    setTimeout(function(){
+    //        location.href=url
+    //    },t)
+    //}
     //我的推广页处理函数
     function myPromotion(){
         var loadMore=$("#pro-list li.loadMore");
@@ -43,12 +43,10 @@ $(function(){
         var pg;
 
         function promotionLoad(uid,page){
-            $.ajax({
-                url:"http://api.qianjiantech.com/v1/mysub",
-                type:"get",
-                data:{user_id:uid,page:page,state_code:sessionStorage.getItem("stateCode")},
-                dataType:"json",
-                success:function(result){
+            $.customAjax(
+                "http://api.qianjiantech.com/v1/mysub",
+                {user_id:uid,page:page,state_code:sessionStorage.getItem("stateCode")},
+                function(result){
                     //console.log(result);
                     var code=result.code;
                     //console.log(code);
@@ -77,13 +75,10 @@ $(function(){
                     }else if(code==2001){
                         loadMore.html("<div>您还没有下线</div>")
                     }else if(code==9000){
-                        reminderDeal("你已在其他设备登录!");
-                        closeBtn.html("即将进入登录页").unbind("click");
-                        jump("../loginRegisterHTML/login.html",1500);
-                        sessionStorage.clear();
+                        $.loginOtherDevice(p,pop,closeBtn,"../loginRegisterHTML/login.html")
                     }
                 }
-            })
+            );
         }
         promotionLoad(uid,index);
 

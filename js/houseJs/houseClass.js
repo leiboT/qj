@@ -31,35 +31,6 @@ $(function(){
             loadHeader("土地转让");
             break;
     }
-
-    //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
-    //图片加载完清除占位图
-    function clearPlaceholderShape(){
-        $(".ui-fb").each(function(k,v){
-            $(v).load(function(){
-                $(this).parent().removeClass("ui-lz");
-            })
-        });
-    }
     var primaryHtml=[];
 
     function cutMoney(price){
@@ -95,12 +66,12 @@ $(function(){
             $("section").html(`<p class="txtCenter aroundPadding23 borderBottom1">未找到匹配资源</p>`);
             $(".searchResult").html("没有结果")
         }
-        clearPlaceholderShape()
+        $.clearPlaceholderShape()
     }
 
     var classifyBig=[];
     //加载分类item
-    customAjax(
+    $.customAjax(
         "http://api.qianjiantech.com/v1/filterItem",
         {
             class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId"),
@@ -179,7 +150,7 @@ $(function(){
     //进入根据分类ID加载商品数据
         //查询索引
     var areaId=0,totalPriceId=0,priceId=0,proportionId=0,subwayId=0;
-    customAjax(
+    $.customAjax(
         "http://api.qianjiantech.com/v1/chooseGoods",
         {
             class_id:houseClassId,
@@ -252,7 +223,7 @@ $(function(){
             $(self).attr("data-classifyid")==0?classifyNavBoxLiList.eq(specialIndex-1).html(classifyBig[specialIndex-1]):
                 classifyNavBoxLiList.eq(specialIndex-1).html($(self).text()+'<i class="iconfont icon-arrowdownb"></i>');
         }
-        customAjax(
+        $.customAjax(
             "http://api.qianjiantech.com/v1/chooseGoods",
             {class_id:houseClassId,
                 city:sessionStorage.getItem("userDistrict"),

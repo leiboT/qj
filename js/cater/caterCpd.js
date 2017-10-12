@@ -1,26 +1,6 @@
 $(function(){
-    //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
     //加载商品详情
-    customAjax(
+    $.customAjax(
         "http://api.qianjiantech.com/v1/productInfo",
         {product_id:sessionStorage.getItem("productId")},
         function(res){
@@ -28,25 +8,35 @@ $(function(){
                 var htmlProIntro="";
                 $(res.info.goods_detail).each(function(k,v){
                     htmlProIntro+=`
-                            <li class="borderBottom4">
-                                <img src="${v}" alt="" class="img-response">
+                            <li class="borderBottom4 rv ui-lz">
+                                <img src="${v}" alt="" class="ui-fb">
                             </li>
                         `;
                 });
                 $(".productIntroBox").html(htmlProIntro);
+                $.clearPlaceholderShape();
                 var html="";
                 $(res.info.goods_rotation).each(function(k,v){
                     html+=`
                             <div class="swiper-slide">
-                                <img src="${v}" alt="" class="img-response"/>
+                                <img src="" class="img-response" data-img="${v}"/>
                             </div>
                         `;
                 });
                 $(".productDetailImg").html(html);
-                new Swiper('.swiper-container', {
-                    pagination: '.swiper-pagination',
-                    paginationClickable: true
-                });
+                $.imgLoadingEnd(
+                    ".productDetailImg",
+                    function(){
+                        new Swiper('.swiper-container', {
+                            pagination: '.swiper-pagination'
+                            //loop:true,
+                            //loopSlider:10
+                            //autoplayDisableOnInteraction : false,
+                            //autoplay: 2500
+                        })
+                    },
+                    ".loadingImg1"
+                );
                 $(".shopName").text(res.info.address);
                 $(".productTitle").text(res.info.describe);
                 $(".sale").text("已售:"+res.info.sell_count);
@@ -68,38 +58,20 @@ $(function(){
     var pop=$("#pop");
     var p=$("#pop p");
     var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
-    //提示弹出框处理函数
-    function  reminderDeal(txt){
-        p.html(txt);
-        pop.addClass("pop-show");
-    }
-
     //点击其他区域关闭弹框
-    $(pop).mouseup(function(e){
-        var _con = $('.pop-box');
-        if(_con != e.target && _con.has(e.target).length === 0){
-            $(this).removeClass("pop-show");
-        }
-    });
-    //跳转
-    function jump(url,t){
-        setTimeout(function(){
-            location.href=url
-        },t)
-    }
-
+    $.elseClosePop(pop);
     //预载购物车头部信息处理
     var preloadCart=function(ele){
         $(".pro-img").html(`<img src="${ele.attr('data-img')}" class="img-response"/>`);
         $(".price-cart").text("￥"+ele.attr("data-price"));
-        $(".inventory-cart").text("库存 "+ele.attr("data-number"))
+        $(".inventory-cart").text("库存 "+ele.attr("data-number"));
         $(".classify-cart").text("已选择"+ele.text());
     };
 
     //点击加入购物车处理
     addCart.click(function(){
         if(sessionStorage.getItem("uid")&&sessionStorage.getItem("stateCode")){
-            customAjax(
+            $.customAjax(
                 "http://api.qianjiantech.com/v1/mayAddShopCart",
                 {product_id:sessionStorage.getItem("productId")},
                 function(res){
@@ -127,11 +99,7 @@ $(function(){
             //数量复位
             $("#number").val(1)
         }else{
-            reminderDeal("请先登录！");
-            closeBtn.text("进入登录页");
-            closeBtn.on("click",function(){
-                jump("../../loginRegisterHTML/login.html",0);
-            });
+            $.pleaseLogin(p,pop,closeBtn,"../../loginRegisterHTML/login.html");
         }
     });
 
@@ -139,13 +107,8 @@ $(function(){
     $(".cart-link").click(function(e){
         if(!sessionStorage.getItem("uid")&&!sessionStorage.getItem("stateCode")){
             e.preventDefault();
-            reminderDeal("请先登录！");
-            closeBtn.text("进入登录页");
-            closeBtn.on("click",function(){
-                jump("../../loginRegisterHTML/login.html",0);
-            });
+            $.pleaseLogin(p,pop,closeBtn,"../../loginRegisterHTML/login.html");
         }
-
     });
 
     //预载购物车弹出样式处理
@@ -179,7 +142,7 @@ $(function(){
 
     //确定可提交处理
     var confirmCanSubmit=function(){
-        customAjax(
+        $.customAjax(
             "http://api.qianjiantech.com/v1/addShopCart",
             {
                 user_id:sessionStorage.getItem("uid"),
@@ -199,11 +162,7 @@ $(function(){
                         addCartWarn("加入失败,请重试");
                         break;
                     case 9000:
-                        console.log("已在其他设备登录");
-                        reminderDeal("已在其他设备登录");
-                        closeBtn.text("即将进入登录页!");
-                        jump("../../loginRegisterHTML/login.html",1500);
-                        sessionStorage.clear();
+                        $.loginOtherDevice(p,pop,closeBtn,"../../loginRegisterHTML/login.html");
                         break;
                 }
 

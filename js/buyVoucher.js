@@ -4,40 +4,8 @@ $(function(){
     var p=$("#pop p");
     var closeBtn=$("#pop span");
 
-    //提示弹出框处理函数
-    function  reminderDeal(txt){
-        p.html(txt);
-        pop.addClass("pop-show");
-    }
-    //异步再封装
-    //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
-
     //点击其他区域关闭弹框
-    $(pop).mouseup(function(e){
-        var _con = $('.pop-box');
-        if(_con != e.target && _con.has(e.target).length === 0){
-            $(this).removeClass("pop-show");
-        }
-    });
+    $.elseClosePop(pop);
     //接受用户凭证
     var user_prove_pic;
 
@@ -111,7 +79,7 @@ $(function(){
 
     //提交
     function submitBuyVoucher(){
-        customAjax(
+        $.customAjax(
             "http://api.qianjiantech.com/v1/createProveOrder",
             {
                 user_id:uid,
@@ -124,7 +92,7 @@ $(function(){
             function(result){
                 var code=result.code;
                 if(code==2005){
-                    customAjax(
+                    $.customAjax(
                         "http://api.qianjiantech.com/v1/getToken",
                         {
                             user_id:uid,
@@ -137,24 +105,19 @@ $(function(){
                         }
                     );
                 }else if(code==2000){
-                    reminderDeal("提交成功,请等待审核!");
+                    $.reminderDeal(p,pop,"提交成功,请等待审核!");
                     closeBtn.unbind("click").html("即将返回详情页");
                     setTimeout(function(){
-                        location.href="productDetailPage.html"
+                        location.href="payEnd.html"
                     },1500)
                 }else if(code==2001){
-                    reminderDeal("提交失败!")
+                    $.reminderDeal(p,pop,"提交失败!")
                 }else if(code==2002){
-                    reminderDeal("系统正忙!")
+                    $.reminderDeal(p,pop,"系统正忙!")
                 }else if(code==4000){
-                    reminderDeal("信息不全!")
+                    $.reminderDeal(p,pop,"信息不全!")
                 }else if(code==9000){
-                    reminderDeal("你已在其他设备登录");
-                    closeBtn.text("即将进入登录页").unbind("click");
-                    setTimeout(function(){
-                        sessionStorage.clear();
-                        location.href="../loginRegisterHTML/login.html";
-                    },1500);
+                    $.loginOtherDevice(p,pop,closeBtn,"../loginRegisterHTML/login.html");
                 }
             }
         );
@@ -164,7 +127,7 @@ $(function(){
         if(loadResult){
             submitBuyVoucher();
         }else{
-            reminderDeal("请上传购买凭证!");
+            $.reminderDeal(p,pop,"请上传购买凭证!");
         }
     });
     //关闭模态弹出框

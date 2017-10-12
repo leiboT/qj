@@ -6,59 +6,9 @@ $(function(){
     var city=sessionStorage.getItem("position");
     if(city)
         $(".address").html(`<i class="iconfont icon-arrowdownb"></i>`+city);
-
-    //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
-
-    //图片加载完清除占位图
-    function clearPlaceholderShape(){
-        $(".ui-fb").each(function(k,v){
-            $(v).load(function(){
-                $(this).parent().removeClass("ui-lz");
-            })
-        });
-    }
-    //判断轮播图片加载完成
-    function imgLoadingEnd(boxSelector,fnc,loadingBox){
-        var imgList = $(boxSelector).find('img');
-        var callback = function(){
-            fnc();
-            $(loadingBox).hide();
-        };
-        var check = (function (count, fn){
-            return function(){
-                count--;
-                if(count == 0){
-                    fn();
-                }
-            };
-        })(imgList.length, callback);
-        imgList.each(function(){
-            $(this).bind('load', check).attr('src', $(this).attr('data-img')).show();
-        });
-    }
-
     //加载首页分类
     function loadSort(){
-        customAjax(
+        $.customAjax(
             "http://api.qianjiantech.com/v1/itemClass",
             {class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId")},
             function(result){
@@ -105,7 +55,7 @@ $(function(){
                         }
                     }
                     navBox.html(html);
-                    clearPlaceholderShape()
+                    $.clearPlaceholderShape()
                 }
             }
         );
@@ -118,7 +68,7 @@ $(function(){
 
     //轮播图
     function carousel(){
-        customAjax(
+        $.customAjax(
             "http://api.qianjiantech.com/v1/itemBanner",
             {class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId")},
             function(result){
@@ -134,7 +84,7 @@ $(function(){
                     `;
                     }
                     carouselBox.html(html);
-                    imgLoadingEnd(
+                    $.imgLoadingEnd(
                         ".carousel-box",
                         function(){
                             new Swiper('.swiper-container', {
@@ -244,7 +194,7 @@ $(function(){
     }
     //加载猜你喜欢
     function loadYouLick(){
-        customAjax(
+        $.customAjax(
             "http://api.qianjiantech.com/v1/rp",
             {class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId") },
             function(result){
@@ -271,7 +221,7 @@ $(function(){
                         `;
                     });
                     $(".productContainer").html(html);
-                    clearPlaceholderShape()
+                    $.clearPlaceholderShape()
                 }
 
             }

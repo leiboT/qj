@@ -9,56 +9,21 @@ $(function(){
     var pop=$("#pop");
     var p=$("#pop p");
     var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
-    //提示弹出框处理函数
-    function  reminderDeal(txt){
-        p.html(txt);
-        pop.addClass("pop-show");
-    }
     //点击其他区域关闭弹框
-    $(pop).mouseup(function(e){
-        var _con = $('.pop-box');
-        if(_con != e.target && _con.has(e.target).length === 0){
-            $(this).removeClass("pop-show");
-        }
-    });
+    $.elseClosePop(pop);
     //关闭模态弹出框
     closeBtn.on("click",function(){
         pop.removeClass("pop-show");
     });
-    //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
-    //跳转
-    function jump(url,t){
-        setTimeout(function(){
-            location.href=url
-        },t)
-    }
-    customAjax(
+
+    $.customAjax(
         "http://api.qianjiantech.com/v1/mayCreateOrder",
         {
             user_id:uid,
             state_code:stateCode
         },
         function(res){
-            console.log(res);
+            //console.log(res);
             switch (res.code){
                 case 2000:
                     var html="";
@@ -122,10 +87,7 @@ $(function(){
                     $("#orderTotalMoney").html("总价：￥"+res.info.add.total_money);
                     break;
                 case 9000:
-                    reminderDeal("已在其他设备登录");
-                    closeBtn.html("即将进入登录页").unbind("click");
-                    jump("../../loginRegisterHTML/login.html",200);
-                    sessionStorage.clear();
+                    $.loginOtherDevice(p,pop,closeBtn,"../../loginRegisterHTML/login.html");
                     break;
             }
         }
@@ -138,9 +100,9 @@ $(function(){
     var commitOrder=function(){
         var addressId=$(".selectAddress").attr("data-addressId");
         if(!eval(addressId)){
-            reminderDeal("请选择地址")
+            $.reminderDeal(p,pop,"请选择地址")
         }else{
-            customAjax(
+            $.customAjax(
                 "http://api.qianjiantech.com/v1/createOrder",
                 {
                     user_id:uid,
@@ -151,21 +113,21 @@ $(function(){
                     message:$(".buyerMessage").val()||" "
                 },
                 function(res){
-                    console.log(res);
+                    //console.log(res);
                     switch (res.code){
                         case 2000:
                             sessionStorage.setItem("ord",res.info.order_id);
                             sessionStorage.setItem("tmy",res.info.total_money);
-                            jump("pay.html",0);
+                            $.jump("pay.html",0);
                             break;
                         case 2001:
-                            reminderDeal("库存不足");
+                            $.reminderDeal(p,pop,"库存不足");
                             break;
                         case 2002:
-                            reminderDeal("提交失败,请重试");
+                            $.reminderDeal(p,pop,"提交失败,请重试");
                             break;
                         case 2005:
-                            customAjax(
+                            $.customAjax(
                                 "http://api.qianjiantech.com/v1/getToken",
                                 {
                                     user_id:sessionStorage.getItem("uid"),
@@ -179,12 +141,9 @@ $(function(){
                             );
                             break;
                         case 4000:
-                            console.log("参数不全");
                             break;
                         case 9000:
-                            reminderDeal("已在其他设备登录");
-                            closeBtn.html("即将进入登录页").unbind("click");
-                            jump("../../loginRegisterHTML/login.html",200);
+                            $.loginOtherDevice(p,pop,closeBtn,"../../loginRegisterHTML/login.html");
                             break;
                     }
                 }

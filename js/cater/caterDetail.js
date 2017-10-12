@@ -3,49 +3,18 @@ $(function(){
     var pop=$("#pop");
     var p=$("#pop p");
     var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
-    //提示弹出框处理函数
-    function  reminderDeal(txt){
-        p.html(txt);
-        pop.addClass("pop-show");
-    }
-    //跳转
-    function jump(url,t){
-        setTimeout(function(){
-            location.href=url
-        },t)
-    }
     //切换商品和商家介绍
     $("#shopProAndInfo>li").click(function(){
         $(this).addClass("activeColor").siblings().removeClass("activeColor");
-        console.log($(this).index());
+        //console.log($(this).index());
         $("#shopProAndInfoDetail>ul").eq($(this).index()).addClass("show").siblings().addClass("die").removeClass("show");
     });
-    //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
     //加载商家信息
-    customAjax(
+    $.customAjax(
         "http://api.qianjiantech.com/v1/shopIntroduction",
         {shop_id:sessionStorage.getItem("shopId")},
         function(res){
-            console.log(res);
+            //console.log(res);
             if(res.code==2000){
                 $(".shopName").html(res.info.shop_name);
                 $(".shopAddress").html(res.info.address);
@@ -54,23 +23,29 @@ $(function(){
                 $(res.info.show.rotation).each(function(k,v){
                     html+=`
                             <div class="swiper-slide">
-                                <img src="${v}" alt="" class="img-response"/>
+                                <img src="" class="img-response" data-img="${v}"/>
                             </div>
                         `;
                 });
                 $(".productDetailImg").html(html);
-                new Swiper('.swiper-container', {
-                    pagination: '.swiper-pagination',
-                    loop:true,
-                    loopSlider:10,
-                    autoplayDisableOnInteraction : false,
-                    autoplay: 2500
-                });
+                $.imgLoadingEnd(
+                    ".productDetailImg",
+                    function(){
+                        new Swiper('.swiper-container', {
+                            pagination: '.swiper-pagination',
+                            loop:true,
+                            loopSlider:10,
+                            autoplayDisableOnInteraction : false,
+                            autoplay: 2500
+                        });
+                    },
+                    ".loadingImg1"
+                );
             }
         }
     );
     //加载商家产品
-    customAjax(
+    $.customAjax(
         "http://api.qianjiantech.com/v1/shopGoods",
         {
             user_id:sessionStorage.getItem("uid"),
@@ -78,14 +53,14 @@ $(function(){
             shop_id:sessionStorage.getItem("shopId")
         },
         function(res){
-            console.log(res);
+            //console.log(res);
             if(res.code==2000){
                 var html="";
                 $(res.info).each(function(k,v){
                     html+=`
                             <li class="productBox" data-proId="${v.product_id}">
-                                <div class="productPicture">
-                                    <img src="${v.img_url}" alt=""/>
+                                <div class="productPicture rv ui-lz">
+                                    <img src="${v.img_url}" alt="" class="ui-fb"/>
                                 </div>
                                 <ul class="productDescription">
                                     <li class="productName">厚街香肠</li>
@@ -100,11 +75,9 @@ $(function(){
                         `;
                 });
                 $(".productContainer").html(html);
+                $.clearPlaceholderShape();
             }else if(res.code==9000){
-                reminderDeal("你已在其他设备登录!");
-                closeBtn.html("即将进入登录页").unbind("click");
-                jump("../../loginRegisterHTML/login.html",1500);
-                sessionStorage.clear();
+                $.loginOtherDevice(p,pop,closeBtn,"../../loginRegisterHTML/login.html");
             }
         }
     );

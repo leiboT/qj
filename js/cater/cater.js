@@ -1,25 +1,4 @@
 $(function(){
-    //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
-
     $(".address").html(`
                         <a href="../../smallFeatureHTML/position.html">
                             <i class="iconfont icon-arrowdownb"></i>
@@ -27,7 +6,7 @@ $(function(){
                         </a>
                     `);
     //特产筛选项
-    customAjax(
+    $.customAjax(
         "http://api.qianjiantech.com/v1/specialtyChoose",
         {
             area_name:sessionStorage.getItem("userDistrict"),
@@ -118,11 +97,11 @@ $(function(){
 
     //加载特产商品处理函数
     function loadSpecialty(result){
-        console.log(result);
+        //console.log(result);
         if(result.code==2000){
             var html="";
             $(result.info).each(function(k,v){
-                console.log(v);
+                //console.log(v);
                 var htmlGoods="";
                 $(v.goods).each(function(k1,v1){
                     htmlGoods+=`
@@ -161,10 +140,12 @@ $(function(){
                     `;
             });
             $("#specialtyContainer").html(html);
+        }else if(result.code==2001){
+            $("#specialtyContainer").html(`<li class="txtCenter borderBottom1">未找到匹配资源</li>`);
         }
     }
     //进入即加载距离最近的特产
-    customAjax(
+    $.customAjax(
         "http://api.qianjiantech.com/v1/show",
         {
             area_name:sessionStorage.getItem("userDistrict") || "东莞市",

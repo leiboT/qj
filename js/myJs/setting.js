@@ -7,11 +7,12 @@ $(function(){
     var pop=$("#pop");
     var p=$("#pop p");
     var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
+
     //提示弹出框处理函数
-    function  reminderDeal(txt){
-        p.html(txt);
-        pop.addClass("pop-show");
-    }
+    //function  reminderDeal(txt){
+    //    p.html(txt);
+    //    pop.addClass("pop-show");
+    //}
     //用户信息
     var userInfo=JSON.parse(sessionStorage.getItem("userInfo"));
     //加载用户信息
@@ -21,38 +22,39 @@ $(function(){
         $("#uPhone").html(userInfo.uPhone);
     }
     //跳转
-    function jump(url,t){
-        setTimeout(function(){
-            location.href=url
-        },t)
-    }
+    //function jump(url,t){
+    //    setTimeout(function(){
+    //        location.href=url
+    //    },t)
+    //}
     //点击其他区域关闭弹框
-    $(pop).mouseup(function(e){
-        var _con = $('.pop-box');
-        if(_con != e.target && _con.has(e.target).length === 0){
-            $(this).removeClass("pop-show");
-        }
-    });
+    $.elseClosePop(pop);
+    //$(pop).mouseup(function(e){
+    //    var _con = $('.pop-box');
+    //    if(_con != e.target && _con.has(e.target).length === 0){
+    //        $(this).removeClass("pop-show");
+    //    }
+    //});
     //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
+    //function customAjax(url,data,fn){
+    //    //alert(JSON.stringify(arguments));
+    //    $.ajax({
+    //        type:"post",
+    //        url:url,
+    //        data:data,
+    //        dataType:"json",
+    //        success:fn,
+    //        error:function(error){
+    //            //console.log(error)
+    //        },
+    //        beforeSend: function(){
+    //            $('body').append('<div class="loadingWrap"></div>');
+    //        },
+    //        complete: function(){
+    //            $(".loadingWrap").remove();
+    //        }
+    //    })
+    //}
     //用户设置页处理函数
     function userSetting(){
         $("#logOutBtn").click(function(){
@@ -66,7 +68,7 @@ $(function(){
                         break;
                     case "确定":
                         sessionStorage.clear();
-                        jump("../loginRegisterHTML/login.html",200);
+                        $.jump("../loginRegisterHTML/login.html",200);
                         break;
                 }
             });
@@ -89,7 +91,7 @@ $(function(){
         }
 
         function avatarAjax(url,uid,stateCode,data){
-            customAjax(
+            $.customAjax(
                 url,
                 {
                     state_code:stateCode,
@@ -105,10 +107,7 @@ $(function(){
                             sessionStorage.setItem("userInfo",JSON.stringify(userInfo));
                             break;
                         case 9000:
-                            reminderDeal("你已在其他设备登录!");
-                            closeBtn.html("即将进入登录页").unbind("click");
-                            jump("../loginRegisterHTML/login.html",1500);
-                            sessionStorage.clear();
+                            $.loginOtherDevice(p,pop,closeBtn,"../loginRegisterHTML/login.html");
                             break;
                     }
                 }

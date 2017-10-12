@@ -11,47 +11,11 @@ $(function(){
     var pop=$("#pop");
     var p=$("#pop p");
     var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
-    //提示弹出框处理函数
-    function  reminderDeal(txt){
-        p.html(txt);
-        pop.addClass("pop-show");
-    }
-    //跳转
-    function jump(url,t){
-        setTimeout(function(){
-            location.href=url
-        },t)
-    }
 
-    //异步再封装
-    function customAjax(url,data,fn){
-        //alert(JSON.stringify(arguments));
-        $.ajax({
-            type:"post",
-            url:url,
-            data:data,
-            dataType:"json",
-            success:fn,
-            error:function(error){
-                //console.log(error)
-            },
-            beforeSend: function(){
-                $('body').append('<div class="loadingWrap"></div>');
-            },
-            complete: function(){
-                $(".loadingWrap").remove();
-            }
-        })
-    }
     //点击其他区域关闭弹框
-    $(pop).mouseup(function(e){
-        var _con = $('.pop-box');
-        if(_con != e.target && _con.has(e.target).length === 0){
-            $(this).removeClass("pop-show");
-        }
-    });
+    $.elseClosePop(pop);
 
-    customAjax(
+    $.customAjax(
         "http://api.qianjiantech.com/v1/myShopCart",
         {
             user_id:sessionStorage.getItem("uid"),
@@ -112,7 +76,7 @@ $(function(){
                     //删除商品处理
                     var deleteProDel=function(target){
                         //后台删除
-                        customAjax(
+                        $.customAjax(
                             "http://api.qianjiantech.com/v1/deleteShopCart",
                             {
                                 user_id:sessionStorage.getItem("uid"),
@@ -163,7 +127,7 @@ $(function(){
 
                     //编辑购物车(数量)
                     var editCart=function(target,count){
-                        customAjax(
+                        $.customAjax(
                             "http://api.qianjiantech.com/v1/editShopCart",
                             {
                                 user_id:sessionStorage.getItem("uid"),
@@ -228,11 +192,7 @@ $(function(){
                     `);
                     break;
                 case 9000:
-                    console.log("已在其他设备登录!");
-                    reminderDeal("已在其他设备登录");
-                    closeBtn.text("即将进入登录页!");
-                    jump("../../loginRegisterHTML/login.html",1500);
-                    sessionStorage.clear();
+                    $.loginOtherDevice(p,pop,closeBtn,"../../loginRegisterHTML/login.html");
                     break;
             }
         }
