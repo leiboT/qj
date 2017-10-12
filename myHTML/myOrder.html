@@ -44,10 +44,30 @@
             border: 1px solid #999;
             border-radius: 4px;
             margin-right: 10px;
+            color: #252525 ;
         }
-        .confirmReceive{
+        .confirmReceive,.goPay{
             border: 1px solid #F35F62;
             border-radius: 4px;
+            color: #F35F62 ;
+        }
+        /*设置页提示框*/
+        .settingWarn{
+            height: 35%;
+            background-color: #F56064;
+            color: #fff;
+            border-radius: 0 0 12px 12px;
+            border-top: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .settingWarn>span{
+            height: 100%;
+            flex: 1;
+        }
+        .loginOutCancel{
+            border-right: 1px solid #ddd;
         }
     </style>
 </head>
@@ -215,10 +235,14 @@
     <div class="pop-box">
         <h3>提示</h3>
         <p></p>
-        <span>关闭</span>
+        <div class="settingWarn">
+            <span class="loginOutCancel  flexRowBox alignItemCenter justifyContentCenter">取消</span>
+            <span class="loginOutConfirm  flexRowBox alignItemCenter justifyContentCenter">确定</span>
+        </div>
     </div>
 </div>
 <script src="../js/zepto_multiple.js"></script>
+<script src="http://web.qianjiantech.com/js/base.js"></script>
 <script src="../js/myJs/myOrder.js"></script>
 </body>
 </html>
