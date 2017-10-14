@@ -15,7 +15,6 @@ var Zepto = (function() {
 
     // special attributes that should be get/set via method calls
     methodAttributes = ['val', 'css', 'html', 'text', 'data', 'width', 'height', 'offset'],
-
     adjacencyOperators = [ 'after', 'prepend', 'before', 'append' ],
     table = document.createElement('table'),
     tableRow = document.createElement('tr'),
