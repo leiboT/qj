@@ -5,67 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c1e906e2-78fd-41ce-a288-9c4670af8113" name="Default" comment="big change">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/base.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/startHTML/12/payEnd.html" />
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/startHTML/12/payOut.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/businessHTML/shopsOrder.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/businessJS/shopsOrder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/settingHTML/addEditAddress.html" afterPath="$PROJECT_DIR$/myHTML/settingHTML/addEditAddress.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/base.css" afterPath="$PROJECT_DIR$/css/base.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/business.html" afterPath="$PROJECT_DIR$/business.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/business.js" afterPath="$PROJECT_DIR$/js/business.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/12/buyVoucher.html" afterPath="$PROJECT_DIR$/startHTML/12/buyVoucher.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/buyVoucher.js" afterPath="$PROJECT_DIR$/js/buyVoucher.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/cater.js" afterPath="$PROJECT_DIR$/js/cater/cater.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/caterCpd.js" afterPath="$PROJECT_DIR$/js/cater/caterCpd.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/caterDetail.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/caterDetail.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/caterDetail.js" afterPath="$PROJECT_DIR$/js/cater/caterDetail.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/caterDetail2.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/caterDetail2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/caterIndex.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/caterIndex.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/settingHTML/changePassword.html" afterPath="$PROJECT_DIR$/myHTML/settingHTML/changePassword.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/cpd.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/cpd.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/cpd2.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/cpd2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/cpd3.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/cpd3.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/cpd4.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/cpd4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/settingHTML/editNickname.html" afterPath="$PROJECT_DIR$/myHTML/settingHTML/editNickname.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/houseJs/houseClass.js" afterPath="$PROJECT_DIR$/js/houseJs/houseClass.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/houseHTML/houseIndex.html" afterPath="$PROJECT_DIR$/startHTML/houseHTML/houseIndex.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/houseJs/houseIndex.js" afterPath="$PROJECT_DIR$/js/houseJs/houseIndex.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/houseHTML/houseItem.html" afterPath="$PROJECT_DIR$/startHTML/houseHTML/houseItem.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/my.html" afterPath="$PROJECT_DIR$/my.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/my.js" afterPath="$PROJECT_DIR$/js/my.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/myBalance.html" afterPath="$PROJECT_DIR$/myHTML/myBalance.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/myCode.html" afterPath="$PROJECT_DIR$/myHTML/myCode.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/myCode.js" afterPath="$PROJECT_DIR$/js/myJs/myCode.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/myIntegral.html" afterPath="$PROJECT_DIR$/myHTML/myIntegral.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/myOrder.html" afterPath="$PROJECT_DIR$/myHTML/myOrder.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/myOrder.js" afterPath="$PROJECT_DIR$/js/myJs/myOrder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/myPromotion.html" afterPath="$PROJECT_DIR$/myHTML/myPromotion.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/myPromotion.js" afterPath="$PROJECT_DIR$/js/myJs/myPromotion.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/myShops.html" afterPath="$PROJECT_DIR$/myHTML/myShops.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/myShops.js" afterPath="$PROJECT_DIR$/js/myJs/myShops.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/12/pay.html" afterPath="$PROJECT_DIR$/startHTML/12/pay.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/pay.js" afterPath="$PROJECT_DIR$/js/cater/pay.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/smallFeatureHTML/position.html" afterPath="$PROJECT_DIR$/smallFeatureHTML/position.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/position.js" afterPath="$PROJECT_DIR$/js/position.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/12/productDetailPage.html" afterPath="$PROJECT_DIR$/startHTML/12/productDetailPage.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/productDetailPage.js" afterPath="$PROJECT_DIR$/js/productDetailPage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/setting.html" afterPath="$PROJECT_DIR$/myHTML/setting.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/setting.js" afterPath="$PROJECT_DIR$/js/myJs/setting.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/settingHTML/shippingAddress.html" afterPath="$PROJECT_DIR$/myHTML/settingHTML/shippingAddress.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/shippingAddress.js" afterPath="$PROJECT_DIR$/js/myJs/shippingAddress.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/12/shoppingCart.html" afterPath="$PROJECT_DIR$/startHTML/12/shoppingCart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/shoppingCart.js" afterPath="$PROJECT_DIR$/js/cater/shoppingCart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/businessHTML/shopsEnter.html" afterPath="$PROJECT_DIR$/businessHTML/shopsEnter.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/businessJS/shopsEnter.js" afterPath="$PROJECT_DIR$/js/businessJS/shopsEnter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/start.html" afterPath="$PROJECT_DIR$/start.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/start.js" afterPath="$PROJECT_DIR$/js/start.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/12/writeOrder.html" afterPath="$PROJECT_DIR$/startHTML/12/writeOrder.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/writeOrder.js" afterPath="$PROJECT_DIR$/js/cater/writeOrder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/zepto_multiple.js" afterPath="$PROJECT_DIR$/js/zepto_multiple.js" />
     </list>
     <ignored path="qianjian.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,7 +30,18 @@
     <favorites_list name="qianjian" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="start.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/start.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.48758465">
+              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -111,7 +67,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/myHTML/myShops.html" />
         <option value="$PROJECT_DIR$/js/myJs/myShops.js" />
         <option value="$PROJECT_DIR$/myHTML/myPromotion.html" />
         <option value="$PROJECT_DIR$/js/myJs/myPromotion.js" />
@@ -136,18 +91,14 @@
         <option value="$PROJECT_DIR$/js/houseJs/houseClass.js" />
         <option value="$PROJECT_DIR$/start.html" />
         <option value="$PROJECT_DIR$/business.html" />
-        <option value="$PROJECT_DIR$/myHTML/myOrder.html" />
         <option value="$PROJECT_DIR$/js/cater/writeOrder.js" />
         <option value="$PROJECT_DIR$/js/my.js" />
         <option value="$PROJECT_DIR$/js/business.js" />
-        <option value="$PROJECT_DIR$/businessHTML/shopsOrder.html" />
         <option value="$PROJECT_DIR$/myHTML/myBalance.html" />
         <option value="$PROJECT_DIR$/myHTML/myIntegral.html" />
         <option value="$PROJECT_DIR$/js/base.js" />
         <option value="$PROJECT_DIR$/my.html" />
         <option value="$PROJECT_DIR$/js/cater/cater.js" />
-        <option value="$PROJECT_DIR$/js/myJs/myOrder.js" />
-        <option value="$PROJECT_DIR$/js/businessJS/shopsOrder.js" />
         <option value="$PROJECT_DIR$/startHTML/caterHTML/caterIndex.html" />
         <option value="$PROJECT_DIR$/js/cater/caterDetail.js" />
         <option value="$PROJECT_DIR$/startHTML/caterHTML/caterDetail.html" />
@@ -162,6 +113,11 @@
         <option value="$PROJECT_DIR$/css/base.css" />
         <option value="$PROJECT_DIR$/startHTML/caterHTML/cpd.html" />
         <option value="$PROJECT_DIR$/js/start.js" />
+        <option value="$PROJECT_DIR$/isCroll_demo.html" />
+        <option value="$PROJECT_DIR$/businessHTML/shopsOrder.html" />
+        <option value="$PROJECT_DIR$/myHTML/myOrder.html" />
+        <option value="$PROJECT_DIR$/js/businessJS/shopsOrder.js" />
+        <option value="$PROJECT_DIR$/js/myJs/myOrder.js" />
       </list>
     </option>
   </component>
@@ -227,7 +183,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="F:/learn/vue2.0_project01" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="HbShouldOpenHtmlAsHb" value="" />
     <property name="settings.editor.selected.configurable" value="watcher.settings" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
@@ -326,144 +282,6 @@
       <created>1501824936111</created>
       <option name="number" value="Default" />
       <updated>1501824936111</updated>
-    </task>
-    <task id="LOCAL-00056" summary="become dynamic page, change js into external">
-      <created>1506593097869</created>
-      <option name="number" value="00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1506593097870</updated>
-    </task>
-    <task id="LOCAL-00057" summary="add loading element">
-      <created>1506593133098</created>
-      <option name="number" value="00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1506593133098</updated>
-    </task>
-    <task id="LOCAL-00058" summary="modify header class">
-      <created>1506593159219</created>
-      <option name="number" value="00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1506593159219</updated>
-    </task>
-    <task id="LOCAL-00059" summary="add yes font">
-      <created>1506593183603</created>
-      <option name="number" value="00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1506593183603</updated>
-    </task>
-    <task id="LOCAL-00060" summary="comment loading element">
-      <created>1506593216330</created>
-      <option name="number" value="00060" />
-      <option name="project" value="LOCAL" />
-      <updated>1506593216330</updated>
-    </task>
-    <task id="LOCAL-00061" summary="loading svg">
-      <created>1506593320481</created>
-      <option name="number" value="00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1506593320481</updated>
-    </task>
-    <task id="LOCAL-00062" summary="9/30">
-      <created>1506757039928</created>
-      <option name="number" value="00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757039929</updated>
-    </task>
-    <task id="LOCAL-00063" summary="9/30">
-      <created>1506757065372</created>
-      <option name="number" value="00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757065372</updated>
-    </task>
-    <task id="LOCAL-00064" summary="handle ios bug that click twinkle">
-      <created>1506757189278</created>
-      <option name="number" value="00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757189278</updated>
-    </task>
-    <task id="LOCAL-00065" summary="handle picture loading problem">
-      <created>1506757237594</created>
-      <option name="number" value="00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757237594</updated>
-    </task>
-    <task id="LOCAL-00066" summary="caterDetailJs">
-      <created>1506757255149</created>
-      <option name="number" value="00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757255149</updated>
-    </task>
-    <task id="LOCAL-00067" summary="payJs">
-      <created>1506757267543</created>
-      <option name="number" value="00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757267543</updated>
-    </task>
-    <task id="LOCAL-00068" summary="handle ios bug about input">
-      <created>1506757315253</created>
-      <option name="number" value="00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757315253</updated>
-    </task>
-    <task id="LOCAL-00069" summary="writeOrderJs">
-      <created>1506757333454</created>
-      <option name="number" value="00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757333454</updated>
-    </task>
-    <task id="LOCAL-00070" summary="9/30">
-      <created>1506757368979</created>
-      <option name="number" value="00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757368979</updated>
-    </task>
-    <task id="LOCAL-00071" summary="9/30">
-      <created>1506757381775</created>
-      <option name="number" value="00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757381775</updated>
-    </task>
-    <task id="LOCAL-00072" summary="use variable replace element">
-      <created>1506757482927</created>
-      <option name="number" value="00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757482928</updated>
-    </task>
-    <task id="LOCAL-00073" summary="handle async produce problem">
-      <created>1506757566548</created>
-      <option name="number" value="00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757566548</updated>
-    </task>
-    <task id="LOCAL-00074" summary="9/30">
-      <created>1506757614778</created>
-      <option name="number" value="00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757614778</updated>
-    </task>
-    <task id="LOCAL-00075" summary="modify jump">
-      <created>1506757640908</created>
-      <option name="number" value="00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757640909</updated>
-    </task>
-    <task id="LOCAL-00076" summary="add position:relative for li">
-      <created>1506757684268</created>
-      <option name="number" value="00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757684268</updated>
-    </task>
-    <task id="LOCAL-00077" summary="add position:relative for form">
-      <created>1506757717502</created>
-      <option name="number" value="00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757717502</updated>
-    </task>
-    <task id="LOCAL-00078" summary="add class to header">
-      <created>1506757849251</created>
-      <option name="number" value="00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1506757849251</updated>
     </task>
     <task id="LOCAL-00079" summary="pay">
       <created>1506757870531</created>
@@ -621,31 +439,169 @@
       <option name="project" value="LOCAL" />
       <updated>1507606319468</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="10/12">
+      <created>1507790593559</created>
+      <option name="number" value="00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1507790593568</updated>
+    </task>
+    <task id="LOCAL-00106" summary="add baseJs">
+      <created>1507790628524</created>
+      <option name="number" value="00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1507790628524</updated>
+    </task>
+    <task id="LOCAL-00107" summary="shopsOrderJs">
+      <created>1507790652301</created>
+      <option name="number" value="00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1507790652301</updated>
+    </task>
+    <task id="LOCAL-00108" summary="add css deal problem in ios">
+      <created>1507790753834</created>
+      <option name="number" value="00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1507790753835</updated>
+    </task>
+    <task id="LOCAL-00109" summary="use baseJs">
+      <created>1507790791539</created>
+      <option name="number" value="00109" />
+      <option name="project" value="LOCAL" />
+      <updated>1507790791539</updated>
+    </task>
+    <task id="LOCAL-00110" summary="shopsOrderJs">
+      <created>1507790811649</created>
+      <option name="number" value="00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1507790811649</updated>
+    </task>
+    <task id="LOCAL-00111" summary="use baseJs">
+      <created>1507790945174</created>
+      <option name="number" value="00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1507790945174</updated>
+    </task>
+    <task id="LOCAL-00112" summary="baseJs">
+      <created>1507790961620</created>
+      <option name="number" value="00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1507790961620</updated>
+    </task>
+    <task id="LOCAL-00113" summary="add base.js link">
+      <created>1507791194709</created>
+      <option name="number" value="00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1507791194709</updated>
+    </task>
+    <task id="LOCAL-00114" summary="add .goPay class &amp; .settingWarn class">
+      <created>1507791274664</created>
+      <option name="number" value="00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1507791274664</updated>
+    </task>
+    <task id="LOCAL-00115" summary="payEnd page">
+      <created>1507791299755</created>
+      <option name="number" value="00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1507791299755</updated>
+    </task>
+    <task id="LOCAL-00116" summary="add loading">
+      <created>1507791344686</created>
+      <option name="number" value="00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1507791344686</updated>
+    </task>
+    <task id="LOCAL-00117" summary="comment product html">
+      <created>1507791400431</created>
+      <option name="number" value="00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1507791400431</updated>
+    </task>
+    <task id="LOCAL-00118" summary="comment product carousel html">
+      <created>1507791462942</created>
+      <option name="number" value="00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1507791462942</updated>
+    </task>
+    <task id="LOCAL-00119" summary="add base.js link">
+      <created>1507791492965</created>
+      <option name="number" value="00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1507791492965</updated>
+    </task>
+    <task id="LOCAL-00120" summary="add base.js link">
+      <created>1507791520831</created>
+      <option name="number" value="00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1507791520832</updated>
+    </task>
+    <task id="LOCAL-00121" summary="modify display text">
+      <created>1507791568550</created>
+      <option name="number" value="00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1507791568550</updated>
+    </task>
+    <task id="LOCAL-00122" summary="x">
+      <created>1507791589897</created>
+      <option name="number" value="00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1507791589897</updated>
+    </task>
+    <task id="LOCAL-00123" summary="add voucher order deal">
+      <created>1507952390588</created>
+      <option name="number" value="00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1507952390589</updated>
+    </task>
+    <task id="LOCAL-00124" summary="add gesture handle">
+      <created>1507952434566</created>
+      <option name="number" value="00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1507952434566</updated>
+    </task>
+    <task id="LOCAL-00125" summary="add gesture handle">
+      <created>1507952452383</created>
+      <option name="number" value="00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1507952452383</updated>
+    </task>
+    <task id="LOCAL-00126" summary="10/14">
+      <created>1507952472358</created>
+      <option name="number" value="00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1507952472358</updated>
+    </task>
+    <task id="LOCAL-00127" summary="add voucher order">
+      <created>1507952495615</created>
+      <option name="number" value="00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1507952495615</updated>
+    </task>
+    <option name="localTasksCounter" value="128" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.11875" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21302083" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33016878" sideWeight="0.50208336" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33016878" sideWeight="0.50208336" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33016878" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33016878" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32805908" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -663,24 +619,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="caterDetailJs" />
-    <MESSAGE value="payJs" />
-    <MESSAGE value="handle ios bug about input" />
-    <MESSAGE value="writeOrderJs" />
-    <MESSAGE value="use variable replace element" />
-    <MESSAGE value="handle async produce problem" />
-    <MESSAGE value="modify jump" />
-    <MESSAGE value="add position:relative for li" />
-    <MESSAGE value="add position:relative for form" />
-    <MESSAGE value="add class to header" />
-    <MESSAGE value="pay" />
-    <MESSAGE value="modify js become external" />
-    <MESSAGE value="9/30" />
-    <MESSAGE value="modify js external" />
-    <MESSAGE value="modify + - width" />
-    <MESSAGE value="add loadingWrap style" />
-    <MESSAGE value="add ajax loading &amp; modify transfer data" />
-    <MESSAGE value="myOrderJs" />
     <MESSAGE value="myOrderPage" />
     <MESSAGE value="modify .pro-txt style" />
     <MESSAGE value="style change" />
@@ -688,7 +626,25 @@
     <MESSAGE value="modify a href value" />
     <MESSAGE value="add loading scroll_bar" />
     <MESSAGE value="add ajax loading" />
-    <option name="LAST_COMMIT_MESSAGE" value="add ajax loading" />
+    <MESSAGE value="10/12" />
+    <MESSAGE value="add baseJs" />
+    <MESSAGE value="add css deal problem in ios" />
+    <MESSAGE value="shopsOrderJs" />
+    <MESSAGE value="use baseJs" />
+    <MESSAGE value="baseJs" />
+    <MESSAGE value="add .goPay class &amp; .settingWarn class" />
+    <MESSAGE value="payEnd page" />
+    <MESSAGE value="add loading" />
+    <MESSAGE value="comment product html" />
+    <MESSAGE value="comment product carousel html" />
+    <MESSAGE value="add base.js link" />
+    <MESSAGE value="modify display text" />
+    <MESSAGE value="x" />
+    <MESSAGE value="add voucher order deal" />
+    <MESSAGE value="add gesture handle" />
+    <MESSAGE value="10/14" />
+    <MESSAGE value="add voucher order" />
+    <option name="LAST_COMMIT_MESSAGE" value="add voucher order" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -697,13 +653,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/myHTML/settingHTML/aboutUs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/businessHTML/shopsEnter.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.81038374">
@@ -795,13 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/myHTML/myOrder.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16252822">
-          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/business.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8095756">
@@ -813,13 +755,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.67494357">
           <caret line="61" column="23" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/businessHTML/shopsOrder.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0835215">
-          <caret line="76" column="17" selection-start-line="76" selection-start-column="17" selection-end-line="76" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -851,13 +786,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/businessJS/shopsOrder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8291621">
-          <caret line="74" column="46" selection-start-line="74" selection-start-column="46" selection-end-line="74" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/startHTML/caterHTML/caterIndex.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.051918738">
@@ -876,7 +804,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8408578">
           <caret line="73" column="41" selection-start-line="73" selection-start-column="41" selection-end-line="73" selection-end-column="41" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -884,7 +811,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -892,7 +818,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-21.09091">
           <caret line="59" column="10" selection-start-line="59" selection-start-column="10" selection-end-line="59" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -900,7 +825,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.758465">
           <caret line="184" column="22" selection-start-line="184" selection-start-column="22" selection-end-line="184" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -908,7 +832,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39173013">
           <caret line="15" column="8" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="8" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -916,7 +839,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4961915">
           <caret line="61" column="19" selection-start-line="61" selection-start-column="19" selection-end-line="61" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,13 +846,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47007617">
           <caret line="63" column="38" selection-start-line="63" selection-start-column="38" selection-end-line="63" selection-end-column="38" />
-          <folding>
-            <marker date="1507773528319" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507773528319" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507773528319" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507773528319" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507773528319" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -938,7 +853,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.18735892">
           <caret line="62" column="12" selection-start-line="62" selection-start-column="16" selection-end-line="117" selection-end-column="21" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -946,7 +860,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.39173013">
           <caret line="81" column="90" selection-start-line="81" selection-start-column="61" selection-end-line="81" selection-end-column="90" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,7 +867,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.8939052">
           <caret line="109" column="13" selection-start-line="109" selection-start-column="13" selection-end-line="109" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -962,7 +874,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7832957">
           <caret line="135" column="37" selection-start-line="135" selection-start-column="37" selection-end-line="135" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -970,10 +881,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5038085">
           <caret line="165" column="30" selection-start-line="165" selection-start-column="30" selection-end-line="165" selection-end-column="30" />
-          <folding>
-            <marker date="1507776038657" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507776038657" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -981,7 +888,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.7866817">
           <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -989,7 +895,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.62676823">
           <caret line="110" column="51" selection-start-line="110" selection-start-column="51" selection-end-line="110" selection-end-column="51" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -997,10 +902,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6789989">
           <caret line="188" column="51" selection-start-line="188" selection-start-column="51" selection-end-line="188" selection-end-column="51" />
-          <folding>
-            <marker date="1507777195704" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507777195704" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1008,15 +909,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.33295712">
           <caret line="18" column="161" selection-start-line="18" selection-start-column="161" selection-end-line="18" selection-end-column="161" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/base.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.39934713">
-          <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,7 +916,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6772009">
           <caret line="25" column="18" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1032,31 +923,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.78555304">
           <caret line="41" column="11" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/myJs/myOrder.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.15669206">
-          <caret line="84" column="32" selection-start-line="84" selection-start-column="32" selection-end-line="84" selection-end-column="32" />
-          <folding>
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507703845333" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1064,7 +930,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.75734496">
           <caret line="29" column="38" selection-start-line="29" selection-start-column="38" selection-end-line="29" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1072,19 +937,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.026115343">
           <caret line="66" column="65" selection-start-line="66" selection-start-column="65" selection-end-line="66" selection-end-column="65" />
-          <folding>
-            <marker date="1507780568414" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507780568414" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507780568414" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/start.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43115124">
-          <caret line="197" column="18" selection-start-line="197" selection-start-column="18" selection-end-line="197" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1100,21 +952,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6789989">
           <caret line="26" column="21" selection-start-line="26" selection-start-column="21" selection-end-line="26" selection-end-column="21" />
-          <folding>
-            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1507780540654" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1122,9 +959,66 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.440181">
           <caret line="301" column="20" selection-start-line="301" selection-start-column="20" selection-end-line="301" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33297062">
+          <caret line="997" column="0" selection-start-line="997" selection-start-column="0" selection-end-line="997" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6528836">
+          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/myJs/myOrder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48966268">
+          <caret line="112" column="85" selection-start-line="112" selection-start-column="85" selection-end-line="112" selection-end-column="85" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/myHTML/myOrder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.2979684">
+          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
           <folding>
-            <element signature="n#style#0;n#li#1;n#ul#1;n#section#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/businessHTML/shopsOrder.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72911966">
+          <caret line="253" column="0" selection-start-line="253" selection-start-column="0" selection-end-line="253" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/businessJS/shopsOrder.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.55603915">
+          <caret line="111" column="117" selection-start-line="110" selection-start-column="24" selection-end-line="111" selection-end-column="117" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/start.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48758465">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
