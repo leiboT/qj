@@ -36,63 +36,62 @@ $(function(){
     $(".classifyNavBox").on("click","li",function(){
         $(this).addClass("activeColor").siblings().removeClass("activeColor");
 
-        //switch (Number($(this).attr("data-classifyid"))){
-        //    case 8:
-        //        customAjax(
-        //            "http://api.qianjiantech.com/v1/show",
-        //            {
-        //                area_name:sessionStorage.getItem("userDistrict") || "东莞市",
-        //                class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId"),
-        //                distance_id:8,
-        //                longitude:113.619790,
-        //                latitude:22.931441
-        //            },
-        //            function(result){
-        //                loadSpecialty(result)
-        //            }
-        //
-        //        );
-        //        break;
-        //    case 9:
-        //        customAjax(
-        //            "http://api.qianjiantech.com/v1/show",
-        //            {
-        //                area_name:sessionStorage.getItem("userDistrict") || "东莞市",
-        //                class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId"),
-        //                sell_count_id:$(this).attr("data-classifyid")
-        //            },
-        //            function(result){
-        //                loadSpecialty(result)
-        //            }
-        //        );
-        //        break;
-        //    case 10:
-        //        customAjax(
-        //            "http://api.qianjiantech.com/v1/show",
-        //            {
-        //                area_name:sessionStorage.getItem("userDistrict") || "东莞市",
-        //                class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId"),
-        //                price_id:$(this).attr("data-classifyid")
-        //            },
-        //            function(a){
-        //                loadSpecialty(a)
-        //            }
-        //        );
-        //        break;
-        //    case 11:
-        //        customAjax(
-        //            "http://api.qianjiantech.com/v1/show",
-        //            {
-        //                area_name:sessionStorage.getItem("userDistrict") || "东莞市",
-        //                class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId"),
-        //                hot_id:$(this).attr("data-classifyid")
-        //            },
-        //            function(a){
-        //                loadSpecialty(a)
-        //            }
-        //        );
-        //        break;
-        //}
+        switch (Number($(this).attr("data-classifyid"))){
+            case 8:
+                $.customAjax(
+                    "http://api.qianjiantech.com/v1/show",
+                    {
+                        area_name:sessionStorage.getItem("userDistrict") || "东莞市",
+                        class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId"),
+                        distance_id:8,
+                        longitude:sessionStorage.getItem("userPosition")?sessionStorage.getItem("userPosition").split(",")[0] : 113.619790,
+                        latitude:sessionStorage.getItem("userPosition")?sessionStorage.getItem("userPosition").split(",")[1] : 22.931441
+                    },
+                    function(result){
+                        loadSpecialty(result)
+                    }
+                );
+                break;
+            case 9:
+                $.customAjax(
+                    "http://api.qianjiantech.com/v1/show",
+                    {
+                        area_name:sessionStorage.getItem("userDistrict") || "东莞市",
+                        class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId"),
+                        sell_count_id:$(this).attr("data-classifyid")
+                    },
+                    function(result){
+                        loadSpecialty(result)
+                    }
+                );
+                break;
+            case 10:
+                $.customAjax(
+                    "http://api.qianjiantech.com/v1/show",
+                    {
+                        area_name:sessionStorage.getItem("userDistrict") || "东莞市",
+                        class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId"),
+                        price_id:$(this).attr("data-classifyid")
+                    },
+                    function(a){
+                        loadSpecialty(a)
+                    }
+                );
+                break;
+            case 11:
+                $.customAjax(
+                    "http://api.qianjiantech.com/v1/show",
+                    {
+                        area_name:sessionStorage.getItem("userDistrict") || "东莞市",
+                        class_id:sessionStorage.getItem("allClassId")||sessionStorage.getItem("backClassId"),
+                        hot_id:$(this).attr("data-classifyid")
+                    },
+                    function(a){
+                        loadSpecialty(a)
+                    }
+                );
+                break;
+        }
     });
 
     //加载特产商品处理函数
@@ -131,6 +130,7 @@ $(function(){
                 </div>
                 <ul>
                     <li class="overflowAuto">
+                    ${v.goods?'':`<div class="txtCenter">该商家还没有产品</div>`}
                         <ul class="shopProductBox flexRowBox justifyContentSpaceBetween txtCenter">
                             ${htmlGoods}
                         </ul>
