@@ -17,7 +17,7 @@
             success:fn,
             error:function(error){
                 //console.log(error);
-                $('body').html('系统正在维护中,请稍后重试!')
+                $('body').html('系统繁忙,请稍后重试!')
             },
             beforeSend: function(){
                 $('body').append('<div class="loadingWrap"></div>');
@@ -89,6 +89,21 @@
             }
         });
     };
+    //图片转base64
+    var imgToBase64 = function(url){
+        var canvas = document.createElement('CANVAS'),
+            ctx = canvas.getContext('2d'),
+            img = new Image();
+        img.crossOrigin = "*";
+        img.src = url;
+        img.onload = function(){
+            canvas.height = img.height;
+            canvas.width = img.width;
+            ctx.drawImage(img,0,0);
+            var dataURL = canvas.toDataURL('image/png');
+            return dataURL;
+        };
+    };
     //如果使用的是zepto，就添加扩展函数
     if(Zepto){
         $.customAjax = customAjax;
@@ -100,5 +115,6 @@
         $.pleaseLogin=pleaseLogin;
         //$.sessionControl=sessionControl;
         $.elseClosePop=elseClosePop;
+        $.imgToBase64=imgToBase64;
     }
 })();
