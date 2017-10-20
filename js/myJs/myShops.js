@@ -84,7 +84,7 @@ $(function(){
 
         //下拉加载更多
         $('body').scroll(function () {
-            console.log(123);
+            //console.log(123);
             if ($(this).scrollTop() + $(this).height() >= $("#pro-list").height()+50) {
                 //console.log("哦哦,到底了.");
                 index+=1;
