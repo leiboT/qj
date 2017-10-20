@@ -81,7 +81,7 @@ $(function(){
     function readFile(){
         var file = this.files[0];
         var self=this;
-        console.log(self);
+        //console.log(self);
         var type=file.type;
 
         //这里我们判断下类型如果不是图片就返回 去掉就可以上传任意文件
@@ -99,7 +99,7 @@ $(function(){
                     avatar:data
                 },
                 function(result){
-                    console.log(result);
+                    //console.log(result);
                     switch (result.code){
                         case 2000:
                             $("#uPic").html('<img src="'+data+'" class="img-response" />');
@@ -117,14 +117,14 @@ $(function(){
         if(file.size>204800){
             if(document.createElement("canvas").getContext){
                 var c=document.getElementById('myCanvas');
-                console.log(c);
+                //console.log(c);
                 var ctx=c.getContext('2d');
                 var img=new Image();
                 var reader = new FileReader();
                 reader.readAsDataURL(file);
                 reader.onload = function(e) {
                     var data = this.result;
-                    user_prove_pic=data;
+                    //user_prove_pic=data;
                     img.src = data;
                     img.onload = function () {
                         var m = this.width / this.height;
@@ -151,8 +151,8 @@ $(function(){
             reader.readAsDataURL(file);
             reader.onload = function(e){
                 var data=this.result;
-                user_prove_pic=data;
-                console.log(this);
+                //user_prove_pic=data;
+                //console.log(this);
                 data=data.replace(/^data:image\/(png|jpg);base64,/,"");
                 avatarAjax(
                     "http://api.qianjiantech.com/v1/modifyAvatar",
