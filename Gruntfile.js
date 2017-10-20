@@ -44,7 +44,7 @@ module.exports=function(grunt){
         },
         uglify: {
             options: {
-                banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n',
+                banner: '/*\nProject-name <%= pkg.name %>\nCreate by <%= pkg.author %> <%= grunt.template.today("yyyy-mm-dd HH:mm:ss") %>\n */',
                 mangle: true, //混淆变量名
                 comments: 'false' //false（删除全部注释），some（保留@preserve @license @cc_on等注释）
             },
@@ -56,6 +56,20 @@ module.exports=function(grunt){
                     dest:'dist/'  //输出到此目录下
                 }]
             }
+        },
+        cssmin: {
+            options: {
+                stripBanners:true, //合并时允许输出头部信息
+                banner: '/*\nProject-name <%= pkg.name %>\nCreate by <%= pkg.author %> <%= grunt.template.today("yyyy-mm-dd HH:mm:ss") %>\n */'
+            },
+            build: {
+                files: [{
+                    expand: true,
+                    cwd: 'css/',
+                    src: ['**/*.css'],
+                    dest: 'dest/'
+                }]
+            }
         }
     });
 
@@ -64,8 +78,8 @@ module.exports=function(grunt){
     grunt.loadNpmTasks('grunt-babel');
     grunt.loadNpmTasks('grunt-contrib-jshint');
     grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-watch');
     //注册任务
-    grunt.registerTask('default', ['copy','babel','uglify']);
-    grunt.registerTask('watcher',['watch']);
+    grunt.registerTask('default', ['copy','babel','uglify','cssmin','watch']);
 };
