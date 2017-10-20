@@ -13,9 +13,9 @@ $(function(){
     var pop=$("#pop");
     var p=$("#pop p");
     var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
+
     //用户ID
     var uid=sessionStorage.getItem("uid");
-
     //提示弹出框处理函数
     //function  reminderDeal(txt){
     //    p.html(txt);
