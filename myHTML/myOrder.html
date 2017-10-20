@@ -14,6 +14,7 @@
             bottom: 0;
             width: 200%;
             transition: top 0.8s ease-out;
+            overflow: hidden;
         }
         .shopImg{
             max-width: 25px;
@@ -80,10 +81,34 @@
         }
         .normalOrder,.voucherOrder{
             width: 50%;
+            top: 0;
+            bottom: 0;
+            overflow: auto;
             transition: all 0.1s ease-out;
         }
         .voucherOrder{
             right: 0;
+        }
+        #imgMagnifyMask{
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            z-index: 2000;
+            background-color: rgba(0,0,0,0.15);
+            display: none;
+        }
+        #imgMagnifyBox{
+            width: 80%;
+            height: 40%;
+            background-color: #fff;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
         }
     </style>
 </head>
@@ -246,12 +271,18 @@
         <!--</li>-->
         <!--</ul>-->
         <!--</li>-->
-        <!--<li class="loadMore"></li>-->
+        <li class="normalLoadMore"></li>
     </ul>
     <!--凭证订单-->
-    <ul class="voucherOrder ab width100">
-
+    <ul class="voucherOrder em1_4 ab width100">
+        <li class="voucherLoadMore"></li>
     </ul>
+</div>
+<!--凭证图片放大-->
+<div id="imgMagnifyMask">
+    <div id="imgMagnifyBox">
+
+    </div>
 </div>
 <!--模态弹出框-->
 <div id="pop">
