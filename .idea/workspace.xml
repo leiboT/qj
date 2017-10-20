@@ -6,28 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="c1e906e2-78fd-41ce-a288-9c4670af8113" name="Default" comment="10/16 exports grunt">
       <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/startHTML/12/payOut.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/base.js" afterPath="$PROJECT_DIR$/js/base.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/cater.js" afterPath="$PROJECT_DIR$/js/cater/cater.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/caterCpd.js" afterPath="$PROJECT_DIR$/js/cater/caterCpd.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/caterDetail2.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/caterDetail2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/cpd2.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/cpd2.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/cpd3.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/cpd3.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/startHTML/caterHTML/cpd4.html" afterPath="$PROJECT_DIR$/startHTML/caterHTML/cpd4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/my.js" afterPath="$PROJECT_DIR$/js/my.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/myHTML/myOrder.html" afterPath="$PROJECT_DIR$/myHTML/myOrder.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/myOrder.js" afterPath="$PROJECT_DIR$/js/myJs/myOrder.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/myShops.js" afterPath="$PROJECT_DIR$/js/myJs/myShops.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/productDetailPage.js" afterPath="$PROJECT_DIR$/js/productDetailPage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/setting.js" afterPath="$PROJECT_DIR$/js/myJs/setting.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/myJs/shippingAddress.js" afterPath="$PROJECT_DIR$/js/myJs/shippingAddress.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/shoppingCart.js" afterPath="$PROJECT_DIR$/js/cater/shoppingCart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/businessHTML/shopsOrder.html" afterPath="$PROJECT_DIR$/businessHTML/shopsOrder.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/businessJS/shopsOrder.js" afterPath="$PROJECT_DIR$/js/businessJS/shopsOrder.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/cater/writeOrder.js" afterPath="$PROJECT_DIR$/js/cater/writeOrder.js" />
     </list>
     <ignored path="qianjian.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -289,114 +272,6 @@
       <option name="number" value="Default" />
       <updated>1501824936111</updated>
     </task>
-    <task id="LOCAL-00083" summary="9/30">
-      <created>1506758048226</created>
-      <option name="number" value="00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1506758048226</updated>
-    </task>
-    <task id="LOCAL-00084" summary="9/30">
-      <created>1506758073093</created>
-      <option name="number" value="00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1506758073093</updated>
-    </task>
-    <task id="LOCAL-00085" summary="modify js external">
-      <created>1506758139728</created>
-      <option name="number" value="00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1506758139728</updated>
-    </task>
-    <task id="LOCAL-00086" summary="modify + - width">
-      <created>1506758168998</created>
-      <option name="number" value="00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1506758168998</updated>
-    </task>
-    <task id="LOCAL-00087" summary="10/10">
-      <created>1507605558261</created>
-      <option name="number" value="00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1507605558262</updated>
-    </task>
-    <task id="LOCAL-00088" summary="add loadingWrap style">
-      <created>1507605590798</created>
-      <option name="number" value="00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1507605590798</updated>
-    </task>
-    <task id="LOCAL-00089" summary="add ajax loading">
-      <created>1507605619914</created>
-      <option name="number" value="00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1507605619914</updated>
-    </task>
-    <task id="LOCAL-00090" summary="add ajax loading">
-      <created>1507605639740</created>
-      <option name="number" value="00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1507605639740</updated>
-    </task>
-    <task id="LOCAL-00091" summary="add ajax loading">
-      <created>1507605660198</created>
-      <option name="number" value="00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1507605660198</updated>
-    </task>
-    <task id="LOCAL-00092" summary="add ajax loading &amp; modify transfer data">
-      <created>1507605746635</created>
-      <option name="number" value="00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1507605746635</updated>
-    </task>
-    <task id="LOCAL-00093" summary="add ajax loading">
-      <created>1507605875252</created>
-      <option name="number" value="00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1507605875253</updated>
-    </task>
-    <task id="LOCAL-00094" summary="add ajax loading">
-      <created>1507605888309</created>
-      <option name="number" value="00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1507605888309</updated>
-    </task>
-    <task id="LOCAL-00095" summary="add ajax loading">
-      <created>1507605912827</created>
-      <option name="number" value="00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1507605912827</updated>
-    </task>
-    <task id="LOCAL-00096" summary="myOrderJs">
-      <created>1507605934104</created>
-      <option name="number" value="00096" />
-      <option name="project" value="LOCAL" />
-      <updated>1507605934104</updated>
-    </task>
-    <task id="LOCAL-00097" summary="add ajax loading">
-      <created>1507605979334</created>
-      <option name="number" value="00097" />
-      <option name="project" value="LOCAL" />
-      <updated>1507605979335</updated>
-    </task>
-    <task id="LOCAL-00098" summary="myOrderPage">
-      <created>1507605998626</created>
-      <option name="number" value="00098" />
-      <option name="project" value="LOCAL" />
-      <updated>1507605998627</updated>
-    </task>
-    <task id="LOCAL-00099" summary="modify .pro-txt style">
-      <created>1507606037233</created>
-      <option name="number" value="00099" />
-      <option name="project" value="LOCAL" />
-      <updated>1507606037233</updated>
-    </task>
-    <task id="LOCAL-00100" summary="style change">
-      <created>1507606065863</created>
-      <option name="number" value="00100" />
-      <option name="project" value="LOCAL" />
-      <updated>1507606065863</updated>
-    </task>
     <task id="LOCAL-00101" summary="10/10">
       <created>1507606086575</created>
       <option name="number" value="00101" />
@@ -583,7 +458,115 @@
       <option name="project" value="LOCAL" />
       <updated>1508126514364</updated>
     </task>
-    <option name="localTasksCounter" value="132" />
+    <task id="LOCAL-00132" summary="10/20">
+      <created>1508461641221</created>
+      <option name="number" value="00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1508461641222</updated>
+    </task>
+    <task id="LOCAL-00133" summary="shopsOrder page">
+      <created>1508461668496</created>
+      <option name="number" value="00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1508461668496</updated>
+    </task>
+    <task id="LOCAL-00134" summary="shopsOrder Js">
+      <created>1508461702702</created>
+      <option name="number" value="00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1508461702702</updated>
+    </task>
+    <task id="LOCAL-00135" summary="add nav deal">
+      <created>1508461746477</created>
+      <option name="number" value="00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1508461746477</updated>
+    </task>
+    <task id="LOCAL-00136" summary="comment console">
+      <created>1508461769617</created>
+      <option name="number" value="00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1508461769617</updated>
+    </task>
+    <task id="LOCAL-00137" summary="comment console">
+      <created>1508461783516</created>
+      <option name="number" value="00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1508461783516</updated>
+    </task>
+    <task id="LOCAL-00138" summary="comment console">
+      <created>1508461802310</created>
+      <option name="number" value="00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1508461802311</updated>
+    </task>
+    <task id="LOCAL-00139" summary="normal &amp; voucher order separate deal &amp; add imgMagnify deal">
+      <created>1508461910306</created>
+      <option name="number" value="00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1508461910306</updated>
+    </task>
+    <task id="LOCAL-00140" summary="comment console">
+      <created>1508461936751</created>
+      <option name="number" value="00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1508461936752</updated>
+    </task>
+    <task id="LOCAL-00141" summary="comment console">
+      <created>1508461973188</created>
+      <option name="number" value="00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1508461973188</updated>
+    </task>
+    <task id="LOCAL-00142" summary="10/20">
+      <created>1508462042871</created>
+      <option name="number" value="00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1508462042871</updated>
+    </task>
+    <task id="LOCAL-00143" summary="modify body content when error &amp; add img to base64 deal">
+      <created>1508462138703</created>
+      <option name="number" value="00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1508462138703</updated>
+    </task>
+    <task id="LOCAL-00144" summary="10/20">
+      <created>1508462152175</created>
+      <option name="number" value="00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1508462152175</updated>
+    </task>
+    <task id="LOCAL-00145" summary="comment console">
+      <created>1508462163441</created>
+      <option name="number" value="00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1508462163441</updated>
+    </task>
+    <task id="LOCAL-00146" summary="add element that is imgMagnify container &amp; it's style">
+      <created>1508462286399</created>
+      <option name="number" value="00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1508462286400</updated>
+    </task>
+    <task id="LOCAL-00147" summary="add css compress deal">
+      <created>1508462329579</created>
+      <option name="number" value="00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1508462329579</updated>
+    </task>
+    <task id="LOCAL-00148" summary="had css compress handle">
+      <created>1508462363613</created>
+      <option name="number" value="00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1508462363613</updated>
+    </task>
+    <task id="LOCAL-00149" summary="10/20">
+      <created>1508462416411</created>
+      <option name="number" value="00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1508462416411</updated>
+    </task>
+    <option name="localTasksCounter" value="150" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -592,6 +575,7 @@
     <layout>
       <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.12291667" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33016878" sideWeight="0.50208336" order="11" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -599,7 +583,6 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32911393" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -625,16 +608,6 @@
     <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="false" />
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="10/10" />
-    <MESSAGE value="modify a href value" />
-    <MESSAGE value="add loading scroll_bar" />
-    <MESSAGE value="add ajax loading" />
-    <MESSAGE value="10/12" />
-    <MESSAGE value="add baseJs" />
-    <MESSAGE value="add css deal problem in ios" />
-    <MESSAGE value="shopsOrderJs" />
-    <MESSAGE value="use baseJs" />
-    <MESSAGE value="baseJs" />
     <MESSAGE value="add .goPay class &amp; .settingWarn class" />
     <MESSAGE value="payEnd page" />
     <MESSAGE value="add loading" />
@@ -650,7 +623,17 @@
     <MESSAGE value="10/16 import grunt" />
     <MESSAGE value="delete needless element" />
     <MESSAGE value="import grunt" />
-    <option name="LAST_COMMIT_MESSAGE" value="import grunt" />
+    <MESSAGE value="shopsOrder page" />
+    <MESSAGE value="shopsOrder Js" />
+    <MESSAGE value="add nav deal" />
+    <MESSAGE value="normal &amp; voucher order separate deal &amp; add imgMagnify deal" />
+    <MESSAGE value="modify body content when error &amp; add img to base64 deal" />
+    <MESSAGE value="comment console" />
+    <MESSAGE value="add element that is imgMagnify container &amp; it's style" />
+    <MESSAGE value="add css compress deal" />
+    <MESSAGE value="had css compress handle" />
+    <MESSAGE value="10/20" />
+    <option name="LAST_COMMIT_MESSAGE" value="10/20" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -972,6 +955,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5745375">
           <caret line="31" column="48" selection-start-line="31" selection-start-column="48" selection-end-line="31" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -979,6 +963,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42546245">
           <caret line="83" column="32" selection-start-line="83" selection-start-column="32" selection-end-line="83" selection-end-column="32" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -986,6 +971,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.10835215">
           <caret line="95" column="21" selection-start-line="95" selection-start-column="21" selection-end-line="95" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -993,6 +979,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9458239">
           <caret line="111" column="9" selection-start-line="111" selection-start-column="9" selection-end-line="111" selection-end-column="9" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1000,6 +990,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.41131666">
           <caret line="228" column="7" selection-start-line="228" selection-start-column="7" selection-end-line="228" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1007,6 +998,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.47007617">
           <caret line="256" column="14" selection-start-line="256" selection-start-column="14" selection-end-line="256" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
