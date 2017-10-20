@@ -9,26 +9,28 @@ $(function(){
     var pop=$("#pop");
     var p=$("#pop p");
     var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
-    var loadMore=$(".loadMore");
-    var index=1;
-    var pg;
-    var myOrderLoad=function(page){
+    var normalLoadMore=$(".normalLoadMore");
+    var voucherLoadMore=$(".voucherLoadMore");
+    //普通订单多页加载标识
+    var normalIndex=1;
+    var normalPg;
+    //普通订单加载
+    var myNormalOrderLoad=function(page){
         $.customAjax(
             "http://api.qianjiantech.com/v1/myOrder",
             {
                 user_id:sessionStorage.getItem("uid"),
                 state_code:sessionStorage.getItem("stateCode"),
-                page:page
+                page:page,
+                type:1
             },
             function(res){
                 //console.log(res);
                 switch (res.code){
                     case 2000:
                         //console.log(res.info.info);
-                        pg=res.info.count;
+                        normalPg=res.info.count;
                         var len=res.info.info.length;
-                        len<=5?loadMore.html("<div>没有更多了</div>"):loadMore.html("<div>上拉加载更多..</div>");
-                        var voucherOrderHtml="";
                         var normalOrderHtml="";
                         $(res.info.info).each(function(k,v){
                             if(v.order_type==0){
@@ -69,7 +71,7 @@ $(function(){
                                     <span class="shopName">${v.shop_name}</span>
                                     <i class="iconfont icon-right"></i>
                                     </a>
-                                    <span class="colorF35F62">${v.order_type==1?"已上传凭证":v.state==0?"您未付款":v.state==1?"已付款,待商家确认":v.state==2?"商家已确认,待发货":v.state==3?"已发货,配送中":v.state==4?"已签收":v.state==5?"订单完成":v.state==6?"退货":"平台确认,赠送积分"}</span>
+                                    <span class="colorF35F62">${v.state==0?"您未付款":v.state==1?"已付款,待商家确认":v.state==2?"商家已确认,待发货":v.state==3?"已发货,配送中":v.state==4?"已签收":v.state==5?"订单完成":v.state==6?"退货":"平台确认,赠送积分"}</span>
                                     </li>
                                     <li>
                                     <ul>
@@ -80,37 +82,16 @@ $(function(){
                                     共${number}件商品 合计:￥${total}(含运费:￥0.00)
                                     </li>`:''}
                                     <li class="orderInfoFooter em0_8 txtRight clearFloat" data-totalM="${total}">
-                                    <span class="lf orderType">${v.order_type==0?"普通订单":"凭证订单"}</span>
-                                    ${v.order_type==1?"":v.state==0?`<div class="goPay">&nbsp;去支付&nbsp;</div>`:v.state==5?`<div class="confirmReceive">&nbsp;确认收货&nbsp;</div>`:v.state>=6?`<div class="returnGood">&nbsp;退货&nbsp;</div>`:""}
+                                    <span class="lf orderType">普通订单</span>
+                                    ${v.state==0?`<div class="goPay">&nbsp;去支付&nbsp;</div>`:v.state==4?`<div class="confirmReceive">&nbsp;确认收货&nbsp;</div>`:v.state>=6?`<div class="returnGood">&nbsp;退货&nbsp;</div>`:""}
                                     </li>
                                     </ul>
                                     </li>
                             `;
-                            }else if(v.order_type==1){
-                                voucherOrderHtml+=`
-                                <li class="orderItem borderBottom4" data-orderId="${v.order_id}">
-        <ul>
-                                    <li class="em0_8 flexRowBox justifyContentSpaceBetween alignItemCenter leftRightPadding3">
-                                    <a href="#" class="color252525 flexRowBox alignItemCenter">
-                                    <div class="shopImg">
-                                    <img src="${v.shop_head_pic}" alt="${v.shop_name}" class="img-response"/>
-                                    </div>
-                                    <span class="shopName">${v.shop_name}</span>
-                                    <i class="iconfont icon-right"></i>
-                                    </a>
-                                    <span class="colorF35F62">${v.state==0?"已上传凭证":v.state==1?"已确认凭证":v.state==2?"待发货":v.state==3?"已发货,配送中":v.state==4?"买家已签收":v.state==5?"订单完成":v.state==6?"退货":"平台确认,赠送积分"}</span>
-                                    <li class="orderInfoFooter em0_8 txtRight clearFloat">
-                                    <span class="lf orderType">凭证订单</span>
-                                    </li>
-                                    </ul>
-                                    </li>
-                                `;
                             }
                         });
-                        normalOrderHtml?normalOrder.append(normalOrderHtml):normalOrder.append(`<li class="normalWarn">您没有普通订单</li>`);
-                        voucherOrderHtml?voucherOrder.append(voucherOrderHtml):voucherOrder.append(`<li class="voucherWarn">您没有凭证订单</li>`);
-                        normalOrder.children().length>1&&$(".normalWarn").remove();
-                        voucherOrder.children().length>1&&$(".voucherWarn").remove();
+                        len==5&&normalPg>1?normalLoadMore.text('上拉加载更多'):normalLoadMore.text('没有更多了');
+                        normalLoadMore.before(normalOrderHtml);
                         normalOrder.on("click",".orderInfoFooter>div",function(){
                             sessionStorage.setItem("ord",$(this).parent().parent().parent().attr("data-orderId"));
                             sessionStorage.setItem("tmy",$(this).parent().attr("data-totalM"));
@@ -132,7 +113,7 @@ $(function(){
                         });
                         break;
                     case 2001:
-                        loadMore.html(`<div>你还没有订单</div>`);
+                        normalLoadMore.text('你还没有普通订单');
                         break;
                     case 9000:
                         $.loginOtherDevice(p,pop,closeBtn,"../loginRegisterHTML/login.html");
@@ -141,7 +122,89 @@ $(function(){
             }
         );
     };
-    myOrderLoad(index);
+    //凭证订单多页加载标识
+    var voucherIndex=1;
+    var voucherPg;
+    //凭证订单加载
+    var myVoucherOrderLoad = function(page){
+        $.customAjax(
+            "http://api.qianjiantech.com/v1/myOrderProve",
+            {
+                user_id:sessionStorage.getItem("uid"),
+                state_code:sessionStorage.getItem("stateCode"),
+                page:page,
+                type:1
+            },
+            function(res){
+                console.log(res);
+                switch (res.code){
+                    case 2000:
+                        console.log(res.info);
+                        voucherPg= res.info.count;
+                        var voucherOrderHtml="";
+                        var len=res.info.data.length;
+                        $(res.info.data).each(function(k,v){
+                            voucherOrderHtml+=`
+                                <li class="orderItem borderBottom4" data-orderid="${v.order_id}">
+        <ul>
+                                    <li class="em0_8 flexRowBox justifyContentSpaceBetween alignItemCenter leftRightPadding3">
+                                    <a href="#" class="color252525 flexRowBox alignItemCenter">
+                                    <div class="shopImg">
+                                    <img src="${v.shop_head_img}" alt="${v.shop_name}" class="img-response">
+                                    </div>
+                                    <span class="shopName">${v.shop_name}</span>
+                                    <i class="iconfont icon-right"></i>
+                                    </a>
+                                    <span class="colorF35F62">已上传凭证</span>
+                                    </li>
+                                    <li>
+                                    <ul>
+                                    <li class="orderProInfo flexRowBox aroundPadding23 em0_8">
+                                    <div class="productImg">
+                                    <img src="${v.product_logo}" alt="${v.product_name}" class="img-response">
+                                    </div>
+                                    <ul class="txtLeft">
+                                    <li>
+                                    ${v.product_name}
+                                    </li>
+                                    <li>
+                                    ${v.product_describe}
+                                    </li>
+                                    <li class="flexRowBox justifyContentSpaceBetween">
+                                    <span>￥${v.product_price}</span>
+                                    <span>x1</span>
+                                    </li>
+                                    </ul>
+                                    </li>
+                                    </ul>
+                                    </li>
+                                    <li class="em0_8">
+                                    凭证图片
+                                    <div class="flexRowBox justifyContentCenter topBottomPadding2 borderTop1 borderBottom1">
+                                    <div class="productImg">
+                                    <img src="${v.user_img_prove}" alt="用户凭证" class="img-response">
+                                    </div>
+                                    </div>
+                                    </li>
+                                    <li class="orderInfoFooter em0_8 txtRight clearFloat" data-totalm="0.01">
+                                    <span class="lf orderType">凭证订单</span>
+                                    </li>
+                                    </ul>
+                                    </li>
+                            `;
+                        });
+                        len==5&&voucherPg>1?voucherLoadMore.text('上拉加载更多'):voucherLoadMore.text('没有更多了');
+                        voucherLoadMore.before(voucherOrderHtml);
+                        break;
+                    case 2001:
+                        voucherLoadMore.text('你还没有凭证订单');
+                        break;
+                }
+            }
+        )
+    };
+    myNormalOrderLoad(normalIndex);
+    myVoucherOrderLoad(voucherIndex);
     //点击其他区域关闭弹框
     $.elseClosePop(pop);
     //弹框确认取消处理
@@ -165,6 +228,14 @@ $(function(){
         sessionStorage.removeItem("ord")
     });
 
+    //凭证图片放大处理
+    voucherOrder.on("click",'.productImg>img',function(){
+        var src=$(this).attr("src");
+        $("#imgMagnifyMask").addClass("show").click(function(){$(this).removeClass('show')});
+        $("#imgMagnifyBox").html(`<img src="${src}" alt="用户凭证" class="img-response"/>`);
+
+    });
+
     //手势处理
     var startX=0,startY=0,endX=0,endY=0,xDistance=0,yDistance=0,selfLeft=0;
     var topSlideJudge=false,rightSlideJudge=false,bottomSlideJudge=false,leftSlideJudge=false,w=shopOrderBox.width()/2;
@@ -180,7 +251,7 @@ $(function(){
         endY=touch.pageY;
         //上滑
         if(startY>endY&&startY-endY>Math.abs(startX-endX)){
-            console.log("上滑");
+            //console.log("上滑");
             //topSlideJudge=true;
             //rightSlideJudge=bottomSlideJudge=leftSlideJudge=false;
             //if(topSlideJudge){
@@ -194,7 +265,7 @@ $(function(){
         }
         //下滑
         if(startY<endY&&endY-startY>Math.abs(startX-endX)){
-            console.log("下滑");
+            //console.log("下滑");
             //bottomSlideJudge=true;
             //topSlideJudge=rightSlideJudge=leftSlideJudge=false;
             //if(bottomSlideJudge){
@@ -207,7 +278,7 @@ $(function(){
         }
         //左滑
         if(startX>endX&&startX-endX>Math.abs(startY-endY)){
-            console.log("左滑");
+            //console.log("左滑");
             leftSlideJudge=true;
             topSlideJudge=rightSlideJudge=bottomSlideJudge=false;
             if(leftSlideJudge){
@@ -221,7 +292,7 @@ $(function(){
         }
         //右滑
         if(startX<endX&&endX-startX>Math.abs(startY-endY)){
-            console.log("右滑");
+            //console.log("右滑");
             rightSlideJudge=true;
             topSlideJudge=bottomSlideJudge=leftSlideJudge=false;
             if(rightSlideJudge){
@@ -265,16 +336,27 @@ $(function(){
 
     });
 
-    //下拉加载更多
-    $('body').scroll(function () {
-        if ($(this).scrollTop() + $(this).height() >= normalOrder.height()+50) {
-            index+=1;
-            index<=pg?loadMore.html("<div>加载中...</div>"):loadMore.html("<div>没有更多了</div>");
-            setTimeout(function(){
-                index<=pg&&myOrderLoad(index);
-            },300);
+    //上拉加载更多
+    normalOrder.scroll(function () {
+        //console.log(document.body.offsetHeight-normalLoadMore.offset().height);
+        //console.log($(this).scrollTop(),$(window).height(),normalOrder.height());
+        if (document.body.offsetHeight-normalLoadMore.offset().height == Math.round(normalLoadMore.offset().top)) {
+            normalIndex+=1;
+            //index<=pg?loadMore.html("<div>加载中...</div>"):loadMore.html("<div>没有更多了</div>");
+            //setTimeout(function(){
+            //    index<=pg&&myOrderLoad(index);
+            //},300);
+            normalIndex<=normalPg&&normalLoadMore.text("加载中...")&&myNormalOrderLoad(normalIndex);
         }
     });
+
+    voucherOrder.scroll(function () {
+        if (document.body.offsetHeight-voucherLoadMore.offset().height == Math.round(voucherLoadMore.offset().top)) {
+            voucherIndex+=1;
+            voucherIndex<=voucherPg&&voucherLoadMore.text("加载中...")&&myVoucherOrderLoad(voucherIndex);
+        }
+    });
+
 
 
     $.fn.scrollTo =function(options){
@@ -310,7 +392,7 @@ $(function(){
         }, opts.delay);
         return _this;
     };
-    loadMore.click(function(){
+    normalLoadMore.click(function(){
         $("body").scrollTo({toT:0})
     });
 });
