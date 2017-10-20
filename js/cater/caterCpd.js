@@ -75,12 +75,12 @@ $(function(){
                 "http://api.qianjiantech.com/v1/mayAddShopCart",
                 {product_id:sessionStorage.getItem("productId")},
                 function(res){
-                    console.log(res);
+                    //console.log(res);
                     if(res.code==2000){
-                        console.log(res.info);
+                        //console.log(res.info);
                         var html="";
                         $(res.info).each(function(k,v){
-                            console.log(v);
+                            //console.log(v);
                             html+=`
                             <li aria-checked="false" data-number="${v.number}" data-price="${v.price}" data-stockId="${v.stock_id}" data-img="${v.img_url}">
                                 ${v.attr}
@@ -153,13 +153,16 @@ $(function(){
                 stock_id: $(".checked").attr("data-stockid")
             },
             function(res){
-                console.log(res);
+                //console.log(res);
                 switch (res.code){
                     case 2000:
                         addCartWarn("加入购物车成功");
                         break;
                     case 2001:
                         addCartWarn("加入失败,请重试");
+                        break;
+                    case 2002:
+                        addCartWarn("该商品库存不足");
                         break;
                     case 9000:
                         $.loginOtherDevice(p,pop,closeBtn,"../../loginRegisterHTML/login.html");
