@@ -134,7 +134,7 @@ $(function(){
                                     state_code:sessionStorage.getItem("stateCode")
                                 },
                                 function(res){
-                                    console.log(res);
+                                    //console.log(res);
                                     res.code==2000&&(token=res.info.token);
                                     commitOrder();
                                 }
