@@ -68,8 +68,8 @@ $(function(){
                         设为默认地址
                     </div>
                     <ul class="addressManipulate">
-                        <li class="border1 addressEdit" data-addressId="${v.address_id}">&nbsp;编辑&nbsp;</li>
-                        <li class="border1 addressDelete" data-addressId="${v.address_id}">&nbsp;删除&nbsp;</li>
+                        <li class="border1 addressEdit topBottomPadding2" data-addressId="${v.address_id}">&nbsp;编&nbsp;辑&nbsp;</li>
+                        <li class="border1 addressDelete topBottomPadding2" data-addressId="${v.address_id}">&nbsp;删&nbsp;除&nbsp;</li>
                     </ul>
                 </li>
             </ul>
