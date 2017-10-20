@@ -23,7 +23,7 @@ $(function(){
             shop_id:sessionStorage.getItem("shopId")
         },
         function(res){
-            console.log(res);
+            //console.log(res);
             switch (res.code){
                 case 2000:
                     var html="";
