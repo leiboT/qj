@@ -182,6 +182,9 @@ $(function(){
                     case 2001:
                         voucherLoadMore.text('没有凭证订单');
                         break;
+                    case 9000:
+                        $.loginOtherDevice(p,pop,closeBtn,"../loginRegisterHTML/login.html");
+                        break;
                 }
             }
         )
