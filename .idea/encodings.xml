@@ -40,6 +40,7 @@
     <file url="file://$PROJECT_DIR$/js/myJs/shippingAddress.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/position.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/productDetailPage.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/showOrder.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/start.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/static/data/cityList.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/static/data/hotCityList.json" charset="UTF-8" />
