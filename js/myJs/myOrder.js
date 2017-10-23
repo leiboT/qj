@@ -113,7 +113,7 @@ $(function(){
                         });
                         break;
                     case 2001:
-                        normalLoadMore.text('你还没有普通订单');
+                        normalLoadMore.text('您还没有普通订单');
                         break;
                     case 9000:
                         $.loginOtherDevice(p,pop,closeBtn,"../loginRegisterHTML/login.html");
@@ -197,7 +197,7 @@ $(function(){
                         voucherLoadMore.before(voucherOrderHtml);
                         break;
                     case 2001:
-                        voucherLoadMore.text('你还没有凭证订单');
+                        voucherLoadMore.text('您还没有凭证订单');
                         break;
                 }
             }
