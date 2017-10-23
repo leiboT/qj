@@ -89,7 +89,7 @@
             }
         });
     };
-    //图片转base64
+    //服务器端图片转base64
     var imgToBase64 = function(url){
         var canvas = document.createElement('CANVAS'),
             ctx = canvas.getContext('2d'),
