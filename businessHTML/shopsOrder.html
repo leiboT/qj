@@ -47,6 +47,9 @@
             border: 1px solid #F35F62;
             border-radius: 4px;
             color: #F35F62 ;
+            min-width: 64px;
+            width: 28%;
+            text-align: center;
         }
         .orderType{
             margin-left: 3%;
@@ -90,7 +93,7 @@
         .voucherOrder{
             right: 0;
         }
-        #imgMagnifyMask{
+        #imgMagnifyMask,#shopsVoucherLoadMak{
             position: fixed;
             top: 0;
             right: 0;
@@ -100,7 +103,7 @@
             background-color: rgba(0,0,0,0.15);
             display: none;
         }
-        #imgMagnifyBox{
+        #imgMagnifyBox,#shopsVoucherLoadMak>div{
             width: 80%;
             height: 40%;
             background-color: #fff;
@@ -110,6 +113,27 @@
             -webkit-transform: translate(-50%,-50%);
             -ms-transform: translate(-50%,-50%);
             transform: translate(-50%,-50%);
+        }
+        #shopsVoucherLoadMak>div{
+            background-color: #e5e5e5;
+        }
+        #shopsVoucherLoadImgBox{
+            height: 100%;
+        }
+        #uploadingOperationBox{
+            margin: 5% 0 7%;
+        }
+        #uploadingOperationBox>label,#confirmUploading>span{
+            display: inline-block;
+            background-color: #F55F62;
+            border-radius: 8px;
+            width: 70%;
+        }
+        #confirmUploading>span{
+            width: 30%;
+        }
+        #confirmUploading{
+            display: none;
         }
     </style>
 </head>
@@ -130,7 +154,21 @@
         <li class="voucherLoadMore"></li>
     </ul>
 </div>
+<!--商家凭证上传-->
+<div id="shopsVoucherLoadMak" class="em1_3 colorfff">
+    <div>
+        <div id="shopsVoucherLoadImgBox">
 
+        </div>
+        <div id="uploadingOperationBox">
+            <label for="shopsVoucherFile">点击此处上传商家凭证</label>
+            <input type="file" id="shopsVoucherFile" class="die"/>
+        </div>
+        <div id="confirmUploading">
+            <span>确认上传</span>
+        </div>
+    </div>
+</div>
 <!--凭证图片放大-->
 <div id="imgMagnifyMask">
     <div id="imgMagnifyBox">
@@ -149,7 +187,7 @@
     </div>
 </div>
 <script src="../js/zepto_multiple.js"></script>
-<script src="http://web.qianjiantech.com/js/base.js"></script>
-<script src="../js/businessJS/shopsOrder.js"></script>
+<script src="../js/base.js"></script>
+<script src="../js/showOrder.js"></script>
 </body>
 </html>
