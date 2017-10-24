@@ -63,7 +63,7 @@ $(function(){
                                     <img src="${v.img_url}" alt="" class="ui-fb"/>
                                 </div>
                                 <ul class="productDescription">
-                                    <li class="productName">厚街香肠</li>
+                                    <li class="productName">${v.product_name}</li>
                                     <li class="productLook em0_8">${v.describe}</li>
                                     <li class="presentIntegral em0_8">赠送积分:${v.market_price}</li>
                                     <li class="productPrice em0_9">
