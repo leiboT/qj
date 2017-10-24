@@ -19,13 +19,13 @@ $(function(){
                 var html="";
                 $(info.goods_detail).each(function(k,v){
                     html+=`
-                            <li class="borderBottom4 productIntroItems">
-                                <img src="${v}" alt="" class="img-response"/>
+                            <li class="borderBottom4 productIntroItems rv ui-lz">
+                                <img src="${v}" alt="" class="ui-fb"/>
                             </li>
                         `;
                 });
                 $("#productIntroBox").html(html);
-
+                $.clearPlaceholderShape();
                 var address=info.address;
                 var describe=info.describe;
                 var latitude=info.latitude;
@@ -91,15 +91,24 @@ $(function(){
 
                     html1+=`
                                 <div class="swiper-slide">
-                                    <img src="${info.goods_rotation[i]}" class="img-response"/>
+                                    <img src="" class="img-response" data-img="${info.goods_rotation[i]}"/>
                                 </div>
                             `;
                 }
                 $(".productDetailImg").html(html1);
-                new Swiper('.swiper-container', {
-                    pagination: '.swiper-pagination',
-                    paginationClickable: true
-                });
+                $.imgLoadingEnd(
+                    ".productDetailImg",
+                    function(){
+                        new Swiper('.swiper-container', {
+                            pagination: '.swiper-pagination'
+                            //loop:true,
+                            //loopSlider:10
+                            //autoplayDisableOnInteraction : false,
+                            //autoplay: 2500
+                        })
+                    },
+                    ".loadingImg1"
+                );
                 $("#productNoticeTxt").html(purchaseNote);
                 asyncJudge=true;
                 if(asyncJudge){
