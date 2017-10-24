@@ -21,6 +21,11 @@
     left: 0;
     background-color: rgba(134,122,125,0.8);
 }
+.productDetailInfoBox>li,.productTitle{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 /*定价与积分*/
 .productDetailPriceAndScore{
     display: flex;
