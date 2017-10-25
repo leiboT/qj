@@ -586,7 +586,7 @@ $(function(){
     normalOrder.scroll(function () {
         //console.log(document.body.offsetHeight-normalLoadMore.offset().height);
         //console.log($(this).scrollTop(),$(window).height(),normalOrder.height());
-        if (document.body.offsetHeight-normalLoadMore.offset().height == Math.round(normalLoadMore.offset().top)) {
+        if (document.body.offsetHeight-normalLoadMore.offset().height >= normalLoadMore.offset().top) {
             normalIndex+=1;
             if(header.text().lastIndexOf('商家订单') != -1){
                 normalIndex<=normalPg&&normalLoadMore.text("加载中...")&&loadShopsNormalOrder(normalIndex);
@@ -597,7 +597,8 @@ $(function(){
     });
 
     voucherOrder.scroll(function () {
-        if (document.body.offsetHeight-voucherLoadMore.offset().height == Math.round(voucherLoadMore.offset().top)) {
+        //console.log(document.body.offsetHeight,voucherLoadMore.offset());
+        if (document.body.offsetHeight-voucherLoadMore.offset().height >= voucherLoadMore.offset().top) {
             voucherIndex+=1;
             if(header.text().lastIndexOf('商家订单') != -1){
                 voucherIndex<=voucherPg&&voucherLoadMore.text("加载中...")&&loadShopsVoucherOrder(normalIndex);
