@@ -23,13 +23,31 @@
         <div class="hintTxt">
             我的余额
         </div>
-        <p class="myBalance">&nbsp;</p>
+        <p class="myBalance">￥<span></span></p>
         <ul class="operate">
-            <li>充 值</li>
-            <li>提 现</li>
-            <li>购买积分</li>
+            <!--<li>充 值</li>-->
+            <li class="withdrawBtn">提 现</li>
+            <!--<li>购买积分</li>-->
         </ul>
     </section>
+    <!--提现弹框-->
+    <div id="withdrawMak" class="em1_4">
+        <div id="withdrawBox" class="topBottomPadding2">
+            <ul>
+                <li>请输入提现金额</li>
+                <li class="em0_8 colorF35F62">(必须大于等于100)</li>
+            </ul>
+            <div class="moneyInput">
+                <input type="number" class="em1_3" value=""/>
+            </div>
+            <div class="withdrawOperate topBottomPadding2">
+                <span>取消</span>
+                <span>确定</span>
+            </div>
+        </div>
+    </div>
+    <!--成功状态吐司框-->
+    <div id="warnPop"></div>
     <!--模态弹出框-->
     <div id="pop">
         <div class="pop-box">
