@@ -1,10 +1,14 @@
 $(function(){
     //header
     var header=$("header");
-    //商家订单盒子
-    var shopOrderBox=$(".shopsOrderBox");
+    //订单盒子外层(包裹普通以及凭证订单)
+    var shopOrderBox=$(".orderBox");
+    //普通订单外层盒子
+    var normalOrderContainer = $(".normalOrderContainer");
     //普通订单盒子
     var normalOrder=$(".normalOrder");
+    //凭证订单外层盒子
+    var voucherOrderContainer = $(".voucherOrderContainer");
     //凭证订单盒子
     var voucherOrder=$(".voucherOrder");
     //输入提交提示模态框元素
@@ -583,10 +587,8 @@ $(function(){
     });
 
     //上拉加载更多
-    normalOrder.scroll(function () {
-        //console.log(document.body.offsetHeight-normalLoadMore.offset().height);
-        //console.log($(this).scrollTop(),$(window).height(),normalOrder.height());
-        if (document.body.offsetHeight-normalLoadMore.offset().height >= normalLoadMore.offset().top) {
+    normalOrderContainer.scroll(function () {
+        if (this.offsetHeight + this.scrollTop >= normalOrder.offset().height) {
             normalIndex+=1;
             if(header.text().lastIndexOf('商家订单') != -1){
                 normalIndex<=normalPg&&normalLoadMore.text("加载中...")&&loadShopsNormalOrder(normalIndex);
@@ -596,9 +598,8 @@ $(function(){
         }
     });
 
-    voucherOrder.scroll(function () {
-        //console.log(document.body.offsetHeight,voucherLoadMore.offset());
-        if (document.body.offsetHeight-voucherLoadMore.offset().height >= voucherLoadMore.offset().top) {
+    voucherOrderContainer.scroll(function () {
+        if (this.offsetHeight + this.scrollTop >= voucherOrder.offset().height) {
             voucherIndex+=1;
             if(header.text().lastIndexOf('商家订单') != -1){
                 voucherIndex<=voucherPg&&voucherLoadMore.text("加载中...")&&loadShopsVoucherOrder(normalIndex);
