@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="//web.qianjiantech.com/css/base.css"/>
     <title>仟健科技</title>
     <style>
-        .shopsOrderBox{
+        .orderBox{
             top: 50px;
             bottom: 0;
             width: 200%;
@@ -79,15 +79,15 @@
         .loginOutCancel{
             border-right: 1px solid #ddd;
         }
-        .normalOrder,.voucherOrder{
+        .normalOrderContainer,.voucherOrderContainer{
             width: 50%;
-            top: 0;
-            bottom: 0;
+            height: 100%;
+            float: left;
             overflow: auto;
             transition: all 0.1s ease-out;
         }
-        .voucherOrder{
-            right: 0;
+        .voucherOrderContainer{
+            float: right;
         }
         #imgMagnifyMask{
             position: fixed;
@@ -119,164 +119,169 @@
     我的订单
 </header>
 <!--订单列表-->
-<div class="ab shopsOrderBox" style="left: 0;">
+<div class="ab orderBox" style="left: 0;">
     <!--普通订单-->
-    <ul class="normalOrder em1_4 ab width100" style="top: 0;">
-        <!--<li class="orderItem borderBottom4">-->
-        <!--<ul>-->
-        <!--&lt;!&ndash;订单商铺及发货信息&ndash;&gt;-->
-        <!--<li class="em0_8 flexRowBox justifyContentSpaceBetween alignItemCenter leftRightPadding3">-->
-        <!--<a href="#" class="color252525 flexRowBox alignItemCenter">-->
-        <!--<div class="shopImg">-->
-        <!--<img src="../static/img/cater/dian.jpg" alt="" class="img-response"/>-->
-        <!--</div>-->
-        <!--<span class="shopName">仟健科技店</span>-->
-        <!--<i class="iconfont icon-right"></i>-->
-        <!--</a>-->
-        <!--<span class="colorF35F62">卖家已发货</span>-->
-        <!--</li>-->
-        <!--&lt;!&ndash;订单产品详情列表&ndash;&gt;-->
-        <!--<li>-->
-        <!--<ul>-->
-        <!--&lt;!&ndash;订单产品详情&ndash;&gt;-->
-        <!--<li class="orderProInfo flexRowBox aroundPadding23 em0_8">-->
-        <!--<div class="productImg">-->
-        <!--<img src="../static/img/cater/1.jpg" alt="" class="img-response"/>-->
-        <!--</div>-->
-        <!--<ul class="txtLeft">-->
-        <!--<li>-->
-        <!--德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】-->
-        <!--</li>-->
-        <!--<li>-->
-        <!--口味  :  香辣,容量  :  1L-->
-        <!--</li>-->
-        <!--<li class="flexRowBox justifyContentSpaceBetween">-->
-        <!--<span>￥68.14</span>-->
-        <!--<span>x1</span>-->
-        <!--</li>-->
-        <!--</ul>-->
-        <!--</li>-->
-        <!--&lt;!&ndash;订单产品详情&ndash;&gt;-->
-        <!--<li class="orderProInfo flexRowBox aroundPadding23 em0_8">-->
-        <!--<div class="productImg">-->
-        <!--<img src="../static/img/cater/1.jpg" alt="" class="img-response"/>-->
-        <!--</div>-->
-        <!--<ul class="txtLeft">-->
-        <!--<li>-->
-        <!--德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】-->
-        <!--</li>-->
-        <!--<li>-->
-        <!--口味  :  香辣,容量  :  1L-->
-        <!--</li>-->
-        <!--<li class="flexRowBox justifyContentSpaceBetween">-->
-        <!--<span>￥68.14</span>-->
-        <!--<span>x1</span>-->
-        <!--</li>-->
-        <!--</ul>-->
-        <!--</li>-->
-        <!--</ul>-->
-        <!--</li>-->
-        <!--&lt;!&ndash;订单商品件数及合计&ndash;&gt;-->
-        <!--<li class="borderBottom1 color252525 em0_8 txtRight rightPadding3">-->
-        <!--共1件商品 合计:￥68.14(含运费:￥0.00)-->
-        <!--</li>-->
-        <!--<li class="orderInfoFooter em0_8 txtRight">-->
-        <!--<span class="lf orderType">普通订单</span>-->
-        <!--<div class="color252525 returnGood">&nbsp;退货&nbsp;</div>-->
-        <!--<div class="colorF35F62 confirmReceive">&nbsp;确认收货&nbsp;</div>-->
-        <!--</li>-->
-        <!--</ul>-->
-        <!--</li>-->
-        <!--<li class="orderItem borderBottom4">-->
-        <!--<ul>-->
-        <!--&lt;!&ndash;订单商铺及发货信息&ndash;&gt;-->
-        <!--<li class="em0_8 flexRowBox justifyContentSpaceBetween alignItemCenter leftRightPadding3">-->
-        <!--<a href="#" class="color252525 flexRowBox alignItemCenter">-->
-        <!--<div class="shopImg">-->
-        <!--<img src="../static/img/cater/dian.jpg" alt="" class="img-response"/>-->
-        <!--</div>-->
-        <!--<span class="shopName">仟健科技店</span>-->
-        <!--<i class="iconfont icon-right"></i>-->
-        <!--</a>-->
-        <!--<span class="colorF35F62">卖家已发货</span>-->
-        <!--</li>-->
-        <!--&lt;!&ndash;订单产品详情&ndash;&gt;-->
-        <!--<li class="orderProInfo flexRowBox aroundPadding23 em0_8">-->
-        <!--<div class="productImg">-->
-        <!--<img src="../static/img/cater/1.jpg" alt="" class="img-response"/>-->
-        <!--</div>-->
-        <!--<ul class="txtLeft">-->
-        <!--<li>-->
-        <!--德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】-->
-        <!--</li>-->
-        <!--<li>-->
-        <!--口味  :  香辣,容量  :  1L-->
-        <!--</li>-->
-        <!--<li class="flexRowBox justifyContentSpaceBetween">-->
-        <!--<span>￥68.14</span>-->
-        <!--<span>x1</span>-->
-        <!--</li>-->
-        <!--</ul>-->
-        <!--</li>-->
-        <!--&lt;!&ndash;订单商品件数及合计&ndash;&gt;-->
-        <!--<li class="borderBottom1 color252525 em0_8 txtRight rightPadding3">-->
-        <!--共1件商品 合计:￥68.14(含运费:￥0.00)-->
-        <!--</li>-->
-        <!--<li class="orderInfoFooter em0_8 txtRight">-->
-        <!--<span class="lf orderType">普通订单</span>-->
-        <!--<div class="color252525 returnGood">&nbsp;退货&nbsp;</div>-->
-        <!--<div class="colorF35F62 confirmReceive">&nbsp;确认收货&nbsp;</div>-->
-        <!--</li>-->
-        <!--</ul>-->
-        <!--</li>-->
-        <!--<li class="orderItem borderBottom4">-->
-        <!--<ul>-->
-        <!--&lt;!&ndash;订单商铺及发货信息&ndash;&gt;-->
-        <!--<li class="em0_8 flexRowBox justifyContentSpaceBetween alignItemCenter leftRightPadding3">-->
-        <!--<a href="#" class="color252525 flexRowBox alignItemCenter">-->
-        <!--<div class="shopImg">-->
-        <!--<img src="../static/img/cater/dian.jpg" alt="" class="img-response"/>-->
-        <!--</div>-->
-        <!--<span class="shopName">仟健科技店</span>-->
-        <!--<i class="iconfont icon-right"></i>-->
-        <!--</a>-->
-        <!--<span class="colorF35F62">卖家已发货</span>-->
-        <!--</li>-->
-        <!--&lt;!&ndash;订单产品详情&ndash;&gt;-->
-        <!--<li class="orderProInfo flexRowBox aroundPadding23 em0_8">-->
-        <!--<div class="productImg">-->
-        <!--<img src="../static/img/cater/1.jpg" alt="" class="img-response"/>-->
-        <!--</div>-->
-        <!--<ul class="txtLeft">-->
-        <!--<li>-->
-        <!--德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】-->
-        <!--</li>-->
-        <!--<li>-->
-        <!--口味  :  香辣,容量  :  1L-->
-        <!--</li>-->
-        <!--<li class="flexRowBox justifyContentSpaceBetween">-->
-        <!--<span>￥68.14</span>-->
-        <!--<span>x1</span>-->
-        <!--</li>-->
-        <!--</ul>-->
-        <!--</li>-->
-        <!--&lt;!&ndash;订单商品件数及合计&ndash;&gt;-->
-        <!--<li class="borderBottom1 color252525 em0_8 txtRight rightPadding3">-->
-        <!--共1件商品 合计:￥68.14(含运费:￥0.00)-->
-        <!--</li>-->
-        <!--<li class="orderInfoFooter em0_8 txtRight">-->
-        <!--<span class="lf orderType">普通订单</span>-->
-        <!--<div class="color252525 returnGood">&nbsp;退货&nbsp;</div>-->
-        <!--<div class="colorF35F62 confirmReceive">&nbsp;确认收货&nbsp;</div>-->
-        <!--</li>-->
-        <!--</ul>-->
-        <!--</li>-->
-        <li class="normalLoadMore"></li>
-    </ul>
+    <div class="normalOrderContainer">
+        <ul class="normalOrder em1_4" style="top: 0;">
+            <!--<li class="orderItem borderBottom4">-->
+            <!--<ul>-->
+            <!--&lt;!&ndash;订单商铺及发货信息&ndash;&gt;-->
+            <!--<li class="em0_8 flexRowBox justifyContentSpaceBetween alignItemCenter leftRightPadding3">-->
+            <!--<a href="#" class="color252525 flexRowBox alignItemCenter">-->
+            <!--<div class="shopImg">-->
+            <!--<img src="../static/img/cater/dian.jpg" alt="" class="img-response"/>-->
+            <!--</div>-->
+            <!--<span class="shopName">仟健科技店</span>-->
+            <!--<i class="iconfont icon-right"></i>-->
+            <!--</a>-->
+            <!--<span class="colorF35F62">卖家已发货</span>-->
+            <!--</li>-->
+            <!--&lt;!&ndash;订单产品详情列表&ndash;&gt;-->
+            <!--<li>-->
+            <!--<ul>-->
+            <!--&lt;!&ndash;订单产品详情&ndash;&gt;-->
+            <!--<li class="orderProInfo flexRowBox aroundPadding23 em0_8">-->
+            <!--<div class="productImg">-->
+            <!--<img src="../static/img/cater/1.jpg" alt="" class="img-response"/>-->
+            <!--</div>-->
+            <!--<ul class="txtLeft">-->
+            <!--<li>-->
+            <!--德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--口味  :  香辣,容量  :  1L-->
+            <!--</li>-->
+            <!--<li class="flexRowBox justifyContentSpaceBetween">-->
+            <!--<span>￥68.14</span>-->
+            <!--<span>x1</span>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+            <!--&lt;!&ndash;订单产品详情&ndash;&gt;-->
+            <!--<li class="orderProInfo flexRowBox aroundPadding23 em0_8">-->
+            <!--<div class="productImg">-->
+            <!--<img src="../static/img/cater/1.jpg" alt="" class="img-response"/>-->
+            <!--</div>-->
+            <!--<ul class="txtLeft">-->
+            <!--<li>-->
+            <!--德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--口味  :  香辣,容量  :  1L-->
+            <!--</li>-->
+            <!--<li class="flexRowBox justifyContentSpaceBetween">-->
+            <!--<span>￥68.14</span>-->
+            <!--<span>x1</span>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+            <!--&lt;!&ndash;订单商品件数及合计&ndash;&gt;-->
+            <!--<li class="borderBottom1 color252525 em0_8 txtRight rightPadding3">-->
+            <!--共1件商品 合计:￥68.14(含运费:￥0.00)-->
+            <!--</li>-->
+            <!--<li class="orderInfoFooter em0_8 txtRight">-->
+            <!--<span class="lf orderType">普通订单</span>-->
+            <!--<div class="color252525 returnGood">&nbsp;退货&nbsp;</div>-->
+            <!--<div class="colorF35F62 confirmReceive">&nbsp;确认收货&nbsp;</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+            <!--<li class="orderItem borderBottom4">-->
+            <!--<ul>-->
+            <!--&lt;!&ndash;订单商铺及发货信息&ndash;&gt;-->
+            <!--<li class="em0_8 flexRowBox justifyContentSpaceBetween alignItemCenter leftRightPadding3">-->
+            <!--<a href="#" class="color252525 flexRowBox alignItemCenter">-->
+            <!--<div class="shopImg">-->
+            <!--<img src="../static/img/cater/dian.jpg" alt="" class="img-response"/>-->
+            <!--</div>-->
+            <!--<span class="shopName">仟健科技店</span>-->
+            <!--<i class="iconfont icon-right"></i>-->
+            <!--</a>-->
+            <!--<span class="colorF35F62">卖家已发货</span>-->
+            <!--</li>-->
+            <!--&lt;!&ndash;订单产品详情&ndash;&gt;-->
+            <!--<li class="orderProInfo flexRowBox aroundPadding23 em0_8">-->
+            <!--<div class="productImg">-->
+            <!--<img src="../static/img/cater/1.jpg" alt="" class="img-response"/>-->
+            <!--</div>-->
+            <!--<ul class="txtLeft">-->
+            <!--<li>-->
+            <!--德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--口味  :  香辣,容量  :  1L-->
+            <!--</li>-->
+            <!--<li class="flexRowBox justifyContentSpaceBetween">-->
+            <!--<span>￥68.14</span>-->
+            <!--<span>x1</span>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+            <!--&lt;!&ndash;订单商品件数及合计&ndash;&gt;-->
+            <!--<li class="borderBottom1 color252525 em0_8 txtRight rightPadding3">-->
+            <!--共1件商品 合计:￥68.14(含运费:￥0.00)-->
+            <!--</li>-->
+            <!--<li class="orderInfoFooter em0_8 txtRight">-->
+            <!--<span class="lf orderType">普通订单</span>-->
+            <!--<div class="color252525 returnGood">&nbsp;退货&nbsp;</div>-->
+            <!--<div class="colorF35F62 confirmReceive">&nbsp;确认收货&nbsp;</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+            <!--<li class="orderItem borderBottom4">-->
+            <!--<ul>-->
+            <!--&lt;!&ndash;订单商铺及发货信息&ndash;&gt;-->
+            <!--<li class="em0_8 flexRowBox justifyContentSpaceBetween alignItemCenter leftRightPadding3">-->
+            <!--<a href="#" class="color252525 flexRowBox alignItemCenter">-->
+            <!--<div class="shopImg">-->
+            <!--<img src="../static/img/cater/dian.jpg" alt="" class="img-response"/>-->
+            <!--</div>-->
+            <!--<span class="shopName">仟健科技店</span>-->
+            <!--<i class="iconfont icon-right"></i>-->
+            <!--</a>-->
+            <!--<span class="colorF35F62">卖家已发货</span>-->
+            <!--</li>-->
+            <!--&lt;!&ndash;订单产品详情&ndash;&gt;-->
+            <!--<li class="orderProInfo flexRowBox aroundPadding23 em0_8">-->
+            <!--<div class="productImg">-->
+            <!--<img src="../static/img/cater/1.jpg" alt="" class="img-response"/>-->
+            <!--</div>-->
+            <!--<ul class="txtLeft">-->
+            <!--<li>-->
+            <!--德芙巧克力礼盒装中秋情人节礼物【顺丰冰配】-->
+            <!--</li>-->
+            <!--<li>-->
+            <!--口味  :  香辣,容量  :  1L-->
+            <!--</li>-->
+            <!--<li class="flexRowBox justifyContentSpaceBetween">-->
+            <!--<span>￥68.14</span>-->
+            <!--<span>x1</span>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+            <!--&lt;!&ndash;订单商品件数及合计&ndash;&gt;-->
+            <!--<li class="borderBottom1 color252525 em0_8 txtRight rightPadding3">-->
+            <!--共1件商品 合计:￥68.14(含运费:￥0.00)-->
+            <!--</li>-->
+            <!--<li class="orderInfoFooter em0_8 txtRight">-->
+            <!--<span class="lf orderType">普通订单</span>-->
+            <!--<div class="color252525 returnGood">&nbsp;退货&nbsp;</div>-->
+            <!--<div class="colorF35F62 confirmReceive">&nbsp;确认收货&nbsp;</div>-->
+            <!--</li>-->
+            <!--</ul>-->
+            <!--</li>-->
+            <li class="normalLoadMore"></li>
+        </ul>
+    </div>
+
     <!--凭证订单-->
-    <ul class="voucherOrder em1_4 ab width100">
-        <li class="voucherLoadMore"></li>
-    </ul>
+    <div class="voucherOrderContainer">
+        <ul class="voucherOrder em1_4">
+            <li class="voucherLoadMore"></li>
+        </ul>
+    </div>
 </div>
 <!--凭证图片放大-->
 <div id="imgMagnifyMask">
