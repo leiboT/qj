@@ -9,8 +9,7 @@ html,body{width: 100%;height: 100%;overflow-x: hidden;
 body{position: relative;-webkit-overflow-scrolling : touch;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;-webkit-tap-highlight-color: rgba(200,200,200,0);}
 [class*='icon-']::before{color: #fff;font-size: 1.4em;font-weight: 900;}
 ::-webkit-input-placeholder{color: #fff;font-size: 1em;}
-:-moz-placeholder {color: #fff;font-size: 1em;}
-::-moz-placeholder{color: #fff;font-size: 1em;}
+:-moz-placeholder{color: #fff;font-size: 1em;}
 :-ms-input-placeholder{color: #fff;font-size: 1em;}
 .img-response{display: block; width: 100%; height: 100%;}
 .overflowAuto{overflow-x: auto;}
