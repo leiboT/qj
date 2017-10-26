@@ -76,6 +76,12 @@ $(function(){
                                     withdrawMak.removeClass("show");
                                     showDiePop(warnPop,"您的余额不足",1500);
                                     break;
+                                case 2004:
+                                    withdrawMak.removeClass("show");
+                                    sessionStorage.setItem("isBalance",1);
+                                    showDiePop(warnPop,"请先绑定银行卡",1500);
+                                    $.jump("settingHTML/bindBankCard.html",1000);
+                                    break;
                                 case 4000:
                                     withdrawMak.removeClass("show");
                                     showDiePop(warnPop,"所需信息不全",1500);
