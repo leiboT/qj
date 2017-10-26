@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta http-equiv="content-type" charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+    <link rel="shortcut icon" href="//web.qianjiantech.com/favicon.ico" />
+    <link rel="bookmark" href="//web.qianjiantech.com/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="//web.qianjiantech.com/static/iconfont/iconfont.css"/>
+    <link rel="stylesheet" href="//web.qianjiantech.com/css/base.css"/>
+    <title>仟健科技</title>
+    <style>
+        ::-webkit-input-placeholder{color: #999;}
+        :-moz-placeholder {color: #999;}
+        :-ms-input-placeholder{color: #999;}
+        .hintBox{
+            background-color: #ddd;
+        }
+        #bankForm ul{
+            margin-bottom: 10%;
+        }
+        #bankForm li{
+            display: flex;
+            align-items: baseline;
+            border-bottom: 1px solid #999;
+            padding: 3%;
+        }
+        #bankForm li>label{
+            width: 30%;
+            text-align: right;
+        }
+        #bankForm li>input{
+            flex: 1;
+            font-size: 1em;
+        }
+        #warnPop{
+            color: #fff;
+            padding: 0.6em;
+            position: fixed;
+            bottom: 10%;
+            left: 50%;
+            -webkit-transform:translateX(-50%);
+            font-size: 1.3em;
+            background-color: rgba(0,0,0,0.5);
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .showWarnPop{
+            opacity: 1 !important;
+        }
+    </style>
+</head>
+<body>
+<!--头部-->
+<header class="noRightHeader">
+    <a href="../setting.html" class="iconfont icon-left"></a>
+    银行卡
+</header>
+<!--主体-->
+<section class="em1_4 marginTop50">
+    <div class="em0_8 borderBottom1 hintBox">涉及提现,请确保信息准确</div>
+    <form action="#" id="bankForm">
+        <ul>
+            <li>
+                <label for="bank_user_name">账户名：</label>
+                <input type="text" placeholder="银行卡账户名" id="bank_user_name" class="" name="bank_user_name"/>
+            </li>
+            <li>
+                <label for="bank_card_number">银行卡号：</label>
+                <input type="number" placeholder="银行卡号" id="bank_card_number" class="" name="bank_card_number"/>
+            </li>
+            <li>
+                <label for="bank_card_number1">确认卡号：</label>
+                <input type="number" placeholder="再次输入银行卡号" id="bank_card_number1" class="" name="bank_card_number1"/>
+            </li>
+            <li>
+                <label for="bank_deposit">开户行：</label>
+                <input type="text" placeholder="开户行地址" id="bank_deposit" class="" name="bank_deposit"/>
+            </li>
+            <li>
+                <label for="bank_account">开户支行：</label>
+                <input type="text" placeholder="开户支行地址" id="bank_account" class="" name="bank_account"/>
+            </li>
+        </ul>
+        <button class="submitConfirmBtn">确认提交</button>
+    </form>
+</section>
+<div id="warnPop"></div>
+<!--模态弹出框-->
+<div id="pop">
+    <div class="pop-box">
+        <h3>提示</h3>
+        <p></p>
+        <span>关闭</span>
+    </div>
+</div>
+<script src="//web.qianjiantech.com/js/zepto_multiple.js"></script>
+<script src="//web.qianjiantech.com/js/base.js"></script>
+<script src="//web.qianjiantech.com/js/myJs/bindBankCard.js"></script>
+</body>
+</html>
