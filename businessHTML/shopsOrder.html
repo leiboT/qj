@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="//web.qianjiantech.com/css/base.css"/>
     <title>仟健科技</title>
     <style>
-        .shopsOrderBox{
+        .orderBox{
             top: 50px;
             bottom: 0;
             width: 200%;
@@ -83,15 +83,15 @@
         .loginOutCancel{
             border-right: 1px solid #ddd;
         }
-        .normalOrder,.voucherOrder{
+        .normalOrderContainer,.voucherOrderContainer{
             width: 50%;
-            top: 0;
-            bottom: 0;
+            height: 100%;
+            float: left;
             overflow: auto;
             transition: all 0.1s ease-out;
         }
-        .voucherOrder{
-            right: 0;
+        .voucherOrderContainer{
+            float: right;
         }
         #imgMagnifyMask,#shopsVoucherLoadMak{
             position: fixed;
@@ -144,15 +144,19 @@
     商家订单
 </header>
 <!--订单列表-->
-<div class="ab shopsOrderBox" style="left: 0;">
+<div class="ab orderBox" style="left: 0;">
     <!--普通订单-->
-    <ul class="normalOrder em1_4 ab width100">
-        <li class="normalLoadMore"></li>
-    </ul>
+    <div class="normalOrderContainer">
+        <ul class="normalOrder em1_4">
+            <li class="normalLoadMore"></li>
+        </ul>
+    </div>
     <!--凭证订单-->
-    <ul class="voucherOrder em1_4 ab width100">
-        <li class="voucherLoadMore"></li>
-    </ul>
+    <div class="voucherOrderContainer">
+        <ul class="voucherOrder em1_4">
+            <li class="voucherLoadMore"></li>
+        </ul>
+    </div>
 </div>
 <!--商家凭证上传-->
 <div id="shopsVoucherLoadMak" class="em1_3 colorfff">
