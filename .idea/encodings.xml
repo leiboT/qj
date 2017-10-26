@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
-    <file url="file://D:/vuedemo/src/App.vue" charset="UTF-8" />
-    <file url="file://D:/vuedemo/src/components/HelloWorld.vue" charset="UTF-8" />
-    <file url="file://D:/vuedemo/src/main.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Gruntfile.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/css/base.css" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/css/business.css" charset="UTF-8" />
@@ -32,6 +29,9 @@
     <file url="file://$PROJECT_DIR$/js/houseJs/houseIndex.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/myJs/LAreaData1.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/myJs/balanceScore.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/myJs/bindBankCard.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/myJs/changePassword.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/js/myJs/editNickname.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/myJs/myCode.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/myJs/myOrder.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/js/myJs/myPromotion.js" charset="UTF-8" />
@@ -44,5 +44,6 @@
     <file url="file://$PROJECT_DIR$/js/start.js" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/static/data/cityList.json" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/static/data/hotCityList.json" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
