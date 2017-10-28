@@ -1,5 +1,5 @@
-*{padding: 0;  margin: 0;  border: none;  outline: none;  box-sizing: border-box;list-style: none}
-body{font: 12px/1.5 Microsoft YaHei,tahoma,arial,Hiragino Sans GB,\\5b8b\4f53,sans-serif;  background-color: #fff;  color: #333; text-align: center;}
+*{padding: 0;  margin: 0;  border: none;  outline: none; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; list-style: none; -webkit-tap-highlight-color: transparent;}
+body{font: 12px/1.5 Microsoft YaHei,tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;  background-color: #fff;  color: #333; text-align: center;}
 a{text-decoration: none;color: #666}
 [class*='icon-']::before{color: #000; font-size: 20px; cursor: pointer;}
 .img-response{display: block; width: 100%; height: 100%;}
