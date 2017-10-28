@@ -298,7 +298,7 @@ $(function(){
     };
 
     //上传凭证所需变量
-    var imgData,self;
+    var imgData,confirmVoucherSelf,shipmentsSelf;
     //订单操作处理
     shopOrderBox.on("click",".orderInfoFooter>div",function(){
         var _self=this;
@@ -350,19 +350,12 @@ $(function(){
                 break;
             //确认发货
             case "shipments":
-                $.reminderDeal(p,pop,"确认发货?");
-                //popConfirmDeal();
-                orderOperationAction(
-                    _self,
-                    '待发货',
-                    '已发货',
-                    '<div class="shipments">&nbsp;确认发货&nbsp;</div>',
-                    ''
-                );
+                shipmentsSelf = _self;
+                $("#confirmShippingMak").addClass("show");
                 break;
             //上传商家凭证
             case "confirmVoucher":
-                self=_self;
+                confirmVoucherSelf=_self;
                 $("#shopsVoucherLoadMak").addClass("show");
                 break;
         }
@@ -450,11 +443,11 @@ $(function(){
                 switch (res.code){
                     case 2000:
                         //将商家凭证加入
-                        $(self).parent().prev().children().append(`<div class="productImg">
+                        $(confirmVoucherSelf).parent().prev().children().append(`<div class="productImg">
                                     <img src="${imgData}" alt="用户凭证" class="img-response">
                                     </div>`);
                         orderOperationAction(
-                            self,
+                            confirmVoucherSelf,
                             '买家已上传凭证',
                             '待平台确认审核',
                             '<div class="confirmVoucher">上传商家凭证</div>',
@@ -482,6 +475,92 @@ $(function(){
     $("#confirmUploading").click(function(){
         shopIsSureProveOrder(sessionStorage.getItem("t"))
     });
+
+    //商家确认发货处理
+    var openCloseJudge = false;
+    var companyList = $(".companyList");
+    var shipperCode,logisticCodeLength=0;
+    //加载显示快递公司列表
+    $(".companyChoose").click(function(){
+        openCloseJudge = !openCloseJudge;
+        if(openCloseJudge){
+            !companyList.text() ? $.customAjax(
+                "../static/data/expressCode.json",
+                null,
+                function(res){
+                    var html = "";
+                    $(res).each(function(k,v){
+                        html += `
+                    <li data-code="${v.code}">${v.name}</li>
+                `;
+                    });
+                    companyList.html(html).addClass("show");
+                }
+            ) : companyList.addClass("show")
+        }else{
+            companyList.removeClass("show");
+        }
+    });
+    //快递公司选择处理
+    companyList.on("click","li",function(){
+        $(".companyChoose>span").text($(this).text());
+        shipperCode = $(this).attr("data-code");
+        companyList.removeClass("show");
+        openCloseJudge = false;
+        shippingSubmitBtnChange(logisticCodeLength);
+    });
+    //点击除中间区域外其他区域关闭弹框
+    $("#confirmShippingMak").mouseup(function(e){
+        var _con = $("#confirmShippingForm");
+        if(_con != e.target && _con.has(e.target).length === 0){
+            $(this).removeClass("show")
+        }
+    });
+    //确认发货提交 -- 修改状态
+    $("#logisticsNumber").on("input propertychange",function(){
+        logisticCodeLength = $(this).val().length;
+        shippingSubmitBtnChange(logisticCodeLength);
+    });
+
+    function shippingSubmitBtnChange(len){
+        if(len >= 1 && $(".companyChoose>span").text() != "请选择"){
+            $(".shippingSubmit").unbind("click");
+            $(".shippingSubmit").addClass("activeBg").click(function(){
+                $.customAjax(
+                    "http://api.qianjiantech.com/v1/shopIsSureShip",
+                    {
+                        user_id: sessionStorage.getItem("uid"),
+                        state_code: sessionStorage.getItem("stateCode"),
+                        order_id: sessionStorage.getItem("ord"),
+                        logisticcode: $("#logisticsNumber").val(),
+                        shippercode: shipperCode
+                    },
+                    function(res){
+                        console.log(res);
+                        switch (res.code){
+                            case 2000:
+                                orderOperationAction(
+                                    shipmentsSelf,
+                                    '待发货',
+                                    '已发货',
+                                    '<div class="shipments">&nbsp;确认发货&nbsp;</div>',
+                                    ''
+                                );
+                                $("#confirmShippingMak").removeClass("show");
+                                break;
+                            case 9000:
+                                $.loginOtherDevice(p,pop,closeBtn,"../loginRegisterHTML/login.html");
+                                break;
+                        }
+                    }
+                )
+            });
+        }else{
+            $(".shippingSubmit").removeClass("activeBg").unbind("click")
+        }
+
+    }
+
 
     //清除ord
     $("header>a").click(function(){
