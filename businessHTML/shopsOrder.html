@@ -10,6 +10,10 @@
     <link rel="stylesheet" href="//web.qianjiantech.com/css/base.css"/>
     <title>仟健科技</title>
     <style>
+        ::-webkit-input-placeholder{color: #999;}
+        ::-moz-placeholder{color: #999;}
+        :-moz-placeholder{color: #999;}
+        :-ms-input-placeholder{color: #999;}
         .orderBox{
             top: 50px;
             bottom: 0;
@@ -93,7 +97,7 @@
         .voucherOrderContainer{
             float: right;
         }
-        #imgMagnifyMask,#shopsVoucherLoadMak{
+        #imgMagnifyMask,#shopsVoucherLoadMak,#confirmShippingMak{
             position: fixed;
             top: 0;
             right: 0;
@@ -103,7 +107,7 @@
             background-color: rgba(0,0,0,0.15);
             display: none;
         }
-        #imgMagnifyBox,#shopsVoucherLoadMak>div{
+        #imgMagnifyBox,#shopsVoucherLoadMak>div,#confirmShippingForm{
             width: 80%;
             height: 40%;
             background-color: #fff;
@@ -113,6 +117,9 @@
             -webkit-transform: translate(-50%,-50%);
             -ms-transform: translate(-50%,-50%);
             transform: translate(-50%,-50%);
+        }
+        #confirmShippingForm{
+            height: 60%;
         }
         #shopsVoucherLoadMak>div{
             background-color: #e5e5e5;
@@ -134,6 +141,43 @@
         }
         #confirmUploading{
             display: none;
+        }
+        .companyChoose{
+            border: 1px solid #e3e3e3;
+        }
+        .companyChoose ::before{
+            color: #252525;
+            font-size: 0.9em;
+        }
+        .companyList{
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #e3e3e3;
+            border-top: 0;
+            max-height: 170px;
+            overflow: scroll;
+            display: none;
+        }
+        .companyList>li{
+            padding: 2% 0;
+        }
+        .companyList>li:hover{
+            background-color: #e3e3e3;
+        }
+        .shippingSubmit{
+            display: inline-block;
+            width: 80%;
+            height: 40px;
+            line-height: 40px;
+            margin-top: 1em;
+            color: #fff;
+            font-size: 1em;
+            -webkit-border-radius: 16px;
+            -moz-border-radius: 16px;
+            border-radius: 16px;
+            background-color: #ddd;
+            letter-spacing: 10px;
+            cursor: pointer;
         }
     </style>
 </head>
@@ -157,6 +201,29 @@
             <li class="voucherLoadMore"></li>
         </ul>
     </div>
+</div>
+<!--确认发货-->
+<div id="confirmShippingMak" class="em1_4">
+    <form action="#" id="confirmShippingForm" class="aroundPadding23 color252525">
+        <ul>
+            <li class="flexRowBox topBottomPadding2">
+                <label for="logisticsNumber">运单号：</label>
+                <input type="number" id="logisticsNumber" class="borderBottom1_252525" placeholder="输入物流运单号"/>
+            </li>
+            <li class="flexRowBox topBottomPadding2">
+                <div>快递公司：</div>
+                <div class="flex1 em0_9 rv">
+                    <div class="companyChoose border1_252525">
+                        <span>请选择</span>
+                        <i class="iconfont icon-arrowdownb"></i>
+                    </div>
+                    <!--快递公司列表-->
+                    <ul class="ab width100 companyList"></ul>
+                </div>
+            </li>
+            <li><span class="shippingSubmit">提交</span></li>
+        </ul>
+    </form>
 </div>
 <!--商家凭证上传-->
 <div id="shopsVoucherLoadMak" class="em1_3 colorfff">
@@ -190,7 +257,7 @@
         </div>
     </div>
 </div>
-<script src="//web.qianjiantech.com/js/zepto_multiple.js"></script>
+<script src="//web.qianjiantech.com/js/zepto_multiple1.js"></script>
 <script src="//web.qianjiantech.com/js/base.js"></script>
 <script src="//web.qianjiantech.com/js/showOrder.js"></script>
 </body>
