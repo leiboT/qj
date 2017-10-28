@@ -10,6 +10,7 @@
     <title>仟健科技</title>
     <style>
         ::-webkit-input-placeholder{color: #999;}
+        ::-moz-placeholder {color: #999;}
         :-moz-placeholder {color: #999;}
         :-ms-input-placeholder{color: #999;}
         .hintBox{
@@ -19,8 +20,6 @@
             margin-bottom: 10%;
         }
         #bankForm li{
-            display: flex;
-            align-items: baseline;
             border-bottom: 1px solid #999;
             padding: 3%;
         }
@@ -28,17 +27,17 @@
             width: 30%;
             text-align: right;
         }
-        #bankForm li>input{
-            flex: 1;
-            font-size: 1em;
-        }
         #warnPop{
             color: #fff;
             padding: 0.6em;
             position: fixed;
             bottom: 10%;
             left: 50%;
-            -webkit-transform:translateX(-50%);
+            -webkit-transform: translateX(-50%);
+            -moz-transform: translateX(-50%);
+            -ms-transform: translateX(-50%);
+            -o-transform: translateX(-50%);
+            transform: translateX(-50%);
             font-size: 1.3em;
             background-color: rgba(0,0,0,0.5);
             opacity: 0;
@@ -60,25 +59,25 @@
     <div class="em0_8 borderBottom1 hintBox">涉及提现,请确保信息准确</div>
     <form action="#" id="bankForm">
         <ul>
-            <li>
+            <li class="flexRowBox alignItemBaseline">
                 <label for="bank_user_name">账户名：</label>
-                <input type="text" placeholder="银行卡账户名" id="bank_user_name" class="" name="bank_user_name"/>
+                <input type="text" placeholder="银行卡账户名" id="bank_user_name" class="flex1 em1" name="bank_user_name"/>
             </li>
-            <li>
+            <li class="flexRowBox alignItemBaseline">
                 <label for="bank_card_number">银行卡号：</label>
-                <input type="number" placeholder="银行卡号" id="bank_card_number" class="" name="bank_card_number"/>
+                <input type="number" placeholder="银行卡号" id="bank_card_number" class="flex1 em1" name="bank_card_number"/>
             </li>
-            <li>
+            <li class="flexRowBox alignItemBaseline">
                 <label for="bank_card_number1">确认卡号：</label>
-                <input type="number" placeholder="再次输入银行卡号" id="bank_card_number1" class="" name="bank_card_number1"/>
+                <input type="number" placeholder="再次输入银行卡号" id="bank_card_number1" class="flex1 em1" name="bank_card_number1"/>
             </li>
-            <li>
+            <li class="flexRowBox alignItemBaseline">
                 <label for="bank_deposit">开户行：</label>
-                <input type="text" placeholder="开户行地址" id="bank_deposit" class="" name="bank_deposit"/>
+                <input type="text" placeholder="开户行地址" id="bank_deposit" class="flex1 em1" name="bank_deposit"/>
             </li>
-            <li>
+            <li class="flexRowBox alignItemBaseline">
                 <label for="bank_account">开户支行：</label>
-                <input type="text" placeholder="开户支行地址" id="bank_account" class="" name="bank_account"/>
+                <input type="text" placeholder="开户支行地址" id="bank_account" class="flex1 em1" name="bank_account"/>
             </li>
         </ul>
         <button class="submitConfirmBtn">确认提交</button>
