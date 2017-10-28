@@ -1,0 +1,70 @@
+[
+  {
+    "name": "顺丰",
+    "code": "SF"
+  },
+  {
+    "name": "百世快递",
+    "code": "HTKY"
+  },
+  {
+    "name": "中通",
+    "code": "ZTO"
+  },
+  {
+    "name": "申通",
+    "code": "STO"
+  },
+  {
+    "name": "圆通",
+    "code": "YTO"
+  },
+  {
+    "name": "韵达",
+    "code": "YD"
+  },
+  {
+    "name": "邮政平邮",
+    "code": "YZPY"
+  },
+  {
+    "name": "EMS",
+    "code": "EMS"
+  },
+  {
+    "name": "天天",
+    "code": "HHTT"
+  },
+  {
+    "name": "京东",
+    "code": "JD"
+  },
+  {
+    "name": "全峰",
+    "code": "QFKD"
+  },
+  {
+    "name": "国通",
+    "code": "GTO"
+  },
+  {
+    "name": "优速",
+    "code": "UC"
+  },
+  {
+    "name": "德邦",
+    "code": "DBL"
+  },
+  {
+    "name": "快捷",
+    "code": "FAST"
+  },
+  {
+    "name": "亚马逊",
+    "code": "AMAZON"
+  },
+  {
+    "name": "宅急送",
+    "code": "ZJS"
+  }
+]
