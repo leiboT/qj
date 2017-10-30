@@ -17,58 +17,10 @@ $(function(){
     var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
     var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
 
-    //异步再封装
-    //function customAjax(url,data,fn){
-    //    //alert(JSON.stringify(arguments));
-    //    $.ajax({
-    //        type:"post",
-    //        url:url,
-    //        data:data,
-    //        dataType:"json",
-    //        success:fn,
-    //        error:function(error){
-    //            //console.log(error)
-    //        },
-    //        beforeSend: function(){
-    //            $('body').append('<div class="loadingWrap"></div>');
-    //        },
-    //        complete: function(){
-    //            $(".loadingWrap").remove();
-    //        }
-    //    })
-    //}
-
     //调转到搜索页
     $("#searchDemo").click(function(){
         location.href="smallFeatureHTML/search.html"
     });
-    //判断轮播图片加载完成
-    //function imgLoadingEnd(boxSelector,fnc,loadingBox){
-    //    var imgList = $(boxSelector).find('img');
-    //    var callback = function(){
-    //        fnc();
-    //        $(loadingBox).hide();
-    //    };
-    //    var check = (function (count, fn){
-    //        return function(){
-    //            count--;
-    //            if(count == 0){
-    //                fn();
-    //            }
-    //        };
-    //    })(imgList.length, callback);
-    //    imgList.each(function(){
-    //        $(this).bind('load', check).attr('src', $(this).attr('data-img')).show();
-    //    });
-    //}
-    ////图片加载完清除占位图
-    //function clearPlaceholderShape(){
-    //    $(".ui-fb").each(function(k,v){
-    //        $(v).load(function(){
-    //            $(this).parent().removeClass("ui-lz");
-    //        })
-    //    });
-    //}
 
     //加载首页分类
     function loadSort(){
