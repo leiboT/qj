@@ -30,7 +30,7 @@
     //图片加载完清除占位图
     $.clearPlaceholderShape = function(){
         $(".ui-fb").each(function(k,v){
-            $(v).load(function(){
+            $(v).on("load", function(){
                 $(this).parent().removeClass("ui-lz");
             })
         });
@@ -67,17 +67,17 @@
     };
     //请先登录处理函数
     $.pleaseLogin = function(p,pop,closeBtn,path){
-        reminderDeal(p,pop,"请先登录!");
+        $.reminderDeal(p,pop,"请先登录!");
         closeBtn.html("进入登录页");
         closeBtn.on("click",function(){
-            jump(path,0);
+            $.jump(path,0);
         });
     };
     //已在其他设备登录
     $.loginOtherDevice = function(p,pop,closeBtn,path){
-        reminderDeal(p,pop,"你已在其他设备登录!");
+        $.reminderDeal(p,pop,"你已在其他设备登录!");
         closeBtn.html("即将进入登录页").unbind("click");
-        jump(path,1500);
+        $.jump(path,1500);
         sessionStorage.clear();
     };
     //点击其他区域关闭弹框
