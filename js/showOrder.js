@@ -536,7 +536,7 @@ $(function(){
                         shippercode: shipperCode
                     },
                     function(res){
-                        console.log(res);
+                        //console.log(res);
                         switch (res.code){
                             case 2000:
                                 orderOperationAction(
@@ -547,6 +547,7 @@ $(function(){
                                     ''
                                 );
                                 $("#confirmShippingMak").removeClass("show");
+                                $("#logisticsNumber").val("");
                                 break;
                             case 9000:
                                 $.loginOtherDevice(p,pop,closeBtn,"../loginRegisterHTML/login.html");
