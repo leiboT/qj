@@ -79,18 +79,26 @@ $(function(){
                     if(res.code==2000){
                         //console.log(res.info);
                         var html="";
-                        $(res.info).each(function(k,v){
-                            //console.log(v);
-                            html+=`
+                        if(res.info[0].attr){
+                            $(res.info).each(function(k,v){
+                                //console.log(v);
+                                html+=`
                             <li aria-checked="false" data-number="${v.number}" data-price="${v.price}" data-stockId="${v.stock_id}" data-img="${v.img_url}">
                                 ${v.attr}
                             </li>
                         `;
-                        });
-                        $(".items").html(html);
-                        var firstItem=$(".items>li").eq(0);
-                        firstItem.addClass("checked").attr("aria-checked",true);
-                        preloadCart(firstItem);
+                            });
+                            $(".items").html(html);
+                            var firstItem=$(".items>li").eq(0);
+                            firstItem.addClass("checked").attr("aria-checked",true);
+                            preloadCart(firstItem);
+                        }else{
+                            $(".pro-img").html(`<img src="${res.info[0].img_url}" class="img-response"/>`);
+                            $(".price-cart").text("￥"+res.info[0].price);
+                            $(".inventory-cart").text("库存 "+res.info[0].number);
+                            $(".classify-cart").text("请选择购买数量").attr("data-stockId",res.info[0].stock_id);
+                            $(".prop_title").parent().remove();
+                        }
                     }
                 }
             );
@@ -150,7 +158,7 @@ $(function(){
                 product_id:sessionStorage.getItem("productId"),
                 state_code:sessionStorage.getItem("stateCode"),
                 count: $("#number").val(),
-                stock_id: $(".checked").attr("data-stockid")
+                stock_id: $(".checked").attr("data-stockid") ||  $(".classify-cart").attr("data-stockid")
             },
             function(res){
                 //console.log(res);
@@ -175,14 +183,20 @@ $(function(){
 
     //确定按钮处理
     proInfoConfirm.click(function(){
-        var judge=false;
-        $($(".items>li")).each(function(k,v){
-            judge=$(v).attr("aria-checked")!="false" || judge;
-        });
-        judge?
+        if($(".items>li").length){
+            var judge=false;
+            $(".items>li").each(function(k,v){
+                judge=$(v).attr("aria-checked")!="false" || judge;
+            });
+            judge?
             confirmCanSubmit() || cartStyleDeal()
-            :
+                :
+                addCartWarn("请选择分类")
+        }else if($(".classify-cart").attr("data-stockid")){
+            confirmCanSubmit() || cartStyleDeal()
+        }else{
             addCartWarn("请选择分类")
+        }
     });
 
 
