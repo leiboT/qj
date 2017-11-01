@@ -1,11 +1,22 @@
 *{padding: 0;  margin: 0;  border: none;  outline: none;  -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;list-style: none;cursor: auto; -webkit-tap-highlight-color: transparent;}
 a,button,input,textarea{-webkit-appearance: none;}
-img,input{vertical-align: middle;}
-body{font: 12px/1.5 Microsoft YaHei,tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;  background-color: #fff;  color: #666; text-align: center; -webkit-font-smoothing: antialiased; /*chrome、safari*/  -moz-osx-font-smoothing: grayscale;/*firefox*/}
 a{text-decoration: none;color: #fff}
-html,body{width: 100%;height: 100%;overflow-x: hidden;
-    overflow-y: auto;min-width: 320px;}
-body{position: relative;-webkit-overflow-scrolling : touch;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;}
+img,input{vertical-align: middle;}
+html,body{width: 100%;height: 100%;overflow-x: hidden; overflow-y: auto; min-width: 320px; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%;}
+body{
+    position: relative;
+    font: 12px/1.5 Microsoft YaHei,tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+    background-color: #fff;
+    color: #666;
+    text-align: center;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling : touch;
+    -webkit-user-select:none;
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
 [class*='icon-']::before{color: #fff;font-size: 1.4em;font-weight: 900;}
 ::-webkit-input-placeholder{color: #fff;font-size: 1em;}
 ::-moz-placeholder{color: #fff;font-size: 1em;}
