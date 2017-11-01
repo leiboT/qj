@@ -118,8 +118,12 @@
             -ms-transform: translate(-50%,-50%);
             transform: translate(-50%,-50%);
         }
-        #confirmShippingForm{
-            height: 60%;
+        #logistics label,#express>div:first-child{
+            min-width: 84px;
+            width: 30%;
+        }
+        #logistics input,#express>div:last-child{
+            width: 70%;
         }
         #shopsVoucherLoadMak>div{
             background-color: #e5e5e5;
@@ -206,11 +210,11 @@
 <div id="confirmShippingMak" class="em1_4">
     <form action="#" id="confirmShippingForm" class="aroundPadding23 color252525">
         <ul>
-            <li class="flexRowBox topBottomPadding2">
-                <label for="logisticsNumber">运单号：</label>
-                <input type="number" id="logisticsNumber" class="borderBottom1_252525" placeholder="输入物流运单号"/>
+            <li class="flexRowBox topBottomPadding2" id="logistics">
+                <label for="logisticsNumber">物流单号：</label>
+                <input type="number" id="logisticsNumber" class="flex1 borderBottom1_252525" placeholder="输入物流运单号"/>
             </li>
-            <li class="flexRowBox topBottomPadding2">
+            <li class="flexRowBox topBottomPadding2" id="express">
                 <div>快递公司：</div>
                 <div class="flex1 em0_9 rv">
                     <div class="companyChoose border1_252525">
