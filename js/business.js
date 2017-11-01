@@ -3,45 +3,8 @@ $(function(){
     var pop=$("#pop");
     var p=$("#pop p");
     var closeBtn=$(".pop-box>span").length?$(".pop-box>span"):$("#pop>div>div");
-    ////异步再封装
-    //function customAjax(url,data,fn){
-    //    //alert(JSON.stringify(arguments));
-    //    $.ajax({
-    //        type:"post",
-    //        url:url,
-    //        data:data,
-    //        dataType:"json",
-    //        success:fn,
-    //        error:function(error){
-    //            //console.log(error)
-    //        },
-    //        beforeSend: function(){
-    //            $('body').append('<div class="loadingWrap"></div>');
-    //        },
-    //        complete: function(){
-    //            $(".loadingWrap").remove();
-    //        }
-    //    })
-    //}
-    //提示弹出框处理函数
-    //function  reminderDeal(txt){
-    //    p.html(txt);
-    //    pop.addClass("pop-show");
-    //}
-    //跳转
-    //function jump(url,t){
-    //    setTimeout(function(){
-    //        location.href=url
-    //    },t)
-    //}
     //点击其他区域关闭弹框
     $.elseClosePop(pop);
-    //$(pop).mouseup(function(e){
-    //    var _con = $('.pop-box');
-    //    if(_con != e.target && _con.has(e.target).length === 0){
-    //        $(this).removeClass("pop-show");
-    //    }
-    //});
     //获取商家身份状态
     $.customAjax(
         "http://api.qianjiantech.com/v1/shopState",
@@ -75,16 +38,8 @@ $(function(){
                 }
             }else if(code==4000){
                 $.pleaseLogin(p,pop,closeBtn,"loginRegisterHTML/login.html");
-                //reminderDeal("请先登录!");
-                //closeBtn.text("进入登录页");
-                //closeBtn.on("click",function(){
-                //    jump("loginRegisterHTML/login.html",0);
-                //});
             }else if(code==9000){
                 $.loginOtherDevice(p,pop,closeBtn,"loginRegisterHTML/login.html");
-                //reminderDeal("您已在其它设备登录");
-                //closeBtn.unbind("click").html("即将进入登录页");
-                //jump("loginRegisterHTML/login.html",1500);
             }
         }
     );
